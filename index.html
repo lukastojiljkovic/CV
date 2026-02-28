@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luka D. Stojiljković — CV</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --primary: #0062B1;
+            --primary-light: #e8f0f8;
+            --primary-glow: rgba(0, 79, 144, .06);
+            --text: #1a1a2e;
+            --text-secondary: #505068;
+            --border: #0062B1;
+            --bg: #ffffff;
+            --bg-subtle: rgba(255,255,255,.6);
+            --page-bg: #dce3ed;
+            --card-shadow: 0 8px 40px rgba(0,50,100,.10), 0 1.5px 6px rgba(0,0,0,.04);
+            --card-border: rgba(255,255,255,.7);
+            --section-gap: 22px;
+            --divider: rgba(0, 79, 144, .12);
+        }
+
+        [data-theme="dark"] {
+            --primary: #70b8f0;
+            --primary-light: #1a2a3a;
+            --primary-glow: rgba(112, 184, 240, .07);
+            --text: #e6e6ec;
+            --text-secondary: #9a9ab8;
+            --border: #70b8f0;
+            --bg: #191920;
+            --bg-subtle: rgba(25,25,32,.65);
+            --page-bg: #0e0e14;
+            --card-shadow: 0 8px 40px rgba(0,0,0,.45), 0 1.5px 6px rgba(0,0,0,.2);
+            --card-border: rgba(112,184,240,.08);
+            --section-gap: 22px;
+            --divider: rgba(112, 184, 240, .14);
+        }
+
+        @media print {
+            body { font-size: 10.5pt; background: #fff; }
+            .page { box-shadow: none; margin: 0; padding: 12mm 12mm; max-width: 100%; border-radius: 0; }
+            a { text-decoration: none; color: var(--primary); }
+        }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'Inter', 'Source Sans 3', 'Segoe UI', Arial, sans-serif;
+            color: var(--text);
+            background: var(--page-bg);
+            line-height: 1.5;
+            font-size: 14px;
+            transition: background .4s, color .3s;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ── Animated mesh gradient background ── */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: -1;
+            background:
+                radial-gradient(ellipse 80% 60% at 10% 15%, rgba(0,98,177,.12) 0%, transparent 55%),
+                radial-gradient(ellipse 60% 70% at 85% 25%, rgba(56,140,210,.10) 0%, transparent 50%),
+                radial-gradient(ellipse 70% 50% at 50% 85%, rgba(0,70,140,.08) 0%, transparent 50%),
+                radial-gradient(ellipse 40% 40% at 70% 60%, rgba(100,170,230,.06) 0%, transparent 45%),
+                linear-gradient(160deg, #d4dff0 0%, #e4eaf4 30%, #dbe4f0 60%, #c8d8ec 100%);
+            animation: meshShift 20s ease-in-out infinite alternate;
+        }
+
+        [data-theme="dark"] body::before {
+            background:
+                radial-gradient(ellipse 80% 60% at 10% 15%, rgba(112,184,240,.08) 0%, transparent 55%),
+                radial-gradient(ellipse 60% 70% at 85% 25%, rgba(60,130,200,.06) 0%, transparent 50%),
+                radial-gradient(ellipse 70% 50% at 50% 85%, rgba(40,100,180,.05) 0%, transparent 50%),
+                radial-gradient(ellipse 40% 40% at 70% 60%, rgba(80,150,220,.04) 0%, transparent 45%),
+                linear-gradient(160deg, #0e0e18 0%, #111120 30%, #0d0d1a 60%, #0a0a14 100%);
+        }
+
+        @keyframes meshShift {
+            0%   { transform: scale(1)   translate(0, 0); }
+            33%  { transform: scale(1.03) translate(-8px, 6px); }
+            66%  { transform: scale(1.01) translate(6px, -4px); }
+            100% { transform: scale(1.02) translate(-3px, 8px); }
+        }
+
+        .page {
+            max-width: 960px;
+            margin: 28px auto;
+            background: var(--bg);
+            padding: 36px 42px;
+            box-shadow: var(--card-shadow);
+            border-radius: 14px;
+            border: 1px solid var(--card-border);
+            transition: background .4s, box-shadow .3s, border-color .3s;
+        }
+
+        /* ── Two-column desktop grid ── */
+        .content-grid {
+            display: block;
+        }
+
+        @media (min-width: 1100px) {
+            .page {
+                max-width: calc(100vw - 80px);
+                padding: 38px 52px;
+            }
+            .content-grid {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0 40px;
+                align-items: start;
+            }
+            .col-left, .col-right {
+                min-width: 0;
+            }
+            .col-right {
+                border-left: 1.5px solid var(--divider);
+                padding-left: 36px;
+            }
+            .col-right .section:first-child {
+                margin-top: 0;
+            }
+        }
+
+        /* ── Header (now in topbar) ── */
+        .header { display: none; }
+
+        /* ── Topbar ── */
+        .topbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 0 28px;
+            height: 54px;
+            background: rgba(255,255,255,.55);
+            backdrop-filter: blur(20px) saturate(1.8);
+            -webkit-backdrop-filter: blur(20px) saturate(1.8);
+            border-bottom: 1px solid rgba(255,255,255,.45);
+            box-shadow: 0 1px 12px rgba(0,40,100,.06);
+            transition: background .4s, border-color .3s, box-shadow .3s;
+        }
+
+        [data-theme="dark"] .topbar {
+            background: rgba(18,18,24,.6);
+            border-bottom-color: rgba(112,184,240,.08);
+            box-shadow: 0 1px 12px rgba(0,0,0,.2);
+        }
+
+        .topbar-name {
+            font-size: 17px;
+            font-weight: 700;
+            color: var(--primary);
+            white-space: nowrap;
+            letter-spacing: .2px;
+            flex-shrink: 0;
+        }
+
+        .topbar-contacts {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            gap: 4px 16px;
+            font-size: 12.5px;
+            color: var(--text-secondary);
+            overflow: hidden;
+            min-width: 0;
+        }
+
+        .topbar-contacts a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: opacity .2s;
+        }
+        .topbar-contacts a:hover { opacity: .7; }
+
+        .topbar-contact {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            white-space: nowrap;
+        }
+
+        .topbar-contact svg {
+            width: 12px; height: 12px;
+            fill: var(--primary);
+            flex-shrink: 0;
+        }
+
+        .topbar-sep {
+            width: 1px;
+            height: 22px;
+            background: var(--divider);
+            flex-shrink: 0;
+            margin: 0 4px;
+        }
+
+        .topbar-actions {
+            display: flex;
+            gap: 6px;
+            flex-shrink: 0;
+        }
+
+        .topbar-actions .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 6px 14px;
+            border: 1.5px solid var(--primary);
+            border-radius: 8px;
+            background: transparent;
+            color: var(--primary);
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all .25s;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .topbar-actions .btn:hover {
+            background: var(--primary);
+            color: #fff;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(0,98,177,.3);
+        }
+        [data-theme="dark"] .topbar-actions .btn:hover {
+            box-shadow: 0 4px 12px rgba(112,184,240,.25);
+        }
+        .topbar-actions .btn:hover svg { fill: #fff; }
+
+        .topbar-actions .btn svg {
+            width: 13px; height: 13px;
+            fill: var(--primary);
+            transition: fill .2s;
+        }
+
+        /* Page spacing for topbar */
+        body { padding-top: 54px; }
+
+        @media print {
+            .topbar { display: none; }
+            body { padding-top: 0; }
+        }
+
+        .contact-row { display: none; }
+        .contact-row a { display: none; }
+        .contact-row a:hover { display: none; }
+
+        .contact-item { display: none; }
+        .contact-item svg { display: none; }
+
+        /* ── Sections ── */
+        .section { margin-top: var(--section-gap); }
+
+        .section-title {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1.6px;
+            padding-bottom: 6px;
+            border-bottom: 2px solid var(--border);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+        .section-title::before {
+            content: '';
+            width: 3px;
+            height: 14px;
+            border-radius: 2px;
+            background: var(--primary);
+            flex-shrink: 0;
+        }
+
+        /* ── Education ── */
+        .edu-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 6px;
+            padding-left: 8px;
+        }
+        .edu-item .degree {
+            font-weight: 600;
+            color: var(--text);
+        }
+        .edu-item .school {
+            color: var(--text-secondary);
+            font-size: 13.5px;
+        }
+        .edu-item .dates {
+            font-size: 13px;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            margin-left: 12px;
+        }
+
+        /* ── Work Experience ── */
+        .work-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            margin-bottom: 4px;
+            padding-left: 8px;
+        }
+        .work-header .role { font-weight: 700; }
+        .work-header .company { font-weight: 600; color: var(--primary); }
+        .work-header .dates {
+            font-size: 13px;
+            color: var(--text-secondary);
+            white-space: nowrap;
+        }
+
+        /* ── Projects ── */
+        .project {
+            margin-bottom: 10px;
+            padding: 10px 12px;
+            border-radius: 8px;
+            background: var(--primary-glow);
+            border: 1px solid transparent;
+            transition: background .3s, border-color .3s, transform .2s;
+        }
+        .project:hover {
+            border-color: var(--divider);
+            transform: translateX(3px);
+        }
+        .project-title {
+            font-weight: 700;
+            margin-bottom: 3px;
+        }
+        .project-title .tech {
+            font-weight: 400;
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+
+        /* ── Bullet lists ── */
+        ul.highlights {
+            list-style: none;
+            padding-left: 16px;
+            margin: 3px 0 0 0;
+            color: var(--text-secondary);
+        }
+        ul.highlights li {
+            margin-bottom: 3px;
+            line-height: 1.5;
+            position: relative;
+            padding-left: 12px;
+        }
+        ul.highlights li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 8px;
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--primary);
+            opacity: .55;
+        }
+
+        /* ── Technologies ── */
+        .tech-row {
+            padding: 7px 12px;
+            margin-bottom: 5px;
+            line-height: 1.55;
+            border-radius: 8px;
+            background: var(--primary-glow);
+            border: 1px solid transparent;
+            transition: background .3s, border-color .3s;
+        }
+        .tech-row:hover {
+            border-color: var(--divider);
+        }
+        .tech-row strong { color: var(--primary); font-weight: 600; }
+
+        /* ── Other info ── */
+        .info-stacked {
+            padding-left: 8px;
+        }
+        .info-stacked h4 {
+            font-size: 13px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: .8px;
+        }
+        .info-list {
+            list-style: disc;
+            padding-left: 20px;
+            color: var(--text-secondary);
+        }
+        .info-list li { margin-bottom: 2px; }
+
+        /* Mobile: side-by-side info */
+        @media (max-width: 1099px) {
+            .info-stacked {
+                display: flex;
+                gap: 30px;
+            }
+            .info-stacked > div { flex: 1; }
+            .info-stacked > div + div { margin-top: 0 !important; }
+        }
+
+        /* ── External link icon ── */
+        .ext-icon {
+            width: 10px; height: 10px;
+            fill: var(--primary);
+            vertical-align: middle;
+            margin-left: 2px;
+        }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .topbar {
+                height: auto;
+                flex-wrap: wrap;
+                padding: 8px 14px;
+                gap: 6px;
+            }
+            .topbar-name { font-size: 15px; }
+            .topbar-contacts { font-size: 11.5px; gap: 3px 10px; }
+            .topbar-sep { display: none; }
+            .topbar-actions .btn { padding: 5px 9px; font-size: 11px; }
+            .topbar-actions .btn span { display: none; }
+            body { padding-top: 90px; }
+        }
+
+        @media (max-width: 600px) {
+            .page { padding: 18px 14px; margin: 10px; }
+            .info-stacked { flex-direction: column; gap: 12px; }
+            .edu-item, .work-header { flex-direction: column; gap: 2px; }
+            .topbar-contacts { display: none; }
+            .topbar { justify-content: space-between; }
+            body { padding-top: 58px; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- ═══════ TOPBAR ═══════ -->
+<div class="topbar">
+    <span class="topbar-name">Luka D. Stojiljković</span>
+    <div class="topbar-sep"></div>
+    <div class="topbar-contacts">
+        <span class="topbar-contact">
+            <svg viewBox="0 0 384 512"><path d="M192 0C86 0 0 86 0 192c0 144 192 320 192 320s192-176 192-320C384 86 298 0 192 0zm0 272a80 80 0 1 1 0-160 80 80 0 0 1 0 160z"/></svg>
+            Belgrade, Serbia
+        </span>
+        <span class="topbar-contact">
+            <svg viewBox="0 0 512 512"><path d="M502.3 190.8L327.4 338.5c-27.5 23.2-67.3 23.2-94.8 0L64 190.8V416a32 32 0 0 0 32 32h384a32 32 0 0 0 32-32V190.8zM480 96H32A32 32 0 0 0 .5 131.5l210 178.5a32 32 0 0 0 41 0L461.5 131.5A32 32 0 0 0 480 96z"/></svg>
+            <a href="mailto:stojiljkovic.d.luka@gmail.com">stojiljkovic.d.luka@gmail.com</a>
+        </span>
+        <span class="topbar-contact">
+            <svg viewBox="0 0 512 512"><path d="M497.4 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.7 370.7 0 0 1 131.3 204a24 24 0 0 0 6.9-28l-48-112A24 24 0 0 0 62.5 49.2L14.2 73.2A24 24 0 0 0 0 96c0 229.4 186.6 416 416 416a24 24 0 0 0 22.8-14.2l24-48.3a24 24 0 0 0-15.4-27.7z"/></svg>
+            <a href="tel:+381649040342">+381-64-90-40-342</a>
+        </span>
+        <span class="topbar-contact">
+            <svg viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+            <a href="https://linkedin.com/in/luka-stojiljkovi%C4%87" target="_blank">LinkedIn</a>
+        </span>
+        <span class="topbar-contact">
+            <svg viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.8-14.3-112.8-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"/></svg>
+            <a href="https://github.com/lukastojiljkovic" target="_blank">GitHub</a>
+        </span>
+    </div>
+    <div class="topbar-sep"></div>
+    <div class="topbar-actions">
+        <button id="themeToggle" class="btn" title="Toggle dark/light theme">
+            <svg id="themeIcon" viewBox="0 0 512 512"><path d="M283.2 512c78.5 0 150.7-35.6 198.8-96.6a16 16 0 0 0-12.7-26.2c-8.9.5-17.5.7-25.8.7C306 390 192 275.9 192 138.5c0-33.6 6.8-66.5 20.2-97.3a16 16 0 0 0-18-22.1C84.6 44.7 0 155.6 0 283.2 0 409.5 102.5 512 228.8 512h54.4z"/></svg>
+            <span id="themeLabel">Dark</span>
+        </button>
+        <a href="CV_Luka_Stojiljkovic.pdf" download class="btn" title="Download PDF">
+            <svg viewBox="0 0 384 512"><path d="M224 136V0H24A23.94 23.94 0 0 0 0 24v464a23.94 23.94 0 0 0 24 24h336a23.94 23.94 0 0 0 24-24V160H248a24.07 24.07 0 0 1-24-24zm76.45 211.36l-96.42 95.7a16 16 0 0 1-22.56 0l-96.42-95.7C73.42 335.9 81.48 320 97.74 320H152V248a8 8 0 0 1 8-8h48a8 8 0 0 1 8 8v72h54.26c16.26 0 24.32 15.9 12.69 27.36zM377 105L279.1 7a24 24 0 0 0-17-7H256v128h128v-6.1a24 24 0 0 0-7-17z"/></svg>
+            <span>PDF</span>
+        </a>
+    </div>
+</div>
+
+<div class="page">
+
+    <!-- ═══════ HEADER ═══════ -->
+    <div class="header">
+        <h1>Luka D. Stojiljković</h1>
+        <div class="contact-row">
+            <span class="contact-item">
+                <svg viewBox="0 0 384 512"><path d="M192 0C86 0 0 86 0 192c0 144 192 320 192 320s192-176 192-320C384 86 298 0 192 0zm0 272a80 80 0 1 1 0-160 80 80 0 0 1 0 160z"/></svg>
+                Belgrade, Serbia
+            </span>
+            <span class="contact-item">
+                <svg viewBox="0 0 512 512"><path d="M502.3 190.8L327.4 338.5c-27.5 23.2-67.3 23.2-94.8 0L64 190.8V416a32 32 0 0 0 32 32h384a32 32 0 0 0 32-32V190.8zM480 96H32A32 32 0 0 0 .5 131.5l210 178.5a32 32 0 0 0 41 0L461.5 131.5A32 32 0 0 0 480 96z"/></svg>
+                <a href="mailto:stojiljkovic.d.luka@gmail.com">stojiljkovic.d.luka@gmail.com</a>
+            </span>
+            <span class="contact-item">
+                <svg viewBox="0 0 512 512"><path d="M497.4 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.7 370.7 0 0 1 131.3 204a24 24 0 0 0 6.9-28l-48-112A24 24 0 0 0 62.5 49.2L14.2 73.2A24 24 0 0 0 0 96c0 229.4 186.6 416 416 416a24 24 0 0 0 22.8-14.2l24-48.3a24 24 0 0 0-15.4-27.7z"/></svg>
+                <a href="tel:+381649040342">+381-64-90-40-342</a>
+            </span>
+            <span class="contact-item">
+                <svg viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+                <a href="https://linkedin.com/in/luka-stojiljković" target="_blank">Luka Stojiljković<svg class="ext-icon" viewBox="0 0 512 512"><path d="M432 320H400a16 16 0 0 0-16 16V448H64V128H208a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16H48A48 48 0 0 0 0 112V464a48 48 0 0 0 48 48H400a48 48 0 0 0 48-48V336A16 16 0 0 0 432 320zM488 0H348.7A23.3 23.3 0 0 0 332 39.7L370.3 78l-128 128a16 16 0 0 0 0 22.6l22.6 22.6a16 16 0 0 0 22.6 0l128-128L453.7 162A23.3 23.3 0 0 0 488 145.3V24A24 24 0 0 0 464 0z"/></svg></a>
+            </span>
+            <span class="contact-item">
+                <svg viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.8-14.3-112.8-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+                <a href="https://github.com/lukastojiljkovic" target="_blank">lukastojiljkovic<svg class="ext-icon" viewBox="0 0 512 512"><path d="M432 320H400a16 16 0 0 0-16 16V448H64V128H208a16 16 0 0 0 16-16V80a16 16 0 0 0-16-16H48A48 48 0 0 0 0 112V464a48 48 0 0 0 48 48H400a48 48 0 0 0 48-48V336A16 16 0 0 0 432 320zM488 0H348.7A23.3 23.3 0 0 0 332 39.7L370.3 78l-128 128a16 16 0 0 0 0 22.6l22.6 22.6a16 16 0 0 0 22.6 0l128-128L453.7 162A23.3 23.3 0 0 0 488 145.3V24A24 24 0 0 0 464 0z"/></svg></a>
+            </span>
+        </div>
+    </div>
+
+    <div class="content-grid">
+    <div class="col-left">
+
+    <!-- ═══════ EDUCATION ═══════ -->
+    <div class="section">
+        <div class="section-title">Education</div>
+        <div class="edu-item">
+            <div>
+                <span class="degree">BSc — School of Computing RAF</span>,
+                <span class="school">Union University in Belgrade, Computer Science</span>
+            </div>
+            <span class="dates">2023 – Expected 2026</span>
+        </div>
+        <div class="edu-item">
+            <div>
+                <span class="degree">BSc — Mathematical Faculty</span>,
+                <span class="school">Belgrade University, Computer Science undergraduate</span>
+            </div>
+            <span class="dates">2018 – 2023</span>
+        </div>
+    </div>
+
+    <!-- ═══════ WORK EXPERIENCE ═══════ -->
+    <div class="section">
+        <div class="section-title">Work Experience</div>
+        <div class="work-header">
+            <div><span class="role">Software Developer</span> — <span class="company">AI in AEC</span> <span style="color:var(--text-secondary); font-size:13px;">(AEC AI consulting startup)</span></div>
+            <span class="dates">May 2025 – January 2026</span>
+        </div>
+        <ul class="highlights">
+            <li>Developed two web applications: <strong>Neostack</strong>, a prototype web application that helps firms catalog their software stack and license usage; <strong>AI in AEC Flow</strong>, an internal platform for time-task and revenue tracking, for better operational performance.</li>
+        </ul>
+    </div>
+
+    <!-- ═══════ STUDENT PROJECTS ═══════ -->
+    <div class="section">
+        <div class="section-title">Student Projects</div>
+
+        <div class="project">
+            <div class="project-title">Software Design <span class="tech">— Java, Swing, MVC, Design Patterns, PowerDesigner</span></div>
+            <ul class="highlights">
+                <li>Built a plug-in–ready diagram editor whose MVC core leverages Factory, Observer, and Command patterns; Swing widgets auto-register via reflection, with &gt;90% JUnit coverage and Maven-based builds.</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <div class="project-title">Parallel Algorithms <span class="tech">— Python, Multithreading</span></div>
+            <ul class="highlights">
+                <li>Engineered a concurrent image-processing pipeline that shards gigapixel datasets across CPU cores using concurrent.futures and lock-free queues, achieving ~8× speed-up with &lt;1 GB RAM via lazy batching.</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <div class="project-title">Databases <span class="tech">— Java, Oracle SQL</span></div>
+            <ul class="highlights">
+                <li>Crafted a normalized ER/EER schema with stored procedures, triggers, and regex-backed input checks for a ticket-sales simulator; integrated the backend via JDBC into a JavaFX GUI with tuned indexes.</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <div class="project-title">Compilers <span class="tech">— C, C++, Java, ANTLR4, XML</span></div>
+            <ul class="highlights">
+                <li>Authored a formal BareC language specification (lexical grammar, static semantics, pointer model) and a command-line compiler that runs standalone lexical/syntax/semantic passes and prints human-readable ASTs.</li>
+            </ul>
+        </div>
+
+    </div>
+
+    </div><!-- /col-left -->
+    <div class="col-right">
+
+    <!-- ═══════ STUDENT PROJECTS (cont.) ═══════ -->
+    <div class="section">
+        <div class="section-title">Student Projects (cont.)</div>
+
+        <div class="project">
+            <div class="project-title">Machine Learning <span class="tech">— Python, PyTorch, TensorFlow</span></div>
+            <ul class="highlights">
+                <li>Delivered a small ML suite: word2vec concept brief, polynomial regression with L2 and K-fold CV, k-NN Iris classifier, 65%+ Naive Bayes tweet detector, and Titanic predictors (decision tree &amp; handcrafted NumPy NN).</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <div class="project-title">Deep Learning <span class="tech">— Python, PyTorch, NumPy, Pandas, Matplotlib, LaTeX</span></div>
+            <ul class="highlights">
+                <li>Built a multimodal deep-learning classifier combining tabular and image data; performed EDA, engineered features, and trained multiple PyTorch models (MLPs, CNNs, and early-fusion architectures with class-balanced loss and early stopping).</li>
+            </ul>
+        </div>
+
+        <div class="project">
+            <div class="project-title">Evolving CNNs with Genetic Algorithms <span class="tech">— Python, scikit-learn</span></div>
+            <ul class="highlights">
+                <li>Designed a GA that evolves CNN depth, channels, kernels, activations, and learning rates with Lamarckian weight inheritance and a Random-Forest surrogate, cutting compute by ~80% while reaching ~99% MNIST accuracy.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ═══════ PERSONAL PROJECTS ═══════ -->
+    <div class="section">
+        <div class="section-title">Personal Projects</div>
+        <div class="project">
+            <div class="project-title">BizCard — Android contact-sharing app <span class="tech">— Android, Kotlin, Jetpack, QR, SQLite</span></div>
+            <ul class="highlights">
+                <li>Developed a privacy-focused offline Android app for fast contact exchange: users share a digital business card via QR code, enabling instant contact saving without manual entry.</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- ═══════ TECHNOLOGIES ═══════ -->
+    <div class="section">
+        <div class="section-title">Technical Skills</div>
+        <div class="tech-row"><strong>Programming Languages:</strong> C, C++, Java, Kotlin, Python, SQL, JavaScript, TypeScript, Octave, LaTeX</div>
+        <div class="tech-row"><strong>Databases:</strong> MySQL, Oracle SQL, PostgreSQL, SQLite</div>
+        <div class="tech-row"><strong>Frameworks &amp; Libraries:</strong> Spring, JavaFX, Gradle, Swing, PyTorch, scikit-learn, TensorFlow, NumPy, Pandas, Matplotlib</div>
+        <div class="tech-row"><strong>Tools:</strong> Git, GitHub, Regex, Google Colab, Maven, ANTLR4, WSL, Microsoft Office, Docker, Bash / Shell, PowerDesigner</div>
+    </div>
+
+    <!-- ═══════ OTHER INFO ═══════ -->
+    <div class="section">
+        <div class="section-title">Additional Information</div>
+        <div class="info-stacked">
+            <div>
+                <h4>Languages</h4>
+                <ul class="info-list">
+                    <li><strong>Serbian:</strong> Native</li>
+                    <li><strong>English:</strong> Excellent proficiency</li>
+                </ul>
+            </div>
+            <div style="margin-top:10px;">
+                <h4>Achievements</h4>
+                <ul class="info-list">
+                    <li>Karate Black Belt (1st Dan Shodan)</li>
+                    <li>Diploma from Elementary Music School (Piano)</li>
+                    <li>B category driver's license</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    </div><!-- /col-right -->
+    </div><!-- /content-grid -->
+
+</div>
+
+<script>
+    const toggle = document.getElementById('themeToggle');
+    const icon = document.getElementById('themeIcon');
+    const label = document.getElementById('themeLabel');
+
+    const sunPath = 'M256 160c-52.9 0-96 43.1-96 96s43.1 96 96 96 96-43.1 96-96-43.1-96-96-96zm246.4 80.5l-94.7-47.3 33.5-100.4c4.5-13.6-8.4-26.5-21.9-21.9l-100.4 33.5-47.4-94.8c-6.4-12.8-24.6-12.8-31 0l-47.3 94.7L92.7 70.8c-13.6-4.5-26.5 8.4-21.9 21.9l33.5 100.4-94.7 47.4c-12.8 6.4-12.8 24.6 0 31l94.7 47.3-33.5 100.5c-4.5 13.6 8.4 26.5 21.9 21.9l100.4-33.5 47.3 94.7c6.4 12.8 24.6 12.8 31 0l47.3-94.7 100.4 33.5c13.6 4.5 26.5-8.4 21.9-21.9l-33.5-100.4 94.7-47.3c12.8-6.4 12.8-24.6 0-31z';
+    const moonPath = 'M283.2 512c78.5 0 150.7-35.6 198.8-96.6a16 16 0 0 0-12.7-26.2c-8.9.5-17.5.7-25.8.7C306 390 192 275.9 192 138.5c0-33.6 6.8-66.5 20.2-97.3a16 16 0 0 0-18-22.1C84.6 44.7 0 155.6 0 283.2 0 409.5 102.5 512 228.8 512h54.4z';
+
+    // Load saved preference
+    const saved = localStorage.getItem('cv-theme');
+    if (saved === 'dark') applyDark();
+
+    toggle.addEventListener('click', () => {
+        if (document.documentElement.getAttribute('data-theme') === 'dark') {
+            applyLight();
+        } else {
+            applyDark();
+        }
+    });
+
+    function applyDark() {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        icon.innerHTML = '<path d="' + sunPath + '"/>';
+        label.textContent = 'Light';
+        localStorage.setItem('cv-theme', 'dark');
+    }
+
+    function applyLight() {
+        document.documentElement.removeAttribute('data-theme');
+        icon.innerHTML = '<path d="' + moonPath + '"/>';
+        label.textContent = 'Dark';
+        localStorage.setItem('cv-theme', 'light');
+    }
+</script>
+</body>
+</html>
