@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luka D. Stojiljković — CV</title>
+    <title>Luka D. Stojiljković - CV</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -447,12 +447,85 @@
             body { padding-top: 90px; }
         }
 
+        /* ── Mobile contact toggle ── */
+        .mobile-contact-toggle {
+            display: none;
+            align-items: center;
+            gap: 5px;
+            padding: 6px 12px;
+            border: 1.5px solid var(--primary);
+            border-radius: 8px;
+            background: transparent;
+            color: var(--primary);
+            font-family: inherit;
+            font-size: 12px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all .25s;
+            white-space: nowrap;
+        }
+        .mobile-contact-toggle svg {
+            width: 13px; height: 13px;
+            fill: var(--primary);
+            transition: fill .2s, transform .3s;
+        }
+        .mobile-contact-toggle:hover {
+            background: var(--primary);
+            color: #fff;
+        }
+        .mobile-contact-toggle:hover svg { fill: #fff; }
+        .mobile-contact-toggle.active svg {
+            transform: rotate(180deg);
+        }
+
+        .mobile-contact-panel {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            background: var(--bg);
+            border-bottom: 1.5px solid var(--divider);
+            box-shadow: 0 4px 20px rgba(0,40,100,.12);
+            padding: 14px 18px;
+            flex-direction: column;
+            gap: 10px;
+            font-size: 13px;
+            color: var(--text-secondary);
+            transform: translateY(-100%);
+            transition: transform .3s ease;
+        }
+        .mobile-contact-panel.open {
+            transform: translateY(0);
+        }
+        [data-theme="dark"] .mobile-contact-panel {
+            box-shadow: 0 4px 20px rgba(0,0,0,.35);
+        }
+        .mobile-contact-panel .panel-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .mobile-contact-panel .panel-item svg {
+            width: 14px; height: 14px;
+            fill: var(--primary);
+            flex-shrink: 0;
+        }
+        .mobile-contact-panel a {
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .mobile-contact-panel a:hover { opacity: .7; }
+
         @media (max-width: 600px) {
             .page { padding: 18px 14px; margin: 10px; }
             .info-stacked { flex-direction: column; gap: 12px; }
             .edu-item, .work-header { flex-direction: column; gap: 2px; }
             .topbar-contacts { display: none; }
             .topbar { justify-content: space-between; }
+            .mobile-contact-toggle { display: inline-flex; }
+            .mobile-contact-panel { display: flex; }
             body { padding-top: 58px; }
         }
     </style>
@@ -487,6 +560,10 @@
     </div>
     <div class="topbar-sep"></div>
     <div class="topbar-actions">
+        <button id="contactToggle" class="mobile-contact-toggle" title="Show contact info">
+            <svg viewBox="0 0 320 512"><path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0L160 256.4l96.4-96.6c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.9 0z"/></svg>
+            Contact
+        </button>
         <button id="themeToggle" class="btn" title="Toggle dark/light theme">
             <svg id="themeIcon" viewBox="0 0 512 512"><path d="M283.2 512c78.5 0 150.7-35.6 198.8-96.6a16 16 0 0 0-12.7-26.2c-8.9.5-17.5.7-25.8.7C306 390 192 275.9 192 138.5c0-33.6 6.8-66.5 20.2-97.3a16 16 0 0 0-18-22.1C84.6 44.7 0 155.6 0 283.2 0 409.5 102.5 512 228.8 512h54.4z"/></svg>
             <span id="themeLabel">Dark</span>
@@ -495,6 +572,30 @@
             <svg viewBox="0 0 384 512"><path d="M224 136V0H24A23.94 23.94 0 0 0 0 24v464a23.94 23.94 0 0 0 24 24h336a23.94 23.94 0 0 0 24-24V160H248a24.07 24.07 0 0 1-24-24zm76.45 211.36l-96.42 95.7a16 16 0 0 1-22.56 0l-96.42-95.7C73.42 335.9 81.48 320 97.74 320H152V248a8 8 0 0 1 8-8h48a8 8 0 0 1 8 8v72h54.26c16.26 0 24.32 15.9 12.69 27.36zM377 105L279.1 7a24 24 0 0 0-17-7H256v128h128v-6.1a24 24 0 0 0-7-17z"/></svg>
             <span>PDF</span>
         </a>
+    </div>
+</div>
+
+<!-- ═══════ MOBILE CONTACT PANEL ═══════ -->
+<div id="mobileContactPanel" class="mobile-contact-panel">
+    <div class="panel-item">
+        <svg viewBox="0 0 384 512"><path d="M192 0C86 0 0 86 0 192c0 144 192 320 192 320s192-176 192-320C384 86 298 0 192 0zm0 272a80 80 0 1 1 0-160 80 80 0 0 1 0 160z"/></svg>
+        Belgrade, Serbia
+    </div>
+    <div class="panel-item">
+        <svg viewBox="0 0 512 512"><path d="M502.3 190.8L327.4 338.5c-27.5 23.2-67.3 23.2-94.8 0L64 190.8V416a32 32 0 0 0 32 32h384a32 32 0 0 0 32-32V190.8zM480 96H32A32 32 0 0 0 .5 131.5l210 178.5a32 32 0 0 0 41 0L461.5 131.5A32 32 0 0 0 480 96z"/></svg>
+        <a href="mailto:stojiljkovic.d.luka@gmail.com">stojiljkovic.d.luka@gmail.com</a>
+    </div>
+    <div class="panel-item">
+        <svg viewBox="0 0 512 512"><path d="M497.4 361.8l-112-48a24 24 0 0 0-28 6.9l-49.6 60.6A370.7 370.7 0 0 1 131.3 204a24 24 0 0 0 6.9-28l-48-112A24 24 0 0 0 62.5 49.2L14.2 73.2A24 24 0 0 0 0 96c0 229.4 186.6 416 416 416a24 24 0 0 0 22.8-14.2l24-48.3a24 24 0 0 0-15.4-27.7z"/></svg>
+        <a href="tel:+381649040342">+381-64-90-40-342</a>
+    </div>
+    <div class="panel-item">
+        <svg viewBox="0 0 448 512"><path d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z"/></svg>
+        <a href="https://linkedin.com/in/luka-stojiljkovi%C4%87" target="_blank">LinkedIn</a>
+    </div>
+    <div class="panel-item">
+        <svg viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.8-14.3-112.8-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8z"/></svg>
+        <a href="https://github.com/lukastojiljkovic" target="_blank">GitHub</a>
     </div>
 </div>
 
@@ -535,14 +636,14 @@
         <div class="section-title">Education</div>
         <div class="edu-item">
             <div>
-                <span class="degree">BSc — School of Computing RAF</span>,
+                <span class="degree">BSc - School of Computing RAF</span>,
                 <span class="school">Union University in Belgrade, Computer Science</span>
             </div>
             <span class="dates">2023 – Expected 2026</span>
         </div>
         <div class="edu-item">
             <div>
-                <span class="degree">BSc — Mathematical Faculty</span>,
+                <span class="degree">BSc - Mathematical Faculty</span>,
                 <span class="school">Belgrade University, Computer Science undergraduate</span>
             </div>
             <span class="dates">2018 – 2023</span>
@@ -553,7 +654,7 @@
     <div class="section">
         <div class="section-title">Work Experience</div>
         <div class="work-header">
-            <div><span class="role">Software Developer</span> — <span class="company">AI in AEC</span> <span style="color:var(--text-secondary); font-size:13px;">(AEC AI consulting startup)</span></div>
+            <div><span class="role">Software Developer</span> - <span class="company">AI in AEC</span> <span style="color:var(--text-secondary); font-size:13px;">(AEC AI consulting startup)</span></div>
             <span class="dates">May 2025 – January 2026</span>
         </div>
         <ul class="highlights">
@@ -566,28 +667,28 @@
         <div class="section-title">Student Projects</div>
 
         <div class="project">
-            <div class="project-title">Software Design <span class="tech">— Java, Swing, MVC, Design Patterns, PowerDesigner</span></div>
+            <div class="project-title">Software Design <span class="tech">- Java, Swing, MVC, Design Patterns, PowerDesigner</span></div>
             <ul class="highlights">
                 <li>Built a plug-in–ready diagram editor whose MVC core leverages Factory, Observer, and Command patterns; Swing widgets auto-register via reflection, with &gt;90% JUnit coverage and Maven-based builds.</li>
             </ul>
         </div>
 
         <div class="project">
-            <div class="project-title">Parallel Algorithms <span class="tech">— Python, Multithreading</span></div>
+            <div class="project-title">Parallel Algorithms <span class="tech">- Python, Multithreading</span></div>
             <ul class="highlights">
                 <li>Engineered a concurrent image-processing pipeline that shards gigapixel datasets across CPU cores using concurrent.futures and lock-free queues, achieving ~8× speed-up with &lt;1 GB RAM via lazy batching.</li>
             </ul>
         </div>
 
         <div class="project">
-            <div class="project-title">Databases <span class="tech">— Java, Oracle SQL</span></div>
+            <div class="project-title">Databases <span class="tech">- Java, Oracle SQL</span></div>
             <ul class="highlights">
                 <li>Crafted a normalized ER/EER schema with stored procedures, triggers, and regex-backed input checks for a ticket-sales simulator; integrated the backend via JDBC into a JavaFX GUI with tuned indexes.</li>
             </ul>
         </div>
 
         <div class="project">
-            <div class="project-title">Compilers <span class="tech">— C, C++, Java, ANTLR4, XML</span></div>
+            <div class="project-title">Compilers <span class="tech">- C, C++, Java, ANTLR4, XML</span></div>
             <ul class="highlights">
                 <li>Authored a formal BareC language specification (lexical grammar, static semantics, pointer model) and a command-line compiler that runs standalone lexical/syntax/semantic passes and prints human-readable ASTs.</li>
             </ul>
@@ -603,21 +704,21 @@
         <div class="section-title">Student Projects (cont.)</div>
 
         <div class="project">
-            <div class="project-title">Machine Learning <span class="tech">— Python, PyTorch, TensorFlow</span></div>
+            <div class="project-title">Machine Learning <span class="tech">- Python, PyTorch, TensorFlow</span></div>
             <ul class="highlights">
                 <li>Delivered a small ML suite: word2vec concept brief, polynomial regression with L2 and K-fold CV, k-NN Iris classifier, 65%+ Naive Bayes tweet detector, and Titanic predictors (decision tree &amp; handcrafted NumPy NN).</li>
             </ul>
         </div>
 
         <div class="project">
-            <div class="project-title">Deep Learning <span class="tech">— Python, PyTorch, NumPy, Pandas, Matplotlib, LaTeX</span></div>
+            <div class="project-title">Deep Learning <span class="tech">- Python, PyTorch, NumPy, Pandas, Matplotlib, LaTeX</span></div>
             <ul class="highlights">
                 <li>Built a multimodal deep-learning classifier combining tabular and image data; performed EDA, engineered features, and trained multiple PyTorch models (MLPs, CNNs, and early-fusion architectures with class-balanced loss and early stopping).</li>
             </ul>
         </div>
 
         <div class="project">
-            <div class="project-title">Evolving CNNs with Genetic Algorithms <span class="tech">— Python, scikit-learn</span></div>
+            <div class="project-title">Evolving CNNs with Genetic Algorithms <span class="tech">- Python, scikit-learn</span></div>
             <ul class="highlights">
                 <li>Designed a GA that evolves CNN depth, channels, kernels, activations, and learning rates with Lamarckian weight inheritance and a Random-Forest surrogate, cutting compute by ~80% while reaching ~99% MNIST accuracy.</li>
             </ul>
@@ -628,7 +729,7 @@
     <div class="section">
         <div class="section-title">Personal Projects</div>
         <div class="project">
-            <div class="project-title">BizCard — Android contact-sharing app <span class="tech">— Android, Kotlin, Jetpack, QR, SQLite</span></div>
+            <div class="project-title">BizCard - Android contact-sharing app <span class="tech">- Android, Kotlin, Jetpack, QR, SQLite</span></div>
             <ul class="highlights">
                 <li>Developed a privacy-focused offline Android app for fast contact exchange: users share a digital business card via QR code, enabling instant contact saving without manual entry.</li>
             </ul>
@@ -704,6 +805,32 @@
         label.textContent = 'Dark';
         localStorage.setItem('cv-theme', 'light');
     }
+
+    // ── Mobile contact panel toggle ──
+    const contactToggle = document.getElementById('contactToggle');
+    const contactPanel = document.getElementById('mobileContactPanel');
+
+    contactToggle.addEventListener('click', () => {
+        const isOpen = contactPanel.classList.contains('open');
+        if (isOpen) {
+            contactPanel.classList.remove('open');
+            contactToggle.classList.remove('active');
+        } else {
+            // Position panel below topbar
+            const topbarHeight = document.querySelector('.topbar').offsetHeight;
+            contactPanel.style.top = topbarHeight + 'px';
+            contactPanel.classList.add('open');
+            contactToggle.classList.add('active');
+        }
+    });
+
+    // Close panel when clicking outside
+    document.addEventListener('click', (e) => {
+        if (!contactToggle.contains(e.target) && !contactPanel.contains(e.target)) {
+            contactPanel.classList.remove('open');
+            contactToggle.classList.remove('active');
+        }
+    });
 </script>
 </body>
 </html>
