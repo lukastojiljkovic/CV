@@ -22,8 +22,10 @@
             --page-bg: #dce3ed;
             --card-shadow: 0 8px 40px rgba(0,50,100,.10), 0 1.5px 6px rgba(0,0,0,.04);
             --card-border: rgba(255,255,255,.7);
-            --section-gap: 22px;
+            --section-gap: 32px;
             --divider: rgba(0, 79, 144, .12);
+            --project-bg: rgba(0, 79, 144, .03);
+            --project-hover-bg: rgba(0, 79, 144, .07);
         }
 
         [data-theme="dark"] {
@@ -38,8 +40,10 @@
             --page-bg: #0e0e14;
             --card-shadow: 0 8px 40px rgba(0,0,0,.45), 0 1.5px 6px rgba(0,0,0,.2);
             --card-border: rgba(112,184,240,.08);
-            --section-gap: 22px;
+            --section-gap: 32px;
             --divider: rgba(112, 184, 240, .14);
+            --project-bg: rgba(112, 184, 240, .04);
+            --project-hover-bg: rgba(112, 184, 240, .08);
         }
 
         @media print {
@@ -93,42 +97,14 @@
         }
 
         .page {
-            max-width: 960px;
-            margin: 28px auto;
+            max-width: none;
+            margin: 28px 36px;
             background: var(--bg);
-            padding: 36px 42px;
+            padding: 36px 48px;
             box-shadow: var(--card-shadow);
             border-radius: 14px;
             border: 1px solid var(--card-border);
             transition: background .4s, box-shadow .3s, border-color .3s;
-        }
-
-        /* ── Two-column desktop grid ── */
-        .content-grid {
-            display: block;
-        }
-
-        @media (min-width: 1100px) {
-            .page {
-                max-width: calc(100vw - 80px);
-                padding: 38px 52px;
-            }
-            .content-grid {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 0 40px;
-                align-items: start;
-            }
-            .col-left, .col-right {
-                min-width: 0;
-            }
-            .col-right {
-                border-left: 1.5px solid var(--divider);
-                padding-left: 36px;
-            }
-            .col-right .section:first-child {
-                margin-top: 0;
-            }
         }
 
         /* ── Header (now in topbar) ── */
@@ -379,49 +355,14 @@
             opacity: .55;
         }
 
-        /* ── Technologies ── */
-        .tech-row {
-            padding: 7px 12px;
-            margin-bottom: 5px;
-            line-height: 1.55;
-            border-radius: 8px;
-            background: var(--primary-glow);
-            border: 1px solid transparent;
-            transition: background .3s, border-color .3s;
-        }
-        .tech-row:hover {
-            border-color: var(--divider);
-        }
-        .tech-row strong { color: var(--primary); font-weight: 600; }
 
-        /* ── Other info ── */
-        .info-stacked {
-            padding-left: 8px;
-        }
-        .info-stacked h4 {
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 5px;
-            color: var(--primary);
-            text-transform: uppercase;
-            letter-spacing: .8px;
-        }
+
         .info-list {
             list-style: disc;
             padding-left: 20px;
             color: var(--text-secondary);
         }
         .info-list li { margin-bottom: 2px; }
-
-        /* Mobile: side-by-side info */
-        @media (max-width: 1099px) {
-            .info-stacked {
-                display: flex;
-                gap: 30px;
-            }
-            .info-stacked > div { flex: 1; }
-            .info-stacked > div + div { margin-top: 0 !important; }
-        }
 
         /* ── External link icon ── */
         .ext-icon {
@@ -528,6 +469,298 @@
             .mobile-contact-panel { display: flex; }
             body { padding-top: 58px; }
         }
+
+        /* ── Progress Tracker ── */
+        .progress-tracker {
+            position: fixed;
+            right: 28px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            display: none;
+            flex-direction: column;
+            gap: 0;
+            padding: 14px 6px;
+            border-radius: 12px;
+            background: rgba(255,255,255,.72);
+            backdrop-filter: blur(16px) saturate(1.6);
+            -webkit-backdrop-filter: blur(16px) saturate(1.6);
+            border: 1px solid var(--card-border);
+            box-shadow: 0 4px 24px rgba(0,40,100,.08);
+            transition: background .4s, border-color .3s, box-shadow .3s;
+        }
+        [data-theme="dark"] .progress-tracker {
+            background: rgba(25,25,32,.72);
+            box-shadow: 0 4px 24px rgba(0,0,0,.3);
+        }
+        .tracker-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 7px 14px 7px 10px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            font-size: 11px;
+            font-weight: 500;
+            letter-spacing: 0.3px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border-radius: 6px;
+            white-space: nowrap;
+        }
+        .tracker-dash {
+            width: 14px;
+            height: 2px;
+            background: var(--text-secondary);
+            border-radius: 2px;
+            transition: all 0.35s cubic-bezier(.4,0,.2,1);
+            flex-shrink: 0;
+            opacity: 0.35;
+        }
+        .tracker-item.active .tracker-dash {
+            width: 26px;
+            height: 3px;
+            background: var(--primary);
+            opacity: 1;
+        }
+        .tracker-item.active {
+            color: var(--primary);
+            font-weight: 700;
+        }
+        .tracker-item:hover {
+            color: var(--primary);
+            background: var(--primary-glow);
+        }
+        .tracker-item:hover .tracker-dash {
+            background: var(--primary);
+            opacity: 0.7;
+        }
+        .section[id] {
+            scroll-margin-top: 72px;
+        }
+
+        @media (min-width: 1200px) {
+            .progress-tracker { display: flex; }
+            .page { margin-right: 200px; }
+        }
+
+        @media print {
+            .progress-tracker { display: none !important; }
+            .profile-summary { display: none !important; }
+        }
+
+        /* ── Profile Summary ── */
+        .profile-summary {
+            margin-bottom: var(--section-gap);
+            padding: 16px 20px;
+            border-radius: 10px;
+            background: linear-gradient(135deg, var(--primary-glow) 0%, transparent 100%);
+            border-left: 3px solid var(--primary);
+            color: var(--text-secondary);
+            font-size: 13.5px;
+            line-height: 1.65;
+        }
+
+        /* ── Hero Section ── */
+        .hero {
+            text-align: center;
+            padding: 48px 20px 40px;
+            position: relative;
+        }
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            border-radius: 2px;
+            background: linear-gradient(90deg, transparent, var(--primary), transparent);
+        }
+        .hero-name {
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--text);
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+        .hero-name span {
+            color: var(--primary);
+        }
+        .hero-subtitle {
+            font-size: 15px;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            max-width: 640px;
+            margin: 0 auto;
+        }
+        .hero-tags {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 8px;
+            margin-top: 18px;
+        }
+        .hero-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 5px 14px;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--primary);
+            background: var(--primary-glow);
+            border: 1px solid var(--divider);
+            border-radius: 20px;
+            letter-spacing: 0.3px;
+        }
+        .hero-tag svg {
+            width: 12px; height: 12px;
+            fill: var(--primary);
+            opacity: .7;
+        }
+        @media (max-width: 600px) {
+            .hero { padding: 28px 10px 24px; }
+            .hero-name { font-size: 26px; }
+            .hero-subtitle { font-size: 13px; }
+        }
+        @media print {
+            .hero { display: none; }
+        }
+
+        /* ── Project Grid ── */
+        .project-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+        @media (min-width: 800px) {
+            .project-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 14px;
+            }
+        }
+
+        /* ── Projects (card style) ── */
+        .project {
+            margin-bottom: 0;
+            padding: 16px 18px;
+            border-radius: 10px;
+            background: var(--project-bg);
+            border: 1px solid transparent;
+            transition: background .3s, border-color .3s, transform .25s, box-shadow .3s;
+            display: flex;
+            flex-direction: column;
+        }
+        .project:hover {
+            border-color: var(--divider);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,50,100,.06);
+            background: var(--project-hover-bg);
+        }
+        [data-theme="dark"] .project:hover {
+            box-shadow: 0 4px 16px rgba(0,0,0,.2);
+        }
+
+        /* ── Tech Skill Pills ── */
+        .skills-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .skill-category {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 6px;
+        }
+        .skill-category-label {
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-right: 6px;
+            white-space: nowrap;
+        }
+        .skill-pill {
+            display: inline-block;
+            padding: 4px 12px;
+            font-size: 12.5px;
+            color: var(--text-secondary);
+            background: var(--project-bg);
+            border: 1px solid var(--divider);
+            border-radius: 16px;
+            transition: all .25s;
+            white-space: nowrap;
+        }
+        .skill-pill:hover {
+            color: var(--primary);
+            border-color: var(--primary);
+            background: var(--primary-glow);
+            transform: translateY(-1px);
+        }
+
+        /* ── Footer ── */
+        .page-footer {
+            text-align: center;
+            padding: 24px 20px 20px;
+            margin-top: var(--section-gap);
+            border-top: 1px solid var(--divider);
+            font-size: 12px;
+            color: var(--text-secondary);
+            opacity: .6;
+        }
+        @media print {
+            .page-footer { display: none; }
+        }
+
+        /* ── Info Cards ── */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 14px;
+        }
+        .info-card {
+            padding: 14px 18px;
+            border-radius: 10px;
+            background: var(--project-bg);
+            border: 1px solid transparent;
+            transition: border-color .3s;
+        }
+        .info-card:hover {
+            border-color: var(--divider);
+        }
+        @media (max-width: 600px) {
+            .info-grid { grid-template-columns: 1fr; }
+        }
+
+        /* ── Scroll Reveal ── */
+        body.js-loaded .section,
+        body.js-loaded .hero,
+        body.js-loaded .profile-summary {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        body.js-loaded .section.revealed,
+        body.js-loaded .hero.revealed,
+        body.js-loaded .profile-summary.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Staggered project cards */
+        body.js-loaded .project {
+            opacity: 0;
+            transform: translateY(14px);
+            transition: opacity 0.45s ease, transform 0.45s ease, background .3s, border-color .3s, box-shadow .3s;
+        }
+        body.js-loaded .project.card-revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
     </style>
 </head>
 <body>
@@ -599,6 +832,30 @@
     </div>
 </div>
 
+<!-- ═══════ PROGRESS TRACKER ═══════ -->
+<nav class="progress-tracker" id="progressTracker">
+    <a href="#education" class="tracker-item active" data-section="education">
+        <span class="tracker-dash"></span>
+        <span class="tracker-label">Education</span>
+    </a>
+    <a href="#experience" class="tracker-item" data-section="experience">
+        <span class="tracker-dash"></span>
+        <span class="tracker-label">Experience</span>
+    </a>
+    <a href="#student-projects" class="tracker-item" data-section="projects">
+        <span class="tracker-dash"></span>
+        <span class="tracker-label">Projects</span>
+    </a>
+    <a href="#skills" class="tracker-item" data-section="skills">
+        <span class="tracker-dash"></span>
+        <span class="tracker-label">Skills</span>
+    </a>
+    <a href="#additional" class="tracker-item" data-section="additional">
+        <span class="tracker-dash"></span>
+        <span class="tracker-label">Info</span>
+    </a>
+</nav>
+
 <div class="page">
 
     <!-- ═══════ HEADER ═══════ -->
@@ -628,11 +885,30 @@
         </div>
     </div>
 
-    <div class="content-grid">
-    <div class="col-left">
+    <!-- ═══════ HERO ═══════ -->
+    <div class="hero">
+        <div class="hero-name">Luka D. <span>Stojiljković</span></div>
+        <p class="hero-subtitle">
+            Computer Science student at RAF Belgrade with professional experience building web applications for startups. Focused on software engineering, machine learning, and systems programming, passionate about writing clean, well-architected code and solving complex engineering challenges.
+        </p>
+        <div class="hero-tags">
+            <span class="hero-tag">
+                <svg viewBox="0 0 640 512"><path d="M278.9 511.5l-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2z"/></svg>
+                Software Engineering
+            </span>
+            <span class="hero-tag">
+                <svg viewBox="0 0 576 512"><path d="M208 0c-29.9 0-54.7 20.5-61.8 48.2-.8 0-1.4-.2-2.2-.2-35.3 0-64 28.7-64 64 0 4.8.6 9.5 1.7 14C52.5 138 32 166.6 32 200c0 12.6 3.2 24.3 8.4 34.9C16.3 248.7 0 274.3 0 304c0 33.3 20.4 61.9 49.4 73.9-.9 4.6-1.4 9.3-1.4 14.1 0 39.8 32.2 72 72 72 4.1 0 8.1-.5 12-1.2 9.6 28.5 36.2 49.2 68 49.2 39.8 0 72-32.2 72-72V64c0-35.3-28.7-64-64-64zm368 304c0-29.7-16.3-55.3-40.4-69.1 5.2-10.6 8.4-22.3 8.4-34.9 0-33.4-20.5-62-49.7-74 1-4.5 1.7-9.2 1.7-14 0-35.3-28.7-64-64-64-.8 0-1.5.2-2.2.2C422.7 20.5 397.9 0 368 0c-35.3 0-64 28.6-64 64v384c0 39.8 32.2 72 72 72 31.8 0 58.4-20.7 68-49.2 3.9.7 7.9 1.2 12 1.2 39.8 0 72-32.2 72-72 0-4.8-.5-9.5-1.4-14.1 29-12 49.4-40.6 49.4-73.9z"/></svg>
+                Machine Learning
+            </span>
+            <span class="hero-tag">
+                <svg viewBox="0 0 512 512"><path d="M0 224h192V32H0v192zM320 32v192h192V32H320zM0 480h192V288H0v192zM320 480h192V288H320v192z"/></svg>
+                Systems Programming
+            </span>
+        </div>
+    </div>
 
     <!-- ═══════ EDUCATION ═══════ -->
-    <div class="section">
+    <div class="section" id="education">
         <div class="section-title">Education</div>
         <div class="edu-item">
             <div>
@@ -651,7 +927,7 @@
     </div>
 
     <!-- ═══════ WORK EXPERIENCE ═══════ -->
-    <div class="section">
+    <div class="section" id="experience">
         <div class="section-title">Work Experience</div>
         <div class="work-header">
             <div><span class="role">Software Developer</span> - <span class="company">AI in AEC</span> <span style="color:var(--text-secondary); font-size:13px;">(AEC AI consulting startup)</span></div>
@@ -663,101 +939,149 @@
     </div>
 
     <!-- ═══════ STUDENT PROJECTS ═══════ -->
-    <div class="section">
+    <div class="section" id="student-projects">
         <div class="section-title">Student Projects</div>
+
+        <div class="project-grid">
 
         <div class="project">
             <div class="project-title">Software Design <span class="tech">- Java, Swing, MVC, Design Patterns, PowerDesigner</span></div>
             <ul class="highlights">
-                <li>Built a plug-in–ready diagram editor whose MVC core leverages Factory, Observer, and Command patterns; Swing widgets auto-register via reflection, with &gt;90% JUnit coverage and Maven-based builds.</li>
+                <li>Built a desktop diagram editor application using Java Swing with a clean MVC architecture. The app allows users to create, edit, and connect visual diagram elements with full mouse-driven interaction, including drag-and-drop, resizing, and multi-selection.</li>
+                <li>Implemented undo/redo functionality using the Command pattern, a dynamic plug-in system that loads new element types from JAR files at runtime via Java reflection, and Factory + Observer patterns to decouple the model from the view layer.</li>
+                <li>Achieved &gt;90% test coverage with JUnit, used Maven for build automation, and modeled the complete system architecture in PowerDesigner before implementation.</li>
             </ul>
         </div>
 
         <div class="project">
             <div class="project-title">Parallel Algorithms <span class="tech">- Python, Multithreading</span></div>
             <ul class="highlights">
-                <li>Engineered a concurrent image-processing pipeline that shards gigapixel datasets across CPU cores using concurrent.futures and lock-free queues, achieving ~8× speed-up with &lt;1 GB RAM via lazy batching.</li>
+                <li>Developed a high-performance image processing system that applies filters and transformations to gigapixel-scale datasets by distributing work across all available CPU cores using Python’s concurrent.futures and custom lock-free queues for thread-safe data flow.</li>
+                <li>Achieved approximately 8× speed-up over sequential processing while maintaining under 1 GB of memory usage through lazy batch loading, where images are processed in configurable chunks rather than loaded entirely into RAM.</li>
             </ul>
         </div>
 
         <div class="project">
             <div class="project-title">Databases <span class="tech">- Java, Oracle SQL</span></div>
             <ul class="highlights">
-                <li>Crafted a normalized ER/EER schema with stored procedures, triggers, and regex-backed input checks for a ticket-sales simulator; integrated the backend via JDBC into a JavaFX GUI with tuned indexes.</li>
+                <li>Designed and built a ticket sales management system with a fully normalized relational database (ER/EER model) in Oracle SQL. The system handles event management, seat allocation, user registration, and purchase tracking with complex business logic.</li>
+                <li>Implemented PL/SQL stored procedures for automated revenue reporting and dynamic seat availability, database triggers for audit logging, and regex-based input validation. Connected the database to an interactive JavaFX desktop interface via JDBC with tuned composite indexes for fast querying.</li>
             </ul>
         </div>
 
         <div class="project">
             <div class="project-title">Compilers <span class="tech">- C, C++, Java, ANTLR4, XML</span></div>
             <ul class="highlights">
-                <li>Authored a formal BareC language specification (lexical grammar, static semantics, pointer model) and a command-line compiler that runs standalone lexical/syntax/semantic passes and prints human-readable ASTs.</li>
+                <li>Authored a complete formal specification for “BareC,” a C-like teaching language, covering its lexical grammar, static semantic rules, and pointer model. Then built a fully functional command-line compiler that processes BareC source files through distinct compilation phases.</li>
+                <li>The compiler pipeline includes a hand-written lexer, a recursive-descent parser that generates typed Abstract Syntax Trees, a scope-aware symbol table for variable resolution, and a semantic analysis pass with type checking and comprehensive error diagnostics.</li>
             </ul>
         </div>
-
-    </div>
-
-    </div><!-- /col-left -->
-    <div class="col-right">
-
-    <!-- ═══════ STUDENT PROJECTS (cont.) ═══════ -->
-    <div class="section">
-        <div class="section-title">Student Projects (cont.)</div>
 
         <div class="project">
             <div class="project-title">Machine Learning <span class="tech">- Python, PyTorch, TensorFlow</span></div>
             <ul class="highlights">
-                <li>Delivered a small ML suite: word2vec concept brief, polynomial regression with L2 and K-fold CV, k-NN Iris classifier, 65%+ Naive Bayes tweet detector, and Titanic predictors (decision tree &amp; handcrafted NumPy NN).</li>
+                <li>Delivered a comprehensive ML portfolio spanning multiple paradigms: word2vec embeddings, polynomial regression with L2 regularization and K-fold cross-validation, k-nearest neighbors classification on the Iris dataset, a Naive Bayes tweet sentiment classifier achieving 65%+ accuracy, and Titanic survival prediction using both decision trees and a neural network built from scratch in NumPy.</li>
+                <li>Emphasis on understanding fundamentals first: manual implementation of backpropagation, custom distance metrics, and probability estimation, before leveraging library abstractions like scikit-learn and PyTorch.</li>
             </ul>
         </div>
 
         <div class="project">
             <div class="project-title">Deep Learning <span class="tech">- Python, PyTorch, NumPy, Pandas, Matplotlib, LaTeX</span></div>
             <ul class="highlights">
-                <li>Built a multimodal deep-learning classifier combining tabular and image data; performed EDA, engineered features, and trained multiple PyTorch models (MLPs, CNNs, and early-fusion architectures with class-balanced loss and early stopping).</li>
+                <li>Built a multimodal deep learning system that classifies data by combining both tabular (structured) and image (unstructured) inputs. Performed extensive exploratory data analysis, feature engineering, and data augmentation to improve model generalization.</li>
+                <li>Trained and compared multiple PyTorch architectures including standalone MLPs, CNNs, and early-fusion models that merge the two data modalities. Applied class-balanced loss functions to handle data imbalance and early stopping to prevent overfitting, with detailed performance analysis across fusion strategies.</li>
             </ul>
         </div>
 
         <div class="project">
             <div class="project-title">Evolving CNNs with Genetic Algorithms <span class="tech">- Python, scikit-learn</span></div>
             <ul class="highlights">
-                <li>Designed a GA that evolves CNN depth, channels, kernels, activations, and learning rates with Lamarckian weight inheritance and a Random-Forest surrogate, cutting compute by ~80% while reaching ~99% MNIST accuracy.</li>
+                <li>Designed a genetic algorithm framework that automatically discovers optimal CNN architectures for image classification. The GA evolves network depth, channel widths, kernel sizes, activation functions, and learning rates across generations, using Lamarckian weight inheritance so offspring networks start from pre-trained parent weights.</li>
+                <li>Integrated a Random Forest surrogate model that predicts architecture fitness before full training, reducing total computation by approximately 80% while still reaching ~99% accuracy on MNIST. Uses tournament selection, multi-point crossover, and adaptive mutation rates.</li>
             </ul>
         </div>
+        </div><!-- /project-grid -->
     </div>
 
     <!-- ═══════ PERSONAL PROJECTS ═══════ -->
-    <div class="section">
+    <div class="section" id="personal-projects">
         <div class="section-title">Personal Projects</div>
         <div class="project">
             <div class="project-title">BizCard - Android contact-sharing app <span class="tech">- Android, Kotlin, Jetpack, QR, SQLite</span></div>
             <ul class="highlights">
-                <li>Developed a privacy-focused offline Android app for fast contact exchange: users share a digital business card via QR code, enabling instant contact saving without manual entry.</li>
+                <li>Developed a privacy-first Android application for instant contact sharing. Users create a customizable digital business card and share it via dynamically generated QR codes. Recipients scan the code to save the contact directly, eliminating manual data entry.</li>
+                <li>Built with Jetpack Compose for a modern reactive UI, Room database for offline-first local storage, and CameraX for real-time QR code scanning. Fully offline architecture with zero cloud dependency, giving users full control over their data.</li>
             </ul>
         </div>
     </div>
 
     <!-- ═══════ TECHNOLOGIES ═══════ -->
-    <div class="section">
+    <div class="section" id="skills">
         <div class="section-title">Technical Skills</div>
-        <div class="tech-row"><strong>Programming Languages:</strong> C, C++, Java, Kotlin, Python, SQL, JavaScript, TypeScript, Octave, LaTeX</div>
-        <div class="tech-row"><strong>Databases:</strong> MySQL, Oracle SQL, PostgreSQL, SQLite</div>
-        <div class="tech-row"><strong>Frameworks &amp; Libraries:</strong> Spring, JavaFX, Gradle, Swing, PyTorch, scikit-learn, TensorFlow, NumPy, Pandas, Matplotlib</div>
-        <div class="tech-row"><strong>Tools:</strong> Git, GitHub, Regex, Google Colab, Maven, ANTLR4, WSL, Microsoft Office, Docker, Bash / Shell, PowerDesigner</div>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <span class="skill-category-label">Languages</span>
+                <span class="skill-pill">C</span>
+                <span class="skill-pill">C++</span>
+                <span class="skill-pill">Java</span>
+                <span class="skill-pill">Kotlin</span>
+                <span class="skill-pill">Python</span>
+                <span class="skill-pill">SQL</span>
+                <span class="skill-pill">JavaScript</span>
+                <span class="skill-pill">TypeScript</span>
+                <span class="skill-pill">Octave</span>
+                <span class="skill-pill">LaTeX</span>
+            </div>
+            <div class="skill-category">
+                <span class="skill-category-label">Databases</span>
+                <span class="skill-pill">MySQL</span>
+                <span class="skill-pill">Oracle SQL</span>
+                <span class="skill-pill">PostgreSQL</span>
+                <span class="skill-pill">SQLite</span>
+            </div>
+            <div class="skill-category">
+                <span class="skill-category-label">Frameworks</span>
+                <span class="skill-pill">Spring</span>
+                <span class="skill-pill">JavaFX</span>
+                <span class="skill-pill">Gradle</span>
+                <span class="skill-pill">Swing</span>
+                <span class="skill-pill">PyTorch</span>
+                <span class="skill-pill">scikit-learn</span>
+                <span class="skill-pill">TensorFlow</span>
+                <span class="skill-pill">NumPy</span>
+                <span class="skill-pill">Pandas</span>
+                <span class="skill-pill">Matplotlib</span>
+            </div>
+            <div class="skill-category">
+                <span class="skill-category-label">Tools</span>
+                <span class="skill-pill">Git</span>
+                <span class="skill-pill">GitHub</span>
+                <span class="skill-pill">Docker</span>
+                <span class="skill-pill">Maven</span>
+                <span class="skill-pill">ANTLR4</span>
+                <span class="skill-pill">Google Colab</span>
+                <span class="skill-pill">WSL</span>
+                <span class="skill-pill">Bash / Shell</span>
+                <span class="skill-pill">Regex</span>
+                <span class="skill-pill">PowerDesigner</span>
+                <span class="skill-pill">Microsoft Office</span>
+            </div>
+        </div>
     </div>
 
     <!-- ═══════ OTHER INFO ═══════ -->
-    <div class="section">
+    <div class="section" id="additional">
         <div class="section-title">Additional Information</div>
-        <div class="info-stacked">
-            <div>
-                <h4>Languages</h4>
+        <div class="info-grid">
+            <div class="info-card">
+                <h4 style="font-size:12px; font-weight:700; color:var(--primary); text-transform:uppercase; letter-spacing:.8px; margin-bottom:8px;">Languages</h4>
                 <ul class="info-list">
                     <li><strong>Serbian:</strong> Native</li>
                     <li><strong>English:</strong> Excellent proficiency</li>
                 </ul>
             </div>
-            <div style="margin-top:10px;">
-                <h4>Achievements</h4>
+            <div class="info-card">
+                <h4 style="font-size:12px; font-weight:700; color:var(--primary); text-transform:uppercase; letter-spacing:.8px; margin-bottom:8px;">Achievements</h4>
                 <ul class="info-list">
                     <li>Karate Black Belt (1st Dan Shodan)</li>
                     <li>Diploma from Elementary Music School (Piano)</li>
@@ -767,8 +1091,10 @@
         </div>
     </div>
 
-    </div><!-- /col-right -->
-    </div><!-- /content-grid -->
+    <!-- ═══════ FOOTER ═══════ -->
+    <div class="page-footer">
+        Built with care · Luka D. Stojiljković · 2026
+    </div>
 
 </div>
 
@@ -830,6 +1156,98 @@
             contactPanel.classList.remove('open');
             contactToggle.classList.remove('active');
         }
+    });
+
+    // ── Scroll Reveal (progressive) ──
+    document.body.classList.add('js-loaded');
+
+    const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('revealed');
+            }
+        });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+
+    document.querySelectorAll('.section, .profile-summary, .hero').forEach(el => {
+        revealObserver.observe(el);
+    });
+
+    // ── Staggered project card reveal ──
+    const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                // Find all sibling project cards in the same grid
+                const grid = entry.target.closest('.project-grid, .section');
+                if (grid) {
+                    const cards = grid.querySelectorAll('.project');
+                    cards.forEach((card, i) => {
+                        setTimeout(() => card.classList.add('card-revealed'), i * 80);
+                    });
+                } else {
+                    entry.target.classList.add('card-revealed');
+                }
+                cardObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
+
+    // Observe only the first project in each grid to trigger the stagger
+    document.querySelectorAll('.project-grid, .section').forEach(container => {
+        const firstProject = container.querySelector('.project');
+        if (firstProject) cardObserver.observe(firstProject);
+    });
+
+    // ── Progress Tracker Scroll Spy ──
+    const trackerItems = document.querySelectorAll('.tracker-item');
+    const sectionMap = {
+        'education':  ['education'],
+        'experience': ['experience'],
+        'projects':   ['student-projects', 'personal-projects'],
+        'skills':     ['skills'],
+        'additional': ['additional']
+    };
+
+    function updateTracker() {
+        const scrollY = window.scrollY + window.innerHeight / 3;
+        let activeKey = null;
+        let closestDist = Infinity;
+
+        for (const [key, ids] of Object.entries(sectionMap)) {
+            for (const id of ids) {
+                const el = document.getElementById(id);
+                if (!el) continue;
+                const top = el.getBoundingClientRect().top + window.scrollY;
+                const dist = scrollY - top;
+                if (dist >= 0 && dist < closestDist) {
+                    closestDist = dist;
+                    activeKey = key;
+                }
+            }
+        }
+
+        // If at very top, default to first
+        if (!activeKey) activeKey = 'education';
+
+        trackerItems.forEach(item => {
+            item.classList.toggle('active', item.dataset.section === activeKey);
+        });
+    }
+
+    window.addEventListener('scroll', updateTracker, { passive: true });
+    window.addEventListener('resize', updateTracker);
+    updateTracker();
+
+    // Tracker click: smooth scroll with offset
+    trackerItems.forEach(item => {
+        item.addEventListener('click', (e) => {
+            e.preventDefault();
+            const href = item.getAttribute('href');
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        });
     });
 </script>
 </body>
