@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luka D. Stojiljković - CV</title>
+    <title>Luka D. Stojiljković - Portfolio</title>
+    <meta name="description" content="Portfolio of Luka D. Stojiljković — Computer Science student at RAF Belgrade. Software engineering, machine learning, and systems programming.">
+    <meta name="author" content="Luka D. Stojiljković">
+    <meta property="og:title" content="Luka D. Stojiljković - Portfolio">
+    <meta property="og:description" content="Computer Science student at RAF Belgrade with professional experience building web applications. Focused on software engineering, machine learning, and systems programming.">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="favicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@300;400;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -11,9 +17,11 @@
 </head>
 <body>
 
+<a href="#education" class="skip-to-content">Skip to content</a>
+
 <!-- ═══════ TOPBAR ═══════ -->
-<div class="topbar">
-    <span class="topbar-name">Luka D. Stojiljković</span>
+<header class="topbar" role="banner">
+    <span class="topbar-name" id="topbarName" title="Scroll to top">Luka D. Stojiljković</span>
     <div class="topbar-sep"></div>
     <div class="topbar-contacts">
         <span class="topbar-contact">
@@ -43,7 +51,7 @@
             <svg viewBox="0 0 320 512"><path d="M143 352.3L7 216.3c-9.4-9.4-9.4-24.6 0-33.9l22.6-22.6c9.4-9.4 24.6-9.4 33.9 0L160 256.4l96.4-96.6c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9l-136 136c-9.2 9.4-24.4 9.4-33.9 0z"/></svg>
             Contact
         </button>
-        <button id="themeToggle" class="btn" title="Toggle dark/light theme">
+        <button id="themeToggle" class="btn" title="Toggle theme: Dark / Light / System" aria-label="Toggle theme">
             <svg id="themeIcon" viewBox="0 0 512 512"><path d="M283.2 512c78.5 0 150.7-35.6 198.8-96.6a16 16 0 0 0-12.7-26.2c-8.9.5-17.5.7-25.8.7C306 390 192 275.9 192 138.5c0-33.6 6.8-66.5 20.2-97.3a16 16 0 0 0-18-22.1C84.6 44.7 0 155.6 0 283.2 0 409.5 102.5 512 228.8 512h54.4z"/></svg>
             <span id="themeLabel">Dark</span>
         </button>
@@ -52,7 +60,7 @@
             <span>PDF</span>
         </a>
     </div>
-</div>
+</header>
 
 <!-- ═══════ MOBILE CONTACT PANEL ═══════ -->
 <div id="mobileContactPanel" class="mobile-contact-panel">
@@ -102,7 +110,7 @@
     </a>
 </nav>
 
-<div class="page">
+<main class="page">
 
     <!-- ═══════ HEADER ═══════ -->
     <div class="header">
@@ -338,11 +346,11 @@
     </div>
 
     <!-- ═══════ FOOTER ═══════ -->
-    <div class="page-footer">
-        Built with care · Luka D. Stojiljković · 2026
-    </div>
+    <footer class="page-footer">
+        Built with care · Luka D. Stojiljković · Portfolio 2026
+    </footer>
 
-</div>
+</main>
 <script src="js/main.js"></script>
 </body>
 </html>
