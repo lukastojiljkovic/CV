@@ -58,10 +58,10 @@
 
 /* ── Skip to content (accessibility) ── */
 .skip-to-content {
-    position: absolute;
-    top: -100px;
+    position: fixed;
+    top: 0;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateY(-100%);
     z-index: 10000;
     padding: 8px 20px;
     background: var(--primary);
@@ -70,10 +70,14 @@
     font-weight: 600;
     border-radius: 0 0 8px 8px;
     text-decoration: none;
-    transition: top .2s ease;
+    transition: transform .2s ease;
+    opacity: 0;
+    pointer-events: none;
 }
 .skip-to-content:focus {
-    top: 0;
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+    pointer-events: auto;
 }
 
 /* ── Base ── */
