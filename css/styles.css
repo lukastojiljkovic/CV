@@ -423,6 +423,16 @@ body {
 [data-theme="light"] .meta-key { text-shadow: none; }
 .meta-val { color: var(--fg-soft); }
 .meta-val .cyr { color: var(--fg-muted); font-size: 0.92em; }
+.meta-bin {
+    color: var(--cyan);
+    font-family: var(--mono);
+    font-size: 9.5px;
+    letter-spacing: 0.08em;
+    opacity: 0.55;
+    margin-top: 1px;
+    text-shadow: 0 0 6px var(--cyan-glow);
+}
+[data-theme="light"] .meta-bin { text-shadow: none; opacity: 0.7; }
 
 .meta-status {
     background: linear-gradient(180deg, transparent, rgba(0, 240, 255, 0.06));
