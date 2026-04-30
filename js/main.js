@@ -14,12 +14,14 @@
     const html = document.documentElement;
     const mqDark = window.matchMedia('(prefers-color-scheme: dark)');
 
+    // First-visit default is 'dark'. 'system' is honoured only if the user
+    // has explicitly cycled to it (and is then persisted to localStorage so
+    // we can distinguish "first visit" from "user picked system").
     function getMode() {
-        return localStorage.getItem(THEME_KEY) || 'system';
+        return localStorage.getItem(THEME_KEY) || 'dark';
     }
 
     function applyTheme(mode) {
-        // Default (no attr) is the cyberpunk dark theme. Light is opt-in.
         const isLight = mode === 'light' || (mode === 'system' && !mqDark.matches);
         if (isLight) {
             html.setAttribute('data-theme', 'light');
@@ -31,17 +33,15 @@
         }
         if (themeBtn) {
             themeBtn.setAttribute('aria-label',
-                `Toggle theme (current: ${mode}). Cycle: System → Dark → Light.`);
+                `Toggle theme (current: ${mode}). Cycle: Dark → Light → System.`);
         }
-        if (mode === 'system') {
-            localStorage.removeItem(THEME_KEY);
-        } else {
-            localStorage.setItem(THEME_KEY, mode);
-        }
+        // Persist every explicit choice, including 'system'.
+        localStorage.setItem(THEME_KEY, mode);
     }
 
+    // Cycle order matches new default: Dark → Light → System → Dark …
     function nextMode(m) {
-        return m === 'system' ? 'dark' : m === 'dark' ? 'light' : 'system';
+        return m === 'dark' ? 'light' : m === 'light' ? 'system' : 'dark';
     }
 
     applyTheme(getMode());
