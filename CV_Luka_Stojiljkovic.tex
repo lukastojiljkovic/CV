@@ -1,0 +1,303 @@
+\documentclass[11pt, a4paper]{article}
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=0.5 cm,
+    bottom=0.5 cm,
+    left=0.5 cm,
+    right=0.5 cm,
+    footskip=0 cm,
+]{geometry}
+\usepackage[explicit]{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 79, 144}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Luka Stojiljkovic - CV},
+    pdfauthor={Luka Stojiljkovic},
+    pdfsubject={Computer Science, Software Development},
+    pdfkeywords={Java, Python, C, C++, Kotlin, SQL, JavaScript, TypeScript, MATLAB, Spring Boot, Spring Security, Hibernate, JPA, JWT, REST APIs, Microservices, React, Vite, Tailwind CSS, shadcn/ui, Jetpack Compose, Material 3, Hilt, Retrofit, Room, OkHttp, PostgreSQL, MySQL, ChromaDB, Machine Learning, Deep Learning, PyTorch, TensorFlow, Keras, scikit-learn, NumPy, Pandas, OpenCV, Hugging Face, transformers, Wav2Vec2, sentence-transformers, RAG, LLM, Multi-Agent LLMs, ReAct, Ollama, Gemma, LM Studio, CNNs, Transfer Learning, ResNet, AlexNet, Convolutional Neural Networks, Genetic Algorithms, Speech Recognition, Computer Vision, NFC HCE, Android, Docker, Kubernetes, NVIDIA Container Toolkit, CUDA, Git, GitHub, JUnit, Mockito, Cypress, Vitest, Software Developer, Team Lead, Full Stack},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+% Ensure that generated pdf is machine readable/ATS parsable:
+\ifPDFTeX
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage[default, type1]{sourcesanspro}
+
+% Some settings:
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.2cm}
+\makeatletter
+\makeatother
+
+\titleformat{\section}{
+    \needspace{4\baselineskip}
+    \Large\color{primaryColor}
+}{
+}{
+}{
+    \textbf{#1}\hspace{0.15cm}\titlerule[0.8pt]\hspace{-0.1cm}
+}[]
+
+\titlespacing{\section}{
+    -1pt
+}{
+    0.2 cm
+}{
+    0.2 cm
+}
+
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.05 cm,
+        partopsep=0pt,
+        itemsep=2pt,
+        leftmargin=0.30 cm + 3pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.1 cm,
+        parsep=0.1 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=5pt
+    ]
+}{
+    \end{itemize}
+}
+
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{
+        0.25 cm + 0.00001 cm
+    }{
+        0.25 cm + 0.00001 cm
+    }
+}{
+    \end{adjustwidth}
+}
+
+\newenvironment{twocolentry}[2][]{
+    \onecolentry
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn \raggedleft \secondColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{threecolentry}[3][]{
+    \onecolentry
+    \def\thirdColumn{#3}
+    \setcolumnwidth{1 cm, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright #2} \switchcolumn
+}{
+    \switchcolumn \raggedleft \thirdColumn
+    \end{paracol}
+    \endonecolentry
+}
+
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\color{primaryColor}\linespread{1.2}
+}
+
+\newcommand{\placelastupdatedtext}{%
+  \AddToShipoutPictureFG*{%
+    \put(
+        \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
+        \LenToUnit{\paperheight-1.0 cm}
+    ){\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{}\hspace{\widthof{}}
+    }}}%
+  }%
+}%
+
+% save the original href command in a new command:
+\let\hrefWithoutArrow\href
+
+% new command for external links:
+\renewcommand{\href}[2]{\hrefWithoutArrow{#1}{\ifthenelse{\equal{#2}{}}{ }{#2 }\raisebox{.15ex}{\footnotesize \faExternalLink*}}}
+
+
+\begin{document}
+    \newcommand{\AND}{\unskip
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox
+        \ignorespaces
+    }
+    \newsavebox\ANDbox
+    \sbox\ANDbox{}
+
+    \placelastupdatedtext
+    \begin{header}
+        \fontsize{28 pt}{28 pt}
+        \hrefWithoutArrow{https://lukastojiljkovic.github.io/CV/}{\textbf{\textbf{Luka D. Stojiljkovi\'{c}}  }}
+
+        \vspace{0.1 cm}
+
+        \normalsize
+        \mbox{{\footnotesize\faMapMarker*}\hspace*{0.13cm}Belgrade, Serbia}%
+        \kern 0.15 cm%
+        \AND%
+        \kern 0.15 cm%
+        \mbox{\hrefWithoutArrow{mailto:stojiljkovic.d.luka@gmail.com}{{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}stojiljkovic.d.luka@gmail.com}}%
+        \kern 0.15 cm%
+        \AND%
+        \kern 0.15 cm%
+        \mbox{\hrefWithoutArrow{tel:+381-64-90-40-342}{{\footnotesize\faPhone*}\hspace*{0.13cm}+381-64-90-40-342}}%
+        \kern 0.15 cm%
+        \AND%
+        \kern 0.15 cm%
+        \mbox{\hrefWithoutArrow{https://linkedin.com/in/luka-stojiljković}{{\footnotesize\faLinkedinIn}\hspace*{0.13cm}Luka Stojiljkovi\'{c}}}%
+        \kern 0.15 cm%
+        \AND%
+        \kern 0.15 cm%
+        \mbox{\hrefWithoutArrow{https://github.com/lukastojiljkovic}{{\footnotesize\faGithub}\hspace*{0.13cm}lukastojiljkovic}}%
+    \end{header}
+
+    \vspace{0.15 cm - 0 cm}
+
+
+    \section{Education}
+
+        \begin{threecolentry}{\textbf{BSc}}{
+            2023 -- Expected 2026
+        }
+        \begin{highlights}
+        School of Computing \textbf{RAF}, Union University in Belgrade, Computer Science
+            \end{highlights}
+        \end{threecolentry}
+        \begin{threecolentry}{\textbf{BSc}}{
+            2018 -- 2023
+        }
+        \begin{highlights}
+        Mathematical Faculty, Belgrade University, Computer Science undergraduate
+            \end{highlights}
+        \end{threecolentry}
+
+    \section{Work Experience}
+
+\begin{twocolentry}{May 2025 -- January 2026}
+    \textbf{Software Developer} -- \textbf{AI in AEC} (AEC AI consulting startup)
+\end{twocolentry}
+\begin{highlights}
+    \item Developed two web applications: \textbf{Neostack}, a prototype web application that helps firms catalog their software stack and license usage; \textbf{AI in AEC Flow}, an internal platform for time-task and revenue tracking, for better operational performance.
+\end{highlights}
+
+    \section{Student Projects}
+
+\textbf{Software Engineering:} \textit{Java, Spring Boot, JPA/Hibernate, JWT, PostgreSQL, JUnit, Mockito, Docker, React, TypeScript, Vite, Tailwind, Vitest, Cypress, Kotlin, Jetpack Compose, Ollama, RAG}
+\begin{highlights}
+    \item Led a 25-person team to deliver a full-stack enterprise banking platform across backend, web, mobile, and DevOps, and shipped a fully self-hosted autonomous LLM banking assistant on top.
+\end{highlights}
+
+\vspace{0.05 cm}
+\textbf{Artificial Intelligence, Machine Learning, and Deep Learning:} \textit{Python, PyTorch, TensorFlow, Keras, NumPy, scikit-learn, Hugging Face Transformers, Wav2Vec2, OpenCV, MATLAB}
+\begin{highlights}
+    \item Built across the modern ML stack -- from-scratch neural-network and Word2Vec implementations in pure NumPy, classical ML pipelines, multimodal PyTorch fusion architectures, MATLAB CNNs with transfer learning, fine-tuned Wav2Vec2 for real-time Serbian ASR, and a fully local multi-agent ReAct LLM research system.
+\end{highlights}
+
+\vspace{0.05 cm}
+\textbf{Misc:} \textit{Kotlin, Jetpack Compose, NFC HCE, C++17, MATLAB}
+\begin{highlights}
+    \item Side work spanning mobile, systems, and graphics -- an offline-first NFC business-card Android app, a complete C++17 compiler and stack-machine VM for a custom C-like language, and a from-scratch MATLAB image-processing suite.
+\end{highlights}
+
+\vspace{0.05 cm}
+\section{Projects}
+
+\textbf{BizCard -- Android contact-sharing app: Android, Kotlin, Jetpack, QR, SQLite}
+\begin{highlights}
+    \item Developed a privacy-focused offline Android app for fast contact exchange: users share a digital business card via QR code, enabling instant contact saving without manual entry.
+\end{highlights}
+
+    \linespread{1}
+    \section{Technical Skills}
+
+        \begin{onecolentry}
+            \textbf{Programming Languages:} Java, Kotlin, Python, TypeScript, JavaScript, C, C++, SQL, MATLAB / Octave, HTML, CSS, Bash, LaTeX
+        \end{onecolentry}
+
+        \vspace{0.05 cm}
+
+        \begin{onecolentry}
+            \textbf{Databases:} PostgreSQL, MySQL, Oracle SQL, SQLite, H2, ChromaDB
+        \end{onecolentry}
+
+        \vspace{0.05 cm}
+
+        \begin{onecolentry}
+            \textbf{Backend and Web:} Spring Boot, Spring Security, Spring Data JPA, Hibernate, JWT, JUnit 5, Mockito, AssertJ, JaCoCo, OpenAPI/Swagger, PDFBox, Lombok, Maven, Gradle, FastAPI, Flask, REST APIs, Microservices, SSE
+        \end{onecolentry}
+
+        \vspace{0.05 cm}
+
+        \begin{onecolentry}
+            \textbf{Frontend and Mobile:} React 19, Vite, Tailwind CSS, shadcn/ui, Radix UI, React Router, React Hook Form, Zod, Axios, Recharts, Vitest, Cypress, Jetpack Compose, Material 3, Hilt, Retrofit, OkHttp, Moshi, Room, DataStore, Coil, Kotlin Coroutines, JavaFX, Swing
+        \end{onecolentry}
+
+        \vspace{0.05 cm}
+
+        \begin{onecolentry}
+            \textbf{ML / AI:} PyTorch, torchvision, torchaudio, TensorFlow, Keras, scikit-learn, NumPy, Pandas, Matplotlib, Seaborn, OpenCV, Hugging Face Transformers, Wav2Vec2, sentence-transformers, ChromaDB, LangChain, Ollama, Gemma, LM Studio, Multi-Agent LLMs, ReAct, RAG, MATLAB Deep Learning Toolbox
+        \end{onecolentry}
+
+        \vspace{0.05 cm}
+
+        \begin{onecolentry}
+            \textbf{Tools and DevOps:} Git, GitHub, Docker, docker-compose, nginx, NVIDIA Container Toolkit, CUDA, WSL, ANTLR4, PowerDesigner, Google Colab, Android Studio, GitHub Pages, Microsoft Office
+        \end{onecolentry}
+
+
+\section{Additional Information}
+
+\begin{onecolentry}
+    \begin{minipage}[t]{0.48\linewidth}
+        \textbf{Languages:}
+        \begin{highlights}
+            \item \textbf{Serbian}: Native
+            \item \textbf{English}: Excellent proficiency
+        \end{highlights}
+    \end{minipage}\hfill
+    \begin{minipage}[t]{0.48\linewidth}
+        \textbf{Achievements:}
+        \begin{highlights}
+            \item Karate Black Belt (1st Dan Shodan)
+            \item Diploma from Elementary Music School (Piano)
+            \item B category driver's license
+        \end{highlights}
+    \end{minipage}
+\end{onecolentry}
+\end{document}
