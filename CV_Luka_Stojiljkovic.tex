@@ -2,8 +2,8 @@
 % Packages:
 \usepackage[
     ignoreheadfoot,
-    top=0.5 cm,
-    bottom=0.5 cm,
+    top=0.4 cm,
+    bottom=0.4 cm,
     left=0.5 cm,
     right=0.5 cm,
     footskip=0 cm,
@@ -20,7 +20,7 @@
     pdftitle={Luka Stojiljkovic - CV},
     pdfauthor={Luka Stojiljkovic},
     pdfsubject={Computer Science, Software Development},
-    pdfkeywords={Java, Python, C, C++, Kotlin, SQL, JavaScript, TypeScript, MATLAB, Spring Boot, Spring Security, Hibernate, JPA, JWT, REST APIs, Microservices, React, Vite, Tailwind CSS, shadcn/ui, Jetpack Compose, Material 3, Hilt, Retrofit, Room, OkHttp, PostgreSQL, MySQL, ChromaDB, Machine Learning, Deep Learning, PyTorch, TensorFlow, Keras, scikit-learn, NumPy, Pandas, OpenCV, Hugging Face, transformers, Wav2Vec2, sentence-transformers, RAG, LLM, Multi-Agent LLMs, ReAct, Ollama, Gemma, LM Studio, CNNs, Transfer Learning, ResNet, AlexNet, Convolutional Neural Networks, Genetic Algorithms, Speech Recognition, Computer Vision, NFC HCE, Android, Docker, Kubernetes, NVIDIA Container Toolkit, CUDA, Git, GitHub, JUnit, Mockito, Cypress, Vitest, Software Developer, Team Lead, Full Stack},
+    pdfkeywords={Software Engineer, Software Developer, Backend Developer, Frontend Developer, Full-Stack Engineer, Full Stack Developer, AI Engineer, ML Engineer, Machine Learning Engineer, AI/ML Engineer, Team Lead, Java, Python, C, C++, C++17, Kotlin, SQL, JavaScript, TypeScript, Rust, MATLAB, Bash, LaTeX, Spring Boot, Spring Security, Spring Data JPA, Hibernate, JPA, JWT, REST APIs, Microservices, SSE, FastAPI, Flask, React, React 19, Vite, Tailwind CSS, shadcn/ui, Radix UI, React Hook Form, Zod, Axios, Recharts, Jetpack Compose, Material 3, Hilt, Retrofit, Room, OkHttp, Moshi, Coil, Kotlin Coroutines, PostgreSQL, MySQL, Oracle SQL, SQLite, H2, ChromaDB, Machine Learning, Deep Learning, PyTorch, torchvision, torchaudio, TensorFlow, Keras, scikit-learn, NumPy, Pandas, OpenCV, Hugging Face, Transformers, Wav2Vec2, sentence-transformers, RAG, LLM, LLM Agents, Multi-Agent LLMs, ReAct, Tool Calling, Self-Improving Agents, MAP-Elites, Beam Search, Typed Tool Pipelines, Ollama, Gemma, LM Studio, LangChain, CNN, Transfer Learning, ResNet, AlexNet, Convolutional Neural Networks, Genetic Algorithms, Speech Recognition, Automatic Speech Recognition, Computer Vision, NFC HCE, Android, eframe, egui, .NET 8, LibreHardwareMonitor, WinRing0, Inno Setup, Hardware Monitoring, Performance Monitoring, Systems Programming, Compilers, Docker, docker-compose, nginx, Kubernetes, NVIDIA Container Toolkit, CUDA, WSL, ANTLR4, Git, GitHub, JUnit, JUnit 5, Mockito, AssertJ, JaCoCo, Cypress, Vitest, Swagger, OpenAPI, Maven, Gradle, Lombok},
     pdfcreator={LaTeX with RenderCV},
     colorlinks=true,
     urlcolor=primaryColor
@@ -68,9 +68,9 @@
 \titlespacing{\section}{
     -1pt
 }{
-    0.2 cm
+    0.10 cm
 }{
-    0.2 cm
+    0.10 cm
 }
 
 \newenvironment{highlights}{
@@ -238,16 +238,23 @@
 \vspace{0.05 cm}
 \section{Projects}
 
-\textbf{BizCard -- Android contact-sharing app: Android, Kotlin, Jetpack, QR, SQLite}
+\textbf{Stem Agent -- Self-improving LLM agent with evolutionary tool composition: Python, LM Studio, Gemma, MAP-Elites, Beam Search, Typed Tool Pipelines}
 \begin{highlights}
-    \item Developed a privacy-focused offline Android app for fast contact exchange: users share a digital business card via QR code, enabling instant contact saving without manual entry.
+    \item LLM agent that ``differentiates'' into domain experts by evolving typed tool pipelines via beam search and MAP-Elites quality-diversity archiving; promoted composites persist across sessions as inherited skills. Runs fully local on LM Studio.
+\end{highlights}
+
+\vspace{0.05 cm}
+
+\textbf{PerfWindow -- Real-time Windows hardware monitor: Rust, eframe/egui, C\#, .NET 8, LibreHardwareMonitor, Inno Setup}
+\begin{highlights}
+    \item Two-process design: a Rust egui dashboard owns the lifecycle of a self-contained .NET 8 sensord that streams CPU, GPU, RAM, storage, fan, voltage, and network sensors via LibreHardwareMonitor; Inno Setup installer handles WinRing0 driver placement, Defender exclusion, admin elevation, and clean uninstall.
 \end{highlights}
 
     \linespread{1}
     \section{Technical Skills}
 
         \begin{onecolentry}
-            \textbf{Programming Languages:} Java, Kotlin, Python, TypeScript, JavaScript, C, C++, SQL, MATLAB / Octave, HTML, CSS, Bash, LaTeX
+            \textbf{Programming Languages:} Java, Kotlin, Python, TypeScript, JavaScript, C, C++, Rust, SQL, MATLAB / Octave, HTML, CSS, Bash, LaTeX
         \end{onecolentry}
 
         \vspace{0.05 cm}
@@ -277,7 +284,7 @@
         \vspace{0.05 cm}
 
         \begin{onecolentry}
-            \textbf{Tools and DevOps:} Git, GitHub, Docker, docker-compose, nginx, NVIDIA Container Toolkit, CUDA, WSL, ANTLR4, PowerDesigner, Google Colab, Android Studio, GitHub Pages, Microsoft Office
+            \textbf{Tools and DevOps:} Git, GitHub, Docker, docker-compose, nginx, NVIDIA Container Toolkit, CUDA, WSL, ANTLR4, Inno Setup, PowerDesigner, Google Colab, Android Studio, GitHub Pages, Microsoft Office
         \end{onecolentry}
 
 

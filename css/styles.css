@@ -47,7 +47,7 @@ sup { font-size: 0.65em; vertical-align: 0.4em; }
     --fg-grid:      rgba(0, 240, 255, 0.06);
 
     /* Type */
-    --display:      'Major Mono Display', 'JetBrains Mono', ui-monospace, monospace;
+    --display:      'JetBrains Mono', 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
     --hud:          'Rajdhani', 'JetBrains Mono', ui-monospace, sans-serif;
     --mono:         'JetBrains Mono', 'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
     --serif:        'Rajdhani', 'JetBrains Mono', ui-monospace, sans-serif;
