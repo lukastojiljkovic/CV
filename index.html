@@ -2,525 +2,439 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luka D. Stojiljković — Software Engineer, AI/ML, Full-Stack Developer · Belgrade</title>
-    <meta name="description" content="Luka D. Stojiljković — software engineer and AI/ML researcher in Belgrade. Full-stack (Spring Boot, React 19, Kotlin, Jetpack Compose), machine learning (PyTorch, Hugging Face, Wav2Vec2), autonomous LLM agents (RAG, ReAct, tool-calling, multi-agent), systems programming (Rust, C++17 compilers).">
-    <meta name="keywords" content="Luka Stojiljković, Software Engineer, AI Engineer, ML Engineer, Full-Stack Developer, Backend Developer, Java, Kotlin, Python, TypeScript, Rust, C++, Spring Boot, React 19, Jetpack Compose, PyTorch, TensorFlow, Hugging Face, LLM Agents, RAG, ReAct, Multi-Agent, PostgreSQL, Docker, Belgrade, Serbia, RAF, Union University">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Luka Stojiljković | Software Engineer</title>
+    <meta name="description" content="Luka Stojiljković, software engineer in Belgrade. Full-stack products (Spring Boot, React, Kotlin), native Windows apps (WinUI 3, Rust) and applied AI (local LLM agents, RAG, PyTorch).">
     <meta name="author" content="Luka D. Stojiljković">
-    <meta name="theme-color" content="#05030d">
+    <meta name="theme-color" content="#f3f4f5" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0e1012" media="(prefers-color-scheme: dark)">
     <link rel="canonical" href="https://lukastojiljkovic.github.io/CV/">
-    <meta property="og:title" content="Luka D. Stojiljković — Software Engineer & AI/ML · Belgrade">
-    <meta property="og:description" content="Full-stack engineering (Spring Boot, React, Kotlin), machine learning (PyTorch, Hugging Face), autonomous LLM agents (RAG, ReAct, tool-calling), systems programming (Rust, C++ compilers).">
-    <meta property="og:type" content="website">
+
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="Luka Stojiljković | Software Engineer">
+    <meta property="og:description" content="Full-stack products, native Windows apps and applied AI. Open to software engineering roles.">
     <meta property="og:url" content="https://lukastojiljkovic.github.io/CV/">
-    <meta property="og:image" content="https://lukastojiljkovic.github.io/CV/favicon.png">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Luka D. Stojiljković — Software Engineer & AI/ML">
-    <meta name="twitter:description" content="Full-stack (Spring Boot, React, Kotlin), AI/ML (PyTorch, Hugging Face), LLM agents (RAG, ReAct), systems (Rust, C++ compilers).">
+    <meta property="og:image" content="https://lukastojiljkovic.github.io/CV/img/nexus.webp">
+
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
-    <meta name="color-scheme" content="dark light">
-    <meta name="robots" content="index, follow">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    <link rel="preload" href="fonts/geist.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="css/styles.css">
+
+    <script>
+        // Theme before first paint, so there is no flash: the stored choice, else the system setting.
+        try {
+            const t = localStorage.getItem('theme');
+            document.documentElement.dataset.theme = t === 'dark' || t === 'light' ? t
+                : matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        } catch (_) {}
+    </script>
 
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "Person",
         "name": "Luka D. Stojiljković",
-        "alternateName": "Luka Stojiljkovic",
-        "givenName": "Luka",
-        "familyName": "Stojiljković",
-        "jobTitle": "Software Engineer & AI/ML Researcher",
-        "email": "stojiljkovic.d.luka@gmail.com",
-        "telephone": "+381-64-90-40-342",
+        "jobTitle": "Software Engineer",
+        "email": "mailto:stojiljkovic.d.luka@gmail.com",
         "url": "https://lukastojiljkovic.github.io/CV/",
-        "image": "https://lukastojiljkovic.github.io/CV/favicon.png",
+        "address": { "@type": "PostalAddress", "addressLocality": "Belgrade", "addressCountry": "RS" },
+        "alumniOf": [
+            { "@type": "CollegeOrUniversity", "name": "School of Computing (RAF), Union University" },
+            { "@type": "CollegeOrUniversity", "name": "Faculty of Mathematics, University of Belgrade" }
+        ],
         "sameAs": [
             "https://github.com/lukastojiljkovic",
             "https://linkedin.com/in/luka-stojiljkovi%C4%87"
         ],
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Belgrade",
-            "addressCountry": "RS"
-        },
-        "alumniOf": [
-            { "@type": "CollegeOrUniversity", "name": "School of Computing RAF, Union University in Belgrade" },
-            { "@type": "CollegeOrUniversity", "name": "Faculty of Mathematics, University of Belgrade" }
-        ],
-        "knowsAbout": [
-            "Software Engineering", "Full-Stack Development", "Backend Development", "Frontend Development",
-            "Java", "Kotlin", "Python", "TypeScript", "JavaScript", "Rust", "C", "C++", "C++17", "SQL", "MATLAB", "Bash", "LaTeX",
-            "Spring Boot", "Spring Security", "Spring Data JPA", "Hibernate", "JWT", "REST APIs", "Microservices", "SSE",
-            "React", "React 19", "Vite", "TypeScript", "Tailwind CSS", "shadcn/ui", "Vitest", "Cypress",
-            "Jetpack Compose", "Material 3", "Hilt", "Retrofit", "Room", "NFC HCE", "Android",
-            "Machine Learning", "Deep Learning", "PyTorch", "TensorFlow", "Keras", "scikit-learn", "Hugging Face Transformers",
-            "Wav2Vec2", "sentence-transformers", "ChromaDB", "LangChain",
-            "LLM Agents", "Multi-Agent Systems", "RAG", "ReAct", "Tool Calling", "Self-Improving Agents", "MAP-Elites",
-            "Ollama", "Gemma", "LM Studio",
-            "PostgreSQL", "MySQL", "Oracle SQL", "SQLite", "H2",
-            "Docker", "docker-compose", "nginx", "CUDA", "WSL", "ANTLR4", "Inno Setup",
-            "eframe", "egui", ".NET 8", "LibreHardwareMonitor",
-            "Compilers", "Systems Programming", "Computer Vision", "Speech Recognition", "Genetic Algorithms"
-        ],
-        "knowsLanguage": [
-            { "@type": "Language", "name": "Serbian" },
-            { "@type": "Language", "name": "English" }
-        ]
+        "knowsAbout": ["Java", "Spring Boot", "React", "TypeScript", "Kotlin", "Python", "PyTorch", "LLM agents", "RAG", "C#", "WinUI 3", "Rust", "C++", "PostgreSQL", "Docker"]
     }
     </script>
 </head>
 <body>
+<a class="skip" href="#main">Skip to content</a>
 
-<a href="#contents" class="skip">// SKIP TO CONTENTS</a>
-
-<svg class="grain-defs" aria-hidden="true" focusable="false" width="0" height="0">
-    <filter id="paperNoise">
-        <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="2" seed="7" stitchTiles="stitch"/>
-        <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0   0 0 0 0.5 0"/>
-    </filter>
-</svg>
-<div class="grain" aria-hidden="true"></div>
-<div class="vignette" aria-hidden="true"></div>
-<div class="grid-bg" aria-hidden="true"></div>
-
-<div class="read-progress" id="readProgress" aria-hidden="true"></div>
-
-<!-- ═════════ S Y S T E M   B A R ═════════ -->
-<header class="sysbar" role="banner">
-    <a class="sys-id" href="#contents" aria-label="Back to top">
-        <span class="sys-id-bracket">[</span>
-        <span class="sys-id-glyph">L.S<span class="sys-cur">_</span></span>
-        <span class="sys-id-bracket">]</span>
-    </a>
-    <span class="sys-divider"></span>
-    <nav class="sys-nav" aria-label="Section navigation">
-        <a href="#log-001" data-cmd="01"><span class="cmd-key">01</span><span class="cmd-label">edu</span></a>
-        <a href="#log-002" data-cmd="02"><span class="cmd-key">02</span><span class="cmd-label">work</span></a>
-        <a href="#log-003" data-cmd="03"><span class="cmd-key">03</span><span class="cmd-label">se</span></a>
-        <a href="#log-004" data-cmd="04"><span class="cmd-key">04</span><span class="cmd-label">ml</span></a>
-        <a href="#log-005" data-cmd="05"><span class="cmd-key">05</span><span class="cmd-label">misc</span></a>
-        <a href="#log-006" data-cmd="06"><span class="cmd-key">06</span><span class="cmd-label">stack</span></a>
-        <a href="#contact" data-cmd="07" class="sys-nav-contact"><span class="cmd-key">07</span><span class="cmd-label">contact</span></a>
-    </nav>
-    <div class="sys-actions">
-        <span class="sys-status" aria-hidden="true">
-            <span class="sys-status-dot"></span>
-            <span class="sys-status-text">ONLINE</span>
-        </span>
-        <button type="button" id="themeToggle" class="sys-btn" aria-label="Toggle theme: System / Dark / Light">
-            <span>THEME://</span><span class="theme-mode" id="themeLabel">SYS</span>
-        </button>
-        <a class="sys-btn sys-btn-primary" href="CV_Luka_Stojiljkovic.pdf" download>
-            <span class="sys-btn-arrow">&gt;</span>CV.pdf
-        </a>
+<header class="bar">
+    <div class="bar-inner">
+        <a class="mark" href="#top">Luka Stojiljković</a>
+        <nav class="nav" aria-label="Sections">
+            <a href="#experience">Experience</a>
+            <a href="#work">Work</a>
+            <a href="#projects">Projects</a>
+            <a href="#stack">Stack</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="bar-actions">
+            <a class="btn btn-quiet" href="CV_Luka_Stojiljkovic.pdf" download>Download CV</a>
+            <button class="theme" type="button" id="theme" aria-label="Switch to dark theme">
+                <span class="theme-light">Dark</span><span class="theme-dark">Light</span>
+            </button>
+        </div>
     </div>
 </header>
 
-<main class="terminal" id="contents">
+<main id="main">
 
-    <!-- ═════════ B O O T   H E R O ═════════ -->
-    <section class="hero">
-        <div class="hero-stamp">
-            <pre class="ascii-mark" data-build-date aria-hidden="true">┌──────────────────────────┐
-│  L.S // SYS_OPERATIVE    │
-│  build: 2026.05.01 · v3  │
-└──────────────────────────┘</pre>
+    <!-- Hero -->
+    <section class="hero wrap" id="top">
+        <div class="hero-copy">
+            <p class="eyebrow">Software Engineer</p>
+            <h1>Luka Stojiljković</h1>
+            <p class="lede">I build full-stack products, native Windows apps and local LLM systems, and ship them with tests.</p>
+            <div class="actions">
+                <a class="btn btn-primary" href="mailto:stojiljkovic.d.luka@gmail.com">Email me</a>
+                <a class="btn" href="https://github.com/lukastojiljkovic" target="_blank" rel="noopener">GitHub</a>
+            </div>
         </div>
 
-        <div class="hero-meta">
-            <span class="meta-cell"><span class="meta-key">CALL</span><span class="meta-val">L. Stojiljković</span></span>
-            <span class="meta-cell"><span class="meta-key">NODE</span><span class="meta-val">Belgrade <span class="cyr">/ Београд</span></span></span>
-            <span class="meta-cell">
-                <span class="meta-key">YR</span>
-                <span class="meta-val">MMXXVI</span>
-                <span class="meta-bin">0b11111101010</span>
-            </span>
-            <span class="meta-cell"><span class="meta-key">REG</span><span class="meta-val">RAF // CS · final yr</span></span>
-            <span class="meta-cell meta-status"><span class="status-pulse"></span><span class="meta-val">OPEN_TO_ROLES</span></span>
+        <div class="console" aria-label="Profile summary">
+            <figure class="frame frame-shot">
+                <figcaption class="frame-bar"><span>Nexus</span><span>desktop app</span></figcaption>
+                <img class="shot-light" src="img/nexus.webp" width="1120" height="720" alt="The Nexus desktop app dashboard with today's agenda, upcoming tasks and exams.">
+                <img class="shot-dark" src="img/nexus-dark.webp" width="1120" height="720" loading="lazy" alt="The Nexus desktop app dashboard in its night theme.">
+            </figure>
+            <dl class="frame frame-status">
+                <div class="frame-bar"><span>Profile</span><span class="live">Open to roles</span></div>
+                <div class="row"><dt>Looking for</dt><dd>Full-stack, backend or applied AI role</dd></div>
+                <div class="row"><dt>Where</dt><dd>Belgrade or remote</dd></div>
+                <div class="row"><dt>Education</dt><dd>BSc Computer Science, RAF, final year</dd></div>
+                <div class="row"><dt>Shipped</dt><dd>Pwrschdlr 1.0, PermaDel 1.0, Refreshify 1.1, PerfWindow 0.10</dd></div>
+            </dl>
         </div>
+    </section>
 
-        <h1 class="hero-name" data-text="STOJILJKOVIĆ">
-            <span class="hn-prefix">&gt; whoami<span class="cur-blink">█</span></span>
-            <span class="hn-line hn-first">LUKA <span class="hn-mid">D.</span></span>
-            <span class="hn-line hn-second" data-text="STOJILJKOVIĆ">STOJILJKOVIĆ</span>
-            <span class="hn-cyr">— СТОЈИЉКОВИЋ</span>
-        </h1>
+    <!-- Experience and education -->
+    <section class="section wrap" id="experience" aria-labelledby="exp-title">
+        <h2 class="section-title" id="exp-title">Experience and education</h2>
 
-        <div class="hero-payload">
-            <p class="hero-prose">
-                <span class="prose-prompt">$&gt;</span>
-                CS operator from Belgrade. I build full-stack platforms, ship autonomous LLM agents, train neural networks from first principles, and write compilers — sometimes all in the same week.
-                <span class="cur-blink">█</span>
+        <div class="career">
+            <div class="track">
+                <h3 class="track-title">Experience</h3>
+                <ol class="timeline">
+                    <li>
+                        <p class="when">May 2025 - Jan 2026</p>
+                        <h4>Software Developer</h4>
+                        <p class="where">AI in AEC, an AI consulting startup for architecture, engineering and construction</p>
+                        <ul class="facts">
+                            <li>Built Neostack, a prototype web app that helps firms catalogue their software stack and licence usage.</li>
+                            <li>Built AI in AEC Flow, an internal platform for time, task and revenue tracking.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="when">2025 - 2026</p>
+                        <h4>Team Lead, BANKA_2</h4>
+                        <p class="where">Software Engineering capstone, RAF</p>
+                        <ul class="facts">
+                            <li>Led 25 students across backend, web, Android and DevOps, wrote the majority of the code and designed the Arbitro assistant.</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="track">
+                <h3 class="track-title">Education</h3>
+                <ol class="timeline">
+                    <li>
+                        <p class="when">2023 - 2026</p>
+                        <h4>BSc Computer Science</h4>
+                        <p class="where">School of Computing (RAF), Union University, Belgrade. Expected 2026.</p>
+                    </li>
+                    <li>
+                        <p class="when">2018 - 2023</p>
+                        <h4>Computer Science studies</h4>
+                        <p class="where">Faculty of Mathematics, University of Belgrade</p>
+                    </li>
+                </ol>
+                <dl class="languages">
+                    <dt>Languages</dt>
+                    <dd>Serbian (native), English (full professional proficiency)</dd>
+                </dl>
+            </div>
+        </div>
+    </section>
+
+    <!-- Selected work -->
+    <section class="section wrap" id="work" aria-labelledby="work-title">
+        <h2 class="section-title" id="work-title">Selected work</h2>
+
+        <div class="work">
+            <article class="panel span-7">
+                <div class="panel-bar"><span>Full-stack platform</span><span>2025 - 2026</span></div>
+                <div class="panel-body">
+                    <h3>BANKA_2</h3>
+                    <p class="summary">Enterprise banking platform built by a 25-person university team I led, with a self-hosted LLM assistant on top.</p>
+                    <ul class="facts">
+                        <li>Spring Boot services for accounts, cards, payments, FX, securities and options trading, OTC, loans and margin.</li>
+                        <li>React 19 web client and a Kotlin / Jetpack Compose Android app at feature parity.</li>
+                        <li>Arbitro, the banking assistant: tool calling, multi-step wizards, RAG over the specifications and SSE streaming, running on Ollama.</li>
+                    </ul>
+                    <div class="metrics">
+                        <div><strong>25</strong><span>engineers led</span></div>
+                        <div><strong>2,165</strong><span>backend tests</span></div>
+                        <div><strong>1,254</strong><span>frontend tests</span></div>
+                    </div>
+                    <p class="stack">Java, Spring Boot, PostgreSQL, React, TypeScript, Kotlin, Docker, Ollama</p>
+                    <p class="links">
+                        <a href="https://github.com/lukastojiljkovic/Software-Engineering-Backend" target="_blank" rel="noopener">Backend</a>
+                        <a href="https://github.com/lukastojiljkovic/Software-Engineering-Frontend" target="_blank" rel="noopener">Frontend</a>
+                        <a href="https://github.com/lukastojiljkovic/Software-Engineering-Android" target="_blank" rel="noopener">Android</a>
+                        <a href="https://github.com/lukastojiljkovic/Software-Engineering-Infrastructure" target="_blank" rel="noopener">Infrastructure</a>
+                    </p>
+                </div>
+            </article>
+
+            <article class="panel span-5">
+                <div class="panel-bar"><span>Applied AI</span><span>2026</span></div>
+                <div class="panel-body">
+                    <h3>Stem Agent</h3>
+                    <p class="summary">An LLM agent that specializes itself for a domain by evolving pipelines of typed tools, and keeps what works between sessions.</p>
+                    <ul class="facts">
+                        <li>Every tool declares input and output types; pipelines that don't type-check can't run.</li>
+                        <li>Six mutation operators with beam search; a MAP-Elites archive keeps the skill library diverse.</li>
+                        <li>Runs locally on LM Studio with Gemma, with an external judge only when a key is set.</li>
+                    </ul>
+                    <p class="stack">Python, LM Studio, Gemma, MAP-Elites</p>
+                    <p class="links">
+                        <a href="https://github.com/lukastojiljkovic/stem-agent" target="_blank" rel="noopener">Repository</a>
+                    </p>
+                </div>
+            </article>
+
+            <article class="panel span-4">
+                <div class="panel-bar"><span>Desktop app</span><span>2026</span></div>
+                <div class="panel-body">
+                    <h3>Nexus</h3>
+                    <p class="summary">Offline-first workspace for tasks, calendar, notes, studying, files, habits, fitness and finance. Your data stays on your device.</p>
+                    <ul class="facts">
+                        <li>Electron and React desktop app with an encrypted SQLite store, in daily use.</li>
+                        <li>Optional end-to-end encrypted sync: the server only ever holds ciphertext.</li>
+                        <li>The local-only build can't reach the network, and CI enforces it.</li>
+                    </ul>
+                    <p class="stack">TypeScript, React, Electron, SQLCipher, Supabase, Turborepo</p>
+                    <p class="note">Open-source release in preparation.</p>
+                </div>
+            </article>
+            <article class="panel span-8 panel-media">
+                <div class="panel-bar"><span>Windows app</span><span>v1.1</span></div>
+                <div class="panel-body">
+                    <h3>Refreshify</h3>
+                    <p class="summary">Cleans up, repairs and updates Windows with the tools Windows already has, without a terminal window.</p>
+                    <ul class="facts">
+                        <li>Runs 16 built-in tools in an order that avoids known failures, after creating a restore point.</li>
+                        <li>Recognizes 15 common failures and fixes the ones it safely can.</li>
+                        <li>Turns a failed step into a report for an AI assistant, with personal paths hidden.</li>
+                    </ul>
+                    <p class="stack">C#, .NET, WinUI 3, Windows App SDK</p>
+                    <p class="links">
+                        <a href="https://lukastojiljkovic.github.io/Refreshify/" target="_blank" rel="noopener">Website</a>
+                        <a href="https://github.com/lukastojiljkovic/Refreshify" target="_blank" rel="noopener">Repository</a>
+                        <a href="https://github.com/lukastojiljkovic/Refreshify/releases/latest" target="_blank" rel="noopener">Download</a>
+                    </p>
+                </div>
+                <img class="panel-shot" src="img/refreshify.webp" width="1164" height="792" loading="lazy" alt="Refreshify home page with the Run all action and the state of this PC.">
+            </article>
+
+            <article class="panel span-6">
+                <div class="panel-bar"><span>Windows app</span><span>v1.0</span></div>
+                <div class="panel-body">
+                    <h3>PermaDel</h3>
+                    <p class="summary">Securely shreds files and folders on Windows so recovery tools can't bring them back.</p>
+                    <ul class="facts">
+                        <li>WinUI 3 app with a File Explorer context menu and optional Windows Hello check before shredding.</li>
+                        <li>Overwrites alternate data streams, flushes every pass to disk and refuses unsafe targets.</li>
+                        <li>Forensic tests scan a raw disk image to prove the data is gone.</li>
+                    </ul>
+                    <p class="stack">C#, .NET, WinUI 3, C++, Inno Setup</p>
+                    <p class="links">
+                        <a href="https://lukastojiljkovic.github.io/PermaDel/" target="_blank" rel="noopener">Website</a>
+                        <a href="https://github.com/lukastojiljkovic/PermaDel" target="_blank" rel="noopener">Repository</a>
+                        <a href="https://github.com/lukastojiljkovic/PermaDel/releases/latest" target="_blank" rel="noopener">Download</a>
+                    </p>
+                </div>
+            </article>
+
+            <article class="panel span-6">
+                <div class="panel-bar"><span>Systems</span><span>v0.10</span></div>
+                <div class="panel-body">
+                    <h3>PerfWindow</h3>
+                    <p class="summary">Real-time hardware monitor for Windows: load, temperatures, power and lifetime data for every component.</p>
+                    <ul class="facts">
+                        <li>Rust and egui dashboard fed by a .NET sensor service built on LibreHardwareMonitor, over a named pipe.</li>
+                        <li>The service starts on demand and exits with the window: nothing stays resident, no tray icon.</li>
+                        <li>Installer handles the signed PawnIO driver, elevation and clean removal.</li>
+                    </ul>
+                    <p class="stack">Rust, egui, C#, .NET 8, Inno Setup</p>
+                    <p class="links">
+                        <a href="https://lukastojiljkovic.github.io/PerfWindow/" target="_blank" rel="noopener">Website</a>
+                        <a href="https://github.com/lukastojiljkovic/PerfWindow" target="_blank" rel="noopener">Repository</a>
+                        <a href="https://github.com/lukastojiljkovic/PerfWindow/releases/latest" target="_blank" rel="noopener">Download</a>
+                    </p>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- More projects -->
+    <section class="section wrap" id="projects" aria-labelledby="proj-title">
+        <h2 class="section-title" id="proj-title">More projects</h2>
+
+        <div class="groups">
+            <div class="group group-wide">
+                <h3>Machine learning and AI</h3>
+                <ul class="index">
+                    <li>
+                        <a href="https://github.com/lukastojiljkovic/serbian-realtime-speech-recognition" target="_blank" rel="noopener">Serbian real-time speech recognition</a>
+                        <p>Fine-tuned Wav2Vec2 XLS-R with a hybrid voice-activity detector and live Cyrillic output. About 0.29 WER on conversational speech. Group project.</p>
+                        <span>PyTorch, Hugging Face, WebRTC VAD</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/amojovic/scientific-research-llm-agents" target="_blank" rel="noopener">Multi-agent research assistant</a>
+                        <p>Six local ReAct agents that define terms, synthesize papers from arXiv and Semantic Scholar, and compile LaTeX reports. Group project.</p>
+                        <span>Python, LM Studio, ReAct</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/lukastojiljkovic/petfinder-multimodal-adoption-prediction" target="_blank" rel="noopener">PetFinder adoption prediction</a>
+                        <p>Seven PyTorch architectures on tabular data and shelter photos. The smallest fusion network beat an 11M-parameter ResNet.</p>
+                        <span>PyTorch, ResNet18, multimodal fusion</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/lukastojiljkovic/mnist-neural-network-from-scratch" target="_blank" rel="noopener">Neural network from scratch</a>
+                        <p>Dense layers, manual backpropagation, Adam and a fused softmax cross-entropy in pure NumPy, trained on MNIST.</p>
+                        <span>NumPy</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/lukastojiljkovic/word2vec" target="_blank" rel="noopener">Word2Vec</a>
+                        <p>CBOW with negative sampling in pure NumPy, trained on the text of White Fang.</p>
+                        <span>NumPy</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/lukastojiljkovic/polynomial-regression-knn-naive-bayes" target="_blank" rel="noopener">Classical ML from scratch</a>
+                        <p>Polynomial and ridge regression, k-NN on Iris and multinomial Naive Bayes on disaster tweets.</p>
+                        <span>NumPy, PyTorch</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/lukastojiljkovic/titanic-and-self-driving-from-scratch" target="_blank" rel="noopener">Titanic and self-driving CNN</a>
+                        <p>A from-scratch decision tree and network on Titanic, plus a behavioural-cloning CNN that drives the Udacity simulator.</p>
+                        <span>TensorFlow, Keras, OpenCV</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/lukastojiljkovic/scene-classification-cnn-vs-alexnet" target="_blank" rel="noopener">Scene classification: CNN vs AlexNet</a>
+                        <p>A CNN trained from scratch against AlexNet transfer learning on six scene classes.</p>
+                        <span>MATLAB</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/lukastojiljkovic/genetic-algorithm-levi13" target="_blank" rel="noopener">Genetic algorithm, Lévi N.13</a>
+                        <p>Binary genetic algorithm minimizing a benchmark function with many local minima.</p>
+                        <span>NumPy</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="group">
+                <h3>Systems and algorithms</h3>
+                <ul class="index">
+                    <li>
+                        <a href="https://github.com/lukastojiljkovic/Intepreter" target="_blank" rel="noopener">BareC compiler and VM</a>
+                        <p>Preprocessor, lexer, recursive-descent parser, type checker, code generator and stack VM for a small C-like language.</p>
+                        <span>C++17</span>
+                    </li>
+                    <li>
+                        <a href="https://lukastojiljkovic.github.io/Power-Scheduler/" target="_blank" rel="noopener">Pwrschdlr</a>
+                        <p>Native Windows 11 timer that shuts down, restarts, sleeps, hibernates or signs out, with a warning you can cancel. A per-user scheduled task keeps the timer when the app is closed. <a href="https://github.com/lukastojiljkovic/Power-Scheduler" target="_blank" rel="noopener">Source</a>.</p>
+                        <span>C#, .NET, WinUI 3, Task Scheduler</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/lukastojiljkovic/Algorithms-and-Data-Structures" target="_blank" rel="noopener">Algorithms and data structures</a>
+                        <p>Course implementations, with a second set for <a href="https://github.com/lukastojiljkovic/Design-and-Analysis-of-Alghoritms" target="_blank" rel="noopener">algorithm design and analysis</a>.</p>
+                        <span>C++</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="group">
+                <h3>Image processing</h3>
+                <ul class="index">
+                    <li>
+                        <a href="https://github.com/lukastojiljkovic/laplacian-pyramid-image-blending" target="_blank" rel="noopener">Laplacian pyramid blending</a>
+                        <p>Burt-Adelson multiresolution blending with Gaussian and Laplacian pyramids.</p>
+                        <span>Octave</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/lukastojiljkovic/haar-wavelet-edge-detection" target="_blank" rel="noopener">Haar wavelet edge detection</a>
+                        <p>Edges from a one-level 2D Haar transform, with exact reconstruction.</p>
+                        <span>MATLAB</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/lukastojiljkovic/hybrid-images-oliva-torralba" target="_blank" rel="noopener">Hybrid images</a>
+                        <p>The Oliva-Torralba illusion from low-pass and high-pass filtered images.</p>
+                        <span>Octave</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/lukastojiljkovic/gaussian-and-max-image-filters" target="_blank" rel="noopener">Gaussian and MAX filters</a>
+                        <p>Linear and non-linear spatial filters without built-in convolution helpers.</p>
+                        <span>Octave</span>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="group">
+                <h3>Android</h3>
+                <ul class="index">
+                    <li>
+                        <a href="https://github.com/lukastojiljkovic/NFCard" target="_blank" rel="noopener">NFCard</a>
+                        <p>Turns a phone into a tappable business card with NFC host-card emulation, with Nearby Connections for larger payloads.</p>
+                        <span>Kotlin, Jetpack Compose, Hilt, Room</span>
+                    </li>
+                    <li>
+                        <a href="https://github.com/lukastojiljkovic/Pomodoro" target="_blank" rel="noopener">Pomodoro</a>,
+                        <a href="https://github.com/lukastojiljkovic/Calculator-app" target="_blank" rel="noopener">Calculator</a>,
+                        <a href="https://github.com/lukastojiljkovic/Age-in-Minutes" target="_blank" rel="noopener">Age in Minutes</a>
+                        <p>First Android apps, in Java and Kotlin.</p>
+                        <span>Android SDK</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stack -->
+    <section class="section wrap" id="stack" aria-labelledby="stack-title">
+        <h2 class="section-title" id="stack-title">Stack</h2>
+        <dl class="matrix">
+            <div><dt>Languages</dt><dd>Java, Kotlin, Python, TypeScript, C#, C++, Rust, SQL</dd></div>
+            <div><dt>Backend</dt><dd>Spring Boot, Spring Security, JPA/Hibernate, REST, SSE, FastAPI</dd></div>
+            <div><dt>Frontend and mobile</dt><dd>React 19, Vite, Tailwind CSS, Zod, Jetpack Compose, Hilt, Room</dd></div>
+            <div><dt>Testing</dt><dd>JUnit 5, Mockito, Vitest, Cypress, xUnit</dd></div>
+            <div><dt>Data</dt><dd>PostgreSQL, MySQL, Oracle, SQLite/SQLCipher, Supabase, ChromaDB</dd></div>
+            <div><dt>AI and ML</dt><dd>PyTorch, TensorFlow, scikit-learn, Hugging Face, Ollama, LM Studio, RAG, tool calling</dd></div>
+            <div><dt>Desktop and systems</dt><dd>WinUI 3, Windows App SDK, Electron, egui, Inno Setup</dd></div>
+            <div><dt>DevOps</dt><dd>Docker, Docker Compose, Kubernetes manifests, GitHub Actions, nginx</dd></div>
+        </dl>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact wrap" id="contact" aria-labelledby="contact-title">
+        <h2 id="contact-title">Open to software engineering roles in Belgrade or remote.</h2>
+        <div class="contact-reach">
+            <a class="email" href="mailto:stojiljkovic.d.luka@gmail.com">stojiljkovic.d.luka@gmail.com</a>
+            <p class="contact-links">
+                <a href="tel:+381649040342">+381 64 904 0342</a>
+                <a href="https://github.com/lukastojiljkovic" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://linkedin.com/in/luka-stojiljkovi%C4%87" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="CV_Luka_Stojiljkovic.pdf" download>Download CV</a>
             </p>
-
-            <aside class="hud-panel" aria-label="Live state">
-                <div class="hud-head">
-                    <span class="hud-title">// LIVE_STATE</span>
-                    <span class="hud-tick"></span>
-                </div>
-                <ul class="hud-list">
-                    <li><span class="hud-k">NOW</span><span class="hud-v">final-yr CS · RAF</span></li>
-                    <li><span class="hud-k">PROJ</span><span class="hud-v">BANKA-2 // arbitro_llm</span></li>
-                    <li><span class="hud-k">TECH</span><span class="hud-v">java · ts · kotlin · pytorch</span></li>
-                    <li><span class="hud-k">BAND</span><span class="hud-v">SE · ML · research</span></li>
-                </ul>
-            </aside>
-        </div>
-
-        <ul class="contact-strip" id="contact" aria-label="Contact">
-            <li><span class="cs-key">[ e ]</span><a href="mailto:stojiljkovic.d.luka@gmail.com">stojiljkovic.d.luka@gmail.com</a></li>
-            <li><span class="cs-key">[tel]</span><a href="tel:+381649040342">+381 64 90 40 342</a></li>
-            <li><span class="cs-key">[git]</span><a href="https://github.com/lukastojiljkovic" target="_blank" rel="noopener">github.com/lukastojiljkovic</a></li>
-            <li><span class="cs-key">[ in]</span><a href="https://linkedin.com/in/luka-stojiljkovi%C4%87" target="_blank" rel="noopener">linkedin.com/in/luka-stojiljković</a></li>
-        </ul>
-    </section>
-
-    <!-- ═════════ L O G _ 0 0 1   E D U C A T I O N ═════════ -->
-    <section class="log" id="log-001">
-        <header class="log-head">
-            <div class="log-num">LOG_001</div>
-            <div class="log-rule" aria-hidden="true">═══════════════════════════════════════════════════</div>
-            <h2 class="log-title">EDUCATION<span class="log-title-blink">_</span></h2>
-        </header>
-        <div class="log-body">
-            <article class="rec">
-                <div class="rec-stamp"><span>2023</span><span class="rec-dash">→</span><span>2026</span></div>
-                <div class="rec-data">
-                    <div class="rec-h">SCHOOL OF COMPUTING — RAF</div>
-                    <div class="rec-d">Bachelor of Computer Science · Union University · Belgrade</div>
-                </div>
-                <div class="rec-tag">ACTIVE</div>
-            </article>
-            <article class="rec">
-                <div class="rec-stamp"><span>2018</span><span class="rec-dash">→</span><span>2023</span></div>
-                <div class="rec-data">
-                    <div class="rec-h">FACULTY OF MATHEMATICS</div>
-                    <div class="rec-d">Computer Science · University of Belgrade</div>
-                </div>
-                <div class="rec-tag rec-tag-done">CLOSED</div>
-            </article>
         </div>
     </section>
-
-    <!-- ═════════ L O G _ 0 0 2   W O R K ═════════ -->
-    <section class="log" id="log-002">
-        <header class="log-head">
-            <div class="log-num">LOG_002</div>
-            <div class="log-rule" aria-hidden="true">═══════════════════════════════════════════════════</div>
-            <h2 class="log-title">WORK_HISTORY<span class="log-title-blink">_</span></h2>
-        </header>
-        <div class="log-body">
-            <article class="rec rec-tall">
-                <div class="rec-stamp"><span>05.2025</span><span class="rec-dash">→</span><span>01.2026</span></div>
-                <div class="rec-data">
-                    <div class="rec-h">SOFTWARE DEVELOPER // <span class="rec-h-em">AI in AEC</span></div>
-                    <div class="rec-d">AEC AI consulting startup</div>
-                    <p class="rec-text">Designed and shipped two web applications. <strong>Neostack</strong> — a prototype platform that helps engineering firms catalog their software stack and license usage. <strong>AI in AEC Flow</strong> — an internal time-task and revenue-tracking system that lifts the firm's day-to-day operational performance.</p>
-                </div>
-                <div class="rec-tag rec-tag-done">SHIPPED</div>
-            </article>
-        </div>
-    </section>
-
-    <!-- ═════════ L O G _ 0 0 3   S O F T W A R E   E N G I N E E R I N G ═════════ -->
-    <section class="log log-feature" id="log-003">
-        <header class="log-head">
-            <div class="log-num">LOG_003</div>
-            <div class="log-rule" aria-hidden="true">═══════════════════════════════════════════════════</div>
-            <h2 class="log-title">SOFTWARE_ENGINEERING<span class="log-title-blink">_</span></h2>
-        </header>
-        <div class="log-body">
-
-            <article class="cardset cardset-feature">
-                <div class="card-banner">
-                    <span class="banner-flag">// LEAD_PROJECT</span>
-                    <span class="banner-arc">2025 ── 2026 · 25 OPERATORS · 4 TIERS</span>
-                    <span class="banner-pulse"></span>
-                </div>
-
-                <h3 class="card-title">
-                    <span class="ct-line">BANKA_2</span>
-                    <span class="ct-tag">// full-stack banking platform</span>
-                    <span class="ct-line ct-line-2">+ AUTONOMOUS_LLM_AGENT</span>
-                </h3>
-
-                <div class="card-quote">
-                    <span class="cq-bracket">&gt;</span>
-                    <span class="cq-text">Twenty-five operators on the team. Authored the majority of every tier &amp; shipped a fully self-hosted LLM banking assistant on top.</span>
-                </div>
-
-                <div class="hud-grid">
-                    <div class="hud-cell">
-                        <span class="hud-cell-key">// TEAM</span>
-                        <span class="hud-cell-num">25</span>
-                        <span class="hud-cell-d">operators led</span>
-                    </div>
-                    <div class="hud-cell hud-cell-magenta">
-                        <span class="hud-cell-key">// TESTS_BE</span>
-                        <span class="hud-cell-num">2,165</span>
-                        <span class="hud-cell-d">JUnit · Mockito</span>
-                    </div>
-                    <div class="hud-cell">
-                        <span class="hud-cell-key">// TESTS_FE</span>
-                        <span class="hud-cell-num">1,254</span>
-                        <span class="hud-cell-d">Vitest + Cypress</span>
-                    </div>
-                    <div class="hud-cell hud-cell-magenta">
-                        <span class="hud-cell-key">// LLM</span>
-                        <span class="hud-cell-num">∞</span>
-                        <span class="hud-cell-d">offline agent runs</span>
-                    </div>
-                </div>
-
-                <div class="card-prose">
-                    <p>I led a 25-person engineering team through full-cycle delivery of an enterprise banking platform — and personally authored the majority of the codebase across every tier. Spring Boot microservices on the backend (auth, accounts, cards, payments, FX transfers, securities and options trading, OTC, loans, margin, portfolio, audit logging) covered by <strong>2,165 JUnit and Mockito tests</strong>; a React 19 + TypeScript web client tested by <strong>1,254 Vitest unit specs</strong> and a complete Cypress end-to-end suite; a native Kotlin / Jetpack Compose Android app at full feature parity; and the Docker-based DevOps tying it all together.</p>
-
-                    <p>On top of that, I architected and shipped <em>Arbitro</em> — an autonomous LLM banking assistant with tool-calling, multi-step wizards, RAG over the platform's specification documents, and SSE-streamed responses — running fully self-hosted on Ollama with a Gemma 4 E4B model and ChromaDB embeddings. No third-party API calls, no data leaving the bank.</p>
-                </div>
-
-                <ul class="chips" aria-label="Stack">
-                    <li>java_17</li><li>spring_boot</li><li>spring_security</li><li>jpa</li><li>jwt</li><li>postgres</li><li>junit5</li><li>mockito</li><li>docker</li><li>react_19</li><li>ts</li><li>vite</li><li>tailwind</li><li>vitest</li><li>cypress</li><li>kotlin</li><li>compose</li><li>hilt</li><li>retrofit</li><li>ollama</li><li>gemma_4</li><li>chromadb</li><li>rag</li>
-                </ul>
-
-                <div class="links">
-                    <a class="port" href="https://github.com/lukastojiljkovic/Software-Engineering-Backend" target="_blank" rel="noopener">
-                        <span class="port-pre">&gt; OPEN</span><span class="port-name">backend.fork</span><span class="port-arr">↗</span>
-                    </a>
-                    <a class="port" href="https://github.com/lukastojiljkovic/Software-Engineering-Frontend" target="_blank" rel="noopener">
-                        <span class="port-pre">&gt; OPEN</span><span class="port-name">frontend.fork</span><span class="port-arr">↗</span>
-                    </a>
-                    <a class="port" href="https://github.com/lukastojiljkovic/Software-Engineering-Android" target="_blank" rel="noopener">
-                        <span class="port-pre">&gt; OPEN</span><span class="port-name">mobile.fork</span><span class="port-arr">↗</span>
-                    </a>
-                </div>
-            </article>
-
-        </div>
-    </section>
-
-    <!-- ═════════ L O G _ 0 0 4   M L  /  D L ═════════ -->
-    <section class="log" id="log-004">
-        <header class="log-head">
-            <div class="log-num">LOG_004</div>
-            <div class="log-rule" aria-hidden="true">═══════════════════════════════════════════════════</div>
-            <h2 class="log-title">AI__ML__DEEP_LEARNING<span class="log-title-blink">_</span></h2>
-        </header>
-        <div class="log-body">
-
-            <p class="log-intro"><span class="prose-prompt">//</span> A spread of work across the modern ML stack — from hand-derived numerical linear algebra and bare-NumPy implementations of foundational algorithms, to fine-tuned transformer pipelines, multimodal architectures, and fully autonomous local LLM agent systems.</p>
-
-            <div class="rack">
-
-                <article class="cardset">
-                    <div class="card-stripe">// self_improving</div>
-                    <h3 class="card-title-s">stem_agent__evolving_tool_pipelines</h3>
-                    <p class="card-text">An LLM agent that ``differentiates'' into domain experts — given a signal like <em>Legal</em> or <em>Economics</em>, it bootstraps a brief from the web and arXiv, then evolves typed tool pipelines through beam search across mutation operators (<code>add</code>, <code>remove</code>, <code>replace</code>, <code>reorder</code>, <code>inject_domain</code>, parametric tweaks). A MAP-Elites archive keyed on <em>(domain, capability)</em> keeps the search diverse; promoted composites persist to <code>tool_library/composites.json</code> as inherited skills. Runs fully local on LM Studio (Gemma 4 E4B / DeepSeek-R1), with a Claude → OpenAI → Gemma fallback chain for judging.</p>
-                    <ul class="chips"><li>python</li><li>lm_studio</li><li>gemma</li><li>map_elites</li><li>beam_search</li><li>typed_pipelines</li><li>arxiv</li><li>latex</li><li>graphviz</li></ul>
-                    <div class="links"><a class="port" href="https://github.com/lukastojiljkovic/stem-agent" target="_blank" rel="noopener"><span class="port-pre">&gt; OPEN</span><span class="port-name">repo</span><span class="port-arr">↗</span></a></div>
-                </article>
-
-                <article class="cardset">
-                    <div class="card-stripe">// agents</div>
-                    <h3 class="card-title-s">multi_agent_research_llm</h3>
-                    <p class="card-text">Six locally-hosted ReAct agents with dynamic handoff, orchestrating term definitions, multi-paper synthesis, narrative comparison, LaTeX-to-PDF report generation, and Bloom's-taxonomy quiz authoring through Wikipedia, arXiv, and Semantic Scholar. Runs entirely offline on LM Studio with gpt-oss-20b and DeepSeek-R1. <em>Group project.</em></p>
-                    <ul class="chips"><li>python</li><li>lm_studio</li><li>react_pattern</li><li>multi_agent</li><li>arxiv</li><li>latex</li></ul>
-                    <div class="links"><a class="port" href="https://github.com/amojovic/scientific-research-llm-agents" target="_blank" rel="noopener"><span class="port-pre">&gt; OPEN</span><span class="port-name">repo</span><span class="port-arr">↗</span></a></div>
-                </article>
-
-                <article class="cardset">
-                    <div class="card-stripe">// asr</div>
-                    <h3 class="card-title-s">serbian_realtime_speech_recognition</h3>
-                    <p class="card-text">A streaming ASR pipeline that captures microphone audio with a hybrid VAD (RMS gate, WebRTC VAD, impulse rejection by rise-fall ratio, with a 15-frame lookback that recovers the leading 50–100 ms most front-ends miss), and transcribes each utterance with a fine-tuned <em>Wav2Vec2-XLS-R-300M</em> model. Live Latin preview while you speak; final Cyrillic transcription. ~0.29 WER on conversational Serbian. <em>Group project.</em></p>
-                    <ul class="chips"><li>pytorch</li><li>torchaudio</li><li>wav2vec2</li><li>huggingface</li><li>webrtc_vad</li><li>flask</li></ul>
-                    <div class="links"><a class="port" href="https://github.com/lukastojiljkovic/serbian-realtime-speech-recognition" target="_blank" rel="noopener"><span class="port-pre">&gt; OPEN</span><span class="port-name">repo</span><span class="port-arr">↗</span></a></div>
-                </article>
-
-                <article class="cardset">
-                    <div class="card-stripe">// multimodal</div>
-                    <h3 class="card-title-s">petfinder_multimodal_adoption</h3>
-                    <p class="card-text">Trained and benchmarked seven PyTorch architectures — TabularMLP variants, a custom CNN, pretrained ResNet18, and three multimodal fusion networks — on Kaggle PetFinder.my to predict adoption speed from structured features and shelter photos. The smallest fusion network beat both an 11M-parameter ResNet and the deeper variants — capacity ≠ generalization.</p>
-                    <ul class="chips"><li>pytorch</li><li>torchvision</li><li>resnet18</li><li>fusion</li><li>pandas</li></ul>
-                    <div class="links"><a class="port" href="https://github.com/lukastojiljkovic/petfinder-multimodal-adoption-prediction" target="_blank" rel="noopener"><span class="port-pre">&gt; OPEN</span><span class="port-name">repo</span><span class="port-arr">↗</span></a></div>
-                </article>
-
-                <article class="cardset">
-                    <div class="card-stripe">// from_scratch</div>
-                    <h3 class="card-title-s">nn_lib_from_scratch__numpy</h3>
-                    <p class="card-text">Hand-derived deep-learning library in pure NumPy: dense layers, ReLU, Softmax, fused softmax-CCE with the analytical <code>y_pred − y_true</code> gradient, and four optimizers (SGD with momentum, Adagrad, RMSprop, Adam with bias correction and lr decay). Trained an MLP on MNIST end-to-end without any autograd.</p>
-                    <ul class="chips"><li>numpy</li><li>mnist</li><li>scratch</li><li>backprop</li></ul>
-                    <div class="links"><a class="port" href="https://github.com/lukastojiljkovic/mnist-neural-network-from-scratch" target="_blank" rel="noopener"><span class="port-pre">&gt; OPEN</span><span class="port-name">repo</span><span class="port-arr">↗</span></a></div>
-                </article>
-
-                <article class="cardset">
-                    <div class="card-stripe">// behavioral_cloning</div>
-                    <h3 class="card-title-s">self_driving_cnn__udacity_sim</h3>
-                    <p class="card-text">From-scratch decision tree and 2-layer NN with manual backprop on the Titanic problem, plus an NVIDIA-architecture CNN trained on Udacity simulator dashcam triples (steering augmentation, h-flip, translation, shadow, brightness) that drives the simulator autonomously over Flask-SocketIO. <em>Group project.</em></p>
-                    <ul class="chips"><li>tensorflow</li><li>keras</li><li>opencv</li><li>flask_socketio</li><li>udacity_sim</li></ul>
-                    <div class="links"><a class="port" href="https://github.com/lukastojiljkovic/titanic-and-self-driving-from-scratch" target="_blank" rel="noopener"><span class="port-pre">&gt; OPEN</span><span class="port-name">repo</span><span class="port-arr">↗</span></a></div>
-                </article>
-
-                <article class="cardset">
-                    <div class="card-stripe">// classical</div>
-                    <h3 class="card-title-s">classical_ml_suite</h3>
-                    <p class="card-text">Polynomial regression with the closed-form normal equation, L2-regularized ridge regression via PyTorch SGD, k-NN on Iris with decision-boundary plots, multinomial Naive Bayes with Laplace smoothing on Kaggle disaster tweets, and a pure-NumPy Word2Vec CBOW with negative sampling — trained on the text of <em>White Fang</em>.</p>
-                    <ul class="chips"><li>numpy</li><li>scikit_learn</li><li>pytorch</li><li>kaggle</li></ul>
-                    <div class="links">
-                        <a class="port" href="https://github.com/lukastojiljkovic/polynomial-regression-knn-naive-bayes" target="_blank" rel="noopener"><span class="port-pre">&gt; OPEN</span><span class="port-name">ml_suite</span><span class="port-arr">↗</span></a>
-                        <a class="port" href="https://github.com/lukastojiljkovic/word2vec" target="_blank" rel="noopener"><span class="port-pre">&gt; OPEN</span><span class="port-name">word2vec</span><span class="port-arr">↗</span></a>
-                    </div>
-                </article>
-
-                <article class="cardset">
-                    <div class="card-stripe">// vision</div>
-                    <h3 class="card-title-s">scene_classification__cnn_vs_alexnet</h3>
-                    <p class="card-text">Custom MATLAB CNN (~1.6M params) trained from scratch versus AlexNet transfer learning on the Intel Image Classification dataset (six classes — buildings, forest, glacier, mountain, sea, street). Compares the trade-off between architectural design and pre-trained representation.</p>
-                    <ul class="chips"><li>matlab</li><li>dl_toolbox</li><li>alexnet</li><li>transfer</li></ul>
-                    <div class="links"><a class="port" href="https://github.com/lukastojiljkovic/scene-classification-cnn-vs-alexnet" target="_blank" rel="noopener"><span class="port-pre">&gt; OPEN</span><span class="port-name">repo</span><span class="port-arr">↗</span></a></div>
-                </article>
-
-                <article class="cardset">
-                    <div class="card-stripe">// optimization</div>
-                    <h3 class="card-title-s">genetic_algorithm__levi_n13</h3>
-                    <p class="card-text">A binary-encoded genetic algorithm minimizing the Lévi N.13 benchmark — a 2D non-convex function with a single global minimum at <em>f(1,1) = 0</em> hidden among many local minima in <em>[−10, 10]²</em>. Inversion mutation, two-point crossover, generational replacement, convergence plots across runs.</p>
-                    <ul class="chips"><li>numpy</li><li>matplotlib</li><li>genetic_algo</li></ul>
-                    <div class="links"><a class="port" href="https://github.com/lukastojiljkovic/genetic-algorithm-levi13" target="_blank" rel="noopener"><span class="port-pre">&gt; OPEN</span><span class="port-name">repo</span><span class="port-arr">↗</span></a></div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ═════════ L O G _ 0 0 5   M I S C ═════════ -->
-    <section class="log" id="log-005">
-        <header class="log-head">
-            <div class="log-num">LOG_005</div>
-            <div class="log-rule" aria-hidden="true">═══════════════════════════════════════════════════</div>
-            <h2 class="log-title">MISC<span class="log-title-blink">_</span></h2>
-        </header>
-        <div class="log-body">
-            <p class="log-intro"><span class="prose-prompt">//</span> Smaller side projects that don't fit a single category — each one a chance to learn something specific about systems, mobile, graphics, or the tooling around an idea.</p>
-
-            <div class="rack">
-
-                <article class="cardset">
-                    <div class="card-stripe">// android</div>
-                    <h3 class="card-title-s">nfcard__offline_nfc_business_card</h3>
-                    <p class="card-text">Android app that turns the phone into a tappable business card. NFC Host-Card Emulation (Forum Type 4 Tag, AID <code>D2760000850101</code>) for peer-to-peer; Reader Mode for receiving. vCard 2.1 encoding for max compatibility, Google Nearby Connections handover for transfers above the NFC payload limit. Offline-first on Jetpack Compose, Hilt, Room.</p>
-                    <ul class="chips"><li>kotlin</li><li>compose</li><li>material_3</li><li>nfc_hce</li><li>hilt</li><li>room</li></ul>
-                    <div class="links"><a class="port" href="https://github.com/lukastojiljkovic/NFCard" target="_blank" rel="noopener"><span class="port-pre">&gt; OPEN</span><span class="port-name">repo</span><span class="port-arr">↗</span></a></div>
-                </article>
-
-                <article class="cardset">
-                    <div class="card-stripe">// hardware</div>
-                    <h3 class="card-title-s">perfwindow__real_time_hw_monitor</h3>
-                    <p class="card-text">A lightweight Windows hardware monitor in a deliberately old-school dashboard. Two-process architecture — a Rust <code>eframe/egui</code> dashboard owns the lifecycle of a self-contained .NET 8 <em>sensord</em> that polls CPU, GPU, RAM, storage, motherboard, fans, voltages, and network throughput via LibreHardwareMonitor and streams snapshots over stdout. Foreground-only: no background service, no tray icon. Ships through an Inno Setup installer that places the WinRing0 driver, asks Defender for a targeted exclusion, requests admin elevation, and cleans every artifact on uninstall.</p>
-                    <ul class="chips"><li>rust</li><li>eframe</li><li>egui</li><li>c_sharp</li><li>dotnet_8</li><li>librehardwaremonitor</li><li>winring0</li><li>inno_setup</li></ul>
-                    <div class="links"><a class="port" href="https://github.com/lukastojiljkovic/PerfWindow" target="_blank" rel="noopener"><span class="port-pre">&gt; OPEN</span><span class="port-name">repo</span><span class="port-arr">↗</span></a></div>
-                </article>
-
-                <article class="cardset">
-                    <div class="card-stripe">// systems</div>
-                    <h3 class="card-title-s">barec__compiler_+_stack_vm</h3>
-                    <p class="card-text">Complete C++17 toolchain for "BareC", a small statically-typed C-like language. Hand-rolled preprocessor → lexer with line/column tracking → recursive-descent parser → two-pass semantic analyzer (strict typing, scope resolution, pointer arithmetic) → single-pass codegen with label table → stack-machine VM with <code>std::variant</code> operands and heap-vector arrays. Single <code>g++ *.cxx</code> build.</p>
-                    <ul class="chips"><li>cpp_17</li><li>recursive_descent</li><li>stack_vm</li><li>std_variant</li></ul>
-                    <div class="links"><a class="port" href="https://github.com/lukastojiljkovic/Intepreter" target="_blank" rel="noopener"><span class="port-pre">&gt; OPEN</span><span class="port-name">repo</span><span class="port-arr">↗</span></a></div>
-                </article>
-
-                <article class="cardset">
-                    <div class="card-stripe">// graphics</div>
-                    <h3 class="card-title-s">matlab_image_processing__from_scratch</h3>
-                    <p class="card-text">Four DSP and computer-vision implementations written without a single helper from <code>imfilter</code>, <code>conv2</code>, <code>padarray</code>, <code>imdilate</code>: Burt-Adelson Laplacian-pyramid blending in HSI space, a 1-level Haar wavelet DWT/IDWT with perfect reconstruction (~280 dB PSNR), Oliva-Torralba hybrid images, and Gaussian / maximum spatial filters with explicit kernel rotation.</p>
-                    <ul class="chips"><li>matlab</li><li>octave</li><li>wavelets</li><li>pyramids</li></ul>
-                    <div class="links">
-                        <a class="port" href="https://github.com/lukastojiljkovic/laplacian-pyramid-image-blending" target="_blank" rel="noopener"><span class="port-pre">&gt; OPEN</span><span class="port-name">pyramid</span><span class="port-arr">↗</span></a>
-                        <a class="port" href="https://github.com/lukastojiljkovic/haar-wavelet-edge-detection" target="_blank" rel="noopener"><span class="port-pre">&gt; OPEN</span><span class="port-name">haar</span><span class="port-arr">↗</span></a>
-                        <a class="port" href="https://github.com/lukastojiljkovic/hybrid-images-oliva-torralba" target="_blank" rel="noopener"><span class="port-pre">&gt; OPEN</span><span class="port-name">hybrid</span><span class="port-arr">↗</span></a>
-                        <a class="port" href="https://github.com/lukastojiljkovic/gaussian-and-max-image-filters" target="_blank" rel="noopener"><span class="port-pre">&gt; OPEN</span><span class="port-name">filters</span><span class="port-arr">↗</span></a>
-                    </div>
-                </article>
-
-                <article class="cardset">
-                    <div class="card-stripe">// utils</div>
-                    <h3 class="card-title-s">smaller_utilities</h3>
-                    <p class="card-text">A few tighter projects from across the years: an Android Pomodoro study timer, a Kotlin calculator, an "age in minutes" curiosity, a C++ exam-prep collection of data-structures and algorithms problems, and a small Windows shutdown scheduler. Useful for what they taught more than what they did.</p>
-                    <ul class="chips"><li>kotlin</li><li>java</li><li>cpp</li><li>android</li></ul>
-                    <div class="links">
-                        <a class="port" href="https://github.com/lukastojiljkovic/Pomodoro" target="_blank" rel="noopener"><span class="port-pre">&gt; OPEN</span><span class="port-name">pomodoro</span><span class="port-arr">↗</span></a>
-                        <a class="port" href="https://github.com/lukastojiljkovic/Calculator-app" target="_blank" rel="noopener"><span class="port-pre">&gt; OPEN</span><span class="port-name">calculator</span><span class="port-arr">↗</span></a>
-                        <a class="port" href="https://github.com/lukastojiljkovic/Algorithms-and-Data-Structures" target="_blank" rel="noopener"><span class="port-pre">&gt; OPEN</span><span class="port-name">dsa</span><span class="port-arr">↗</span></a>
-                        <a class="port" href="https://github.com/lukastojiljkovic/Power-Scheduler" target="_blank" rel="noopener"><span class="port-pre">&gt; OPEN</span><span class="port-name">scheduler</span><span class="port-arr">↗</span></a>
-                    </div>
-                </article>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- ═════════ L O G _ 0 0 6   S T A C K ═════════ -->
-    <section class="log" id="log-006">
-        <header class="log-head">
-            <div class="log-num">LOG_006</div>
-            <div class="log-rule" aria-hidden="true">═══════════════════════════════════════════════════</div>
-            <h2 class="log-title">TECH_STACK<span class="log-title-blink">_</span></h2>
-        </header>
-        <div class="log-body">
-            <div class="stack-grid">
-                <div class="stack-mod"><div class="stack-mod-h">// LANGUAGES</div><ul class="chips"><li>java</li><li>kotlin</li><li>python</li><li>typescript</li><li>javascript</li><li>c</li><li>cpp</li><li>sql</li><li>matlab</li><li>octave</li><li>html</li><li>css</li><li>bash</li><li>latex</li></ul></div>
-                <div class="stack-mod"><div class="stack-mod-h">// BACKEND_+_WEB</div><ul class="chips"><li>spring_boot</li><li>spring_security</li><li>spring_data_jpa</li><li>hibernate</li><li>jwt</li><li>junit_5</li><li>mockito</li><li>assertj</li><li>jacoco</li><li>swagger</li><li>pdfbox</li><li>lombok</li><li>maven</li><li>gradle</li><li>fastapi</li><li>flask</li><li>rest_apis</li><li>microservices</li><li>sse</li></ul></div>
-                <div class="stack-mod"><div class="stack-mod-h">// FRONTEND_+_MOBILE</div><ul class="chips"><li>react_19</li><li>vite</li><li>tailwind</li><li>shadcn_ui</li><li>radix</li><li>react_hook_form</li><li>zod</li><li>axios</li><li>recharts</li><li>vitest</li><li>cypress</li><li>compose</li><li>material_3</li><li>hilt</li><li>retrofit</li><li>okhttp</li><li>moshi</li><li>room</li><li>datastore</li><li>coil</li><li>coroutines</li><li>javafx</li><li>swing</li></ul></div>
-                <div class="stack-mod"><div class="stack-mod-h">// ML_+_AI</div><ul class="chips"><li>pytorch</li><li>torchvision</li><li>torchaudio</li><li>tensorflow</li><li>keras</li><li>scikit_learn</li><li>numpy</li><li>pandas</li><li>matplotlib</li><li>seaborn</li><li>opencv</li><li>huggingface</li><li>wav2vec2</li><li>sentence_transformers</li><li>chromadb</li><li>langchain</li><li>ollama</li><li>gemma</li><li>lm_studio</li><li>react_pattern</li><li>rag</li><li>matlab_dl</li></ul></div>
-                <div class="stack-mod"><div class="stack-mod-h">// DATA</div><ul class="chips"><li>postgresql</li><li>mysql</li><li>oracle_sql</li><li>sqlite</li><li>h2</li><li>chromadb</li></ul></div>
-                <div class="stack-mod"><div class="stack-mod-h">// DEVOPS</div><ul class="chips"><li>git</li><li>github</li><li>docker</li><li>compose</li><li>nginx</li><li>nvidia_toolkit</li><li>cuda</li><li>wsl</li><li>antlr4</li><li>powerdesigner</li><li>android_studio</li><li>github_pages</li></ul></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ═════════ L O G _ 0 0 7   E T C ═════════ -->
-    <section class="log" id="log-007">
-        <header class="log-head">
-            <div class="log-num">LOG_007</div>
-            <div class="log-rule" aria-hidden="true">═══════════════════════════════════════════════════</div>
-            <h2 class="log-title">META<span class="log-title-blink">_</span></h2>
-        </header>
-        <div class="log-body etc-grid">
-            <div class="etc-block">
-                <div class="etc-h">// LANGUAGES</div>
-                <p><strong>SR</strong> // native</p>
-                <p><strong>EN</strong> // excellent proficiency</p>
-            </div>
-            <div class="etc-block">
-                <div class="etc-h">// CERTS</div>
-                <p>Karate Black Belt <span class="muted">[1st Dan Shodan]</span></p>
-                <p>Elementary Music School <span class="muted">[Piano]</span></p>
-                <p>B-category driver's license</p>
-            </div>
-            <div class="etc-block">
-                <div class="etc-h">// OFF_HOURS</div>
-                <p>Long-distance reading, longer-distance hiking, trying not to break the kitchen.</p>
-            </div>
-        </div>
-    </section>
-
-    <footer class="colophon">
-        <pre class="colophon-ascii" aria-hidden="true">// END_OF_TRANSMISSION ─────────────── L.S // SYS_OPERATIVE</pre>
-        <p class="colophon-line" data-build-date>
-            <span class="muted">build</span> 2026.05.01
-            <span class="dot">·</span>
-            <span class="muted">type</span> JetBrains Mono · Rajdhani
-            <span class="dot">·</span>
-            <span class="muted">node</span> Београд
-        </p>
-    </footer>
-
 </main>
 
-<script src="js/main.js"></script>
+<footer class="wrap">
+    <div class="foot">
+        <span>Luka D. Stojiljković</span>
+        <span>Belgrade, Serbia</span>
+    </div>
+</footer>
+
+<script src="js/main.js" defer></script>
 </body>
 </html>
