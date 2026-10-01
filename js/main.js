@@ -33,7 +33,8 @@
         }
     }, { rootMargin: '-45% 0px -50% 0px' });
 
-    links.forEach((_, id) => {
+    // The hero is observed too, with no link of its own, so scrolling back up clears the mark.
+    ['top', ...links.keys()].forEach((id) => {
         const section = document.getElementById(id);
         if (section) observer.observe(section);
     });

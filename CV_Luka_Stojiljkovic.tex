@@ -4,7 +4,7 @@
 \input{glyphtounicode}
 \pdfgentounicode=1
 
-\usepackage[top=1.35cm,bottom=1.2cm,left=1.6cm,right=1.6cm]{geometry}
+\usepackage[top=1.0cm,bottom=0.9cm,left=1.6cm,right=1.6cm]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[default,type1]{sourcesanspro}
@@ -17,14 +17,14 @@
     pdftitle={Luka Stojiljkovic - CV},
     pdfauthor={Luka D. Stojiljkovic},
     pdfsubject={Software Engineer},
-    pdfkeywords={Software Engineer, Full-Stack, Backend, Applied AI, Java, Spring Boot, React, TypeScript, Kotlin, Python, PyTorch, LLM, RAG, Agents, C\#, .NET, WinUI 3, Rust, C++, PostgreSQL, Docker}
+    pdfkeywords={Software Engineer, Applied AI, Full-Stack, Backend, Java, Spring Boot, React, TypeScript, Kotlin, Python, PyTorch, LLM, RAG, Agents, C\#, .NET, WinUI 3, Rust, C++, PostgreSQL, Docker}
 ]{hyperref}
 \urlstyle{same}
 
-% Ink and one accent, matching the portfolio.
-\definecolor{ink}{HTML}{15171A}
+% Ink only: the portfolio's signal yellow does not survive print.
+\definecolor{ink}{HTML}{121418}
 \definecolor{muted}{HTML}{565C64}
-\definecolor{accent}{HTML}{0C7350}
+\definecolor{accent}{HTML}{121418}
 \color{ink}
 
 \pagestyle{empty}
@@ -36,7 +36,7 @@
 \setlength{\tabcolsep}{0pt}
 
 \titleformat{\section}{\large\bfseries}{}{0pt}{}[\vspace{1pt}{\color{accent}\titlerule[0.6pt]}]
-\titlespacing*{\section}{0pt}{9pt}{4pt}
+\titlespacing*{\section}{0pt}{8pt}{3pt}
 
 % \entry{title}{right}{subtitle}
 \newcommand{\entry}[3]{%
@@ -50,13 +50,13 @@
 {\fontsize{22}{24}\selectfont\bfseries Luka D. Stojiljkovi\'{c}}\\[3pt]
 {\large Software Engineer, Belgrade, Serbia}\\[4pt]
 {\small\color{muted}\href{mailto:stojiljkovic.d.luka@gmail.com}{stojiljkovic.d.luka@gmail.com} \quad
-+381 64 904 0342 \quad
+\href{tel:+381649040342}{+381 64 904 0342} \quad
 \href{https://lukastojiljkovic.github.io/CV/}{lukastojiljkovic.github.io/CV} \quad
 \href{https://github.com/lukastojiljkovic}{github.com/lukastojiljkovic} \quad
 \href{https://linkedin.com/in/luka-stojiljkovi\%C4\%87}{LinkedIn}}
 
-\vspace{8pt}
-Final-year Computer Science student building full-stack products, native Windows apps and local LLM systems.
+\vspace{6pt}
+Final-year Computer Science student building LLM agents, full-stack products and native Windows apps.
 Led a 25-person team on a full-stack banking platform and shipped four open-source Windows apps with installers.
 
 \section{Experience}
@@ -76,24 +76,25 @@ Led a 25-person team on a full-stack banking platform and shipped four open-sour
 \end{itemize}
 
 \section{Selected Projects}
-\begin{itemize}[itemsep=3pt]
-  \project{Nexus}{https://lukastojiljkovic.github.io/CV/\#work}{offline-first desktop workspace (tasks, calendar, notes, finance) in an Electron and React monorepo with an encrypted SQLite store and optional end-to-end encrypted sync. Open-source release in preparation.}{TypeScript, Electron, SQLCipher, Supabase}
+\begin{itemize}[itemsep=2pt]
   \project{Stem Agent}{https://github.com/lukastojiljkovic/stem-agent}{LLM agent that specializes itself by evolving pipelines of typed tools with six mutation operators, beam search and a MAP-Elites archive; successful pipelines persist across sessions.}{Python, LM Studio, Gemma}
+  \project{Serbian real-time speech recognition}{https://github.com/lukastojiljkovic/serbian-realtime-speech-recognition}{fine-tuned Wav2Vec2 XLS-R with a hybrid voice-activity detector; about 0.29 WER on conversational speech. Group project.}{PyTorch, Hugging Face}
+  \project{Nexus}{https://lukastojiljkovic.github.io/CV/\#work}{offline-first desktop workspace (tasks, calendar, notes, finance) in an Electron and React monorepo with an encrypted SQLite store and optional end-to-end encrypted sync. Apache 2.0, public release in preparation.}{TypeScript, Electron, SQLCipher, Supabase}
   \project{PermaDel 1.0}{https://github.com/lukastojiljkovic/PermaDel}{secure file shredder for Windows with File Explorer integration and Windows Hello verification. Overwrites alternate data streams and flushes every pass; forensic tests scan a raw disk image.}{C\#, WinUI 3, C++}
   \project{Refreshify 1.1}{https://github.com/lukastojiljkovic/Refreshify}{runs 16 built-in Windows repair and cleanup tools in a safe order after creating a restore point, and recognizes and fixes 15 common failures.}{C\#, WinUI 3}
   \project{PerfWindow 0.10}{https://github.com/lukastojiljkovic/PerfWindow}{real-time hardware monitor: a Rust dashboard fed by an on-demand .NET sensor service that exits with the window, plus an installer that handles drivers and elevation.}{Rust, egui, .NET 8}
-  \project{Serbian real-time speech recognition}{https://github.com/lukastojiljkovic/serbian-realtime-speech-recognition}{fine-tuned Wav2Vec2 XLS-R with a hybrid voice-activity detector; about 0.29 WER on conversational speech. Group project.}{PyTorch, Hugging Face}
+  \project{Pwrschdlr 1.0}{https://github.com/lukastojiljkovic/Power-Scheduler}{a power scheduler, minus the vowels: a Windows 11 timer that shuts down, restarts, sleeps, hibernates or signs out. A one-time Task Scheduler task keeps the timer, so nothing stays running.}{C\#, WinUI 3}
 \end{itemize}
 \vspace{2pt}
 {\small\color{muted}Also: neural networks, Word2Vec and classical ML from scratch in NumPy, a C++17 compiler and stack VM, an NFC business-card Android app and image processing in MATLAB. Full list on the portfolio.}
 
 \section{Skills}
 \begin{tabularx}{\textwidth}{@{}p{3.75cm}X@{}}
+\textbf{AI and ML} & PyTorch, TensorFlow, scikit-learn, Hugging Face, Ollama, LM Studio, RAG, tool calling, ChromaDB \\[1pt]
 \textbf{Languages} & Java, Kotlin, Python, TypeScript, C\#, C++, Rust, SQL \\[1pt]
 \textbf{Backend} & Spring Boot, Spring Security, JPA/Hibernate, REST, SSE, FastAPI \\[1pt]
 \textbf{Frontend and mobile} & React 19, Vite, Tailwind CSS, Zod, Jetpack Compose, Hilt, Room \\[1pt]
 \textbf{Testing} & JUnit 5, Mockito, Vitest, Cypress, xUnit \\[1pt]
-\textbf{AI and ML} & PyTorch, TensorFlow, scikit-learn, Hugging Face, Ollama, LM Studio, RAG, tool calling, ChromaDB \\[1pt]
 \textbf{Data and DevOps} & PostgreSQL, MySQL, Oracle, SQLite, Supabase, Docker, Kubernetes manifests, GitHub Actions \\[1pt]
 \textbf{Desktop} & WinUI 3, Windows App SDK, Electron, egui, Inno Setup \\
 \end{tabularx}
