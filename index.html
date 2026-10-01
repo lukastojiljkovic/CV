@@ -6,8 +6,8 @@
     <title>Luka Stojiljković | Software Engineer</title>
     <meta name="description" content="Luka Stojiljković, software engineer in Belgrade. Applied AI (LLM agents, RAG, PyTorch), full-stack products (Spring Boot, React, Kotlin) and native Windows apps (WinUI 3, Rust).">
     <meta name="author" content="Luka D. Stojiljković">
-    <meta name="theme-color" content="#eef0f3" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#0d0f12" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#f5f6f8" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
     <link rel="canonical" href="https://lukastojiljkovic.github.io/CV/">
 
     <meta property="og:type" content="profile">
@@ -20,7 +20,7 @@
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
     <link rel="preload" href="fonts/ls-sans.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css?v=3">
 
     <script>
         // Theme before first paint, so there is no flash: the stored choice, else the system setting.
@@ -77,7 +77,7 @@
 
 <main id="main">
 
-    <!-- Hero: the name, and the roles card floating over a game the agent is playing -->
+    <!-- Hero: the name, and what I'm looking for beside it -->
     <section class="hero wrap" id="top">
         <div class="hero-copy">
             <h1><span>Luka</span> <span>Stojiljković</span></h1>
@@ -85,37 +85,33 @@
             <div class="actions">
                 <a class="btn btn-primary" href="mailto:stojiljkovic.d.luka@gmail.com">Email me</a>
                 <a class="btn" href="https://github.com/lukastojiljkovic" target="_blank" rel="noopener">GitHub</a>
+                <a class="btn" href="https://linkedin.com/in/luka-stojiljkovi%C4%87" target="_blank" rel="noopener">LinkedIn</a>
             </div>
         </div>
 
-        <div class="hero-side">
-            <div class="console" id="tetris">
-                <div class="hud">
-                    <div class="hud-cell">
-                        <span class="hud-label">Next</span>
-                        <canvas class="next" width="64" height="64" aria-hidden="true"></canvas>
-                    </div>
-                    <div class="hud-cell">
-                        <span class="hud-label">Lines</span>
-                        <strong class="hud-lines" data-lines>0</strong>
-                    </div>
-                    <div class="hud-cell">
-                        <span class="hud-label">Playing</span>
-                        <strong class="hud-mode" data-mode>Autopilot</strong>
-                    </div>
-                    <p class="hud-note" id="tetris-note">A search agent scores every possible drop and plays the best one.<span class="keys"> Click the board and use the arrow keys to take over.</span></p>
+        <aside class="card" aria-labelledby="card-title">
+            <p class="status" id="card-title">Open to roles</p>
+            <ul class="roles">
+                <li>Applied AI</li>
+                <li>Full-stack</li>
+                <li>Backend</li>
+            </ul>
+            <dl class="card-facts">
+                <div><dt>Where</dt><dd>Belgrade or remote</dd></div>
+                <div><dt>Education</dt><dd>BSc Computer Science, RAF, final year</dd></div>
+                <div>
+                    <dt>Shipped</dt>
+                    <dd>
+                        <ul class="shipped">
+                            <li><a href="#refreshify"><img src="img/icons/refreshify.png" width="20" height="20" alt="">Refreshify 1.1</a></li>
+                            <li><a href="#pwrschdlr"><img src="img/icons/pwrschdlr.png" width="20" height="20" alt="">Pwrschdlr 1.0</a></li>
+                            <li><a href="#permadel"><img src="img/icons/permadel.png" width="20" height="20" alt="">PermaDel 1.0</a></li>
+                            <li><a href="#perfwindow"><img src="img/icons/perfwindow.png" width="20" height="20" alt="">PerfWindow 0.10</a></li>
+                        </ul>
+                    </dd>
                 </div>
-                <canvas class="board" tabindex="0" role="application" aria-label="Tetris" aria-describedby="tetris-note"></canvas>
-            </div>
-
-            <dl class="card">
-                <div class="card-head"><span class="chip">Open to roles</span></div>
-                <div class="row"><dt>Looking for</dt><dd>Applied AI, full&#8209;stack or backend role</dd></div>
-                <div class="row"><dt>Where</dt><dd>Belgrade or remote</dd></div>
-                <div class="row"><dt>Education</dt><dd>BSc Computer Science, RAF, final year</dd></div>
-                <div class="row"><dt>Shipped</dt><dd>Pwrschdlr 1.0, PermaDel 1.0, Refreshify 1.1, PerfWindow 0.10</dd></div>
             </dl>
-        </div>
+        </aside>
     </section>
 
     <!-- Experience and education -->
@@ -198,7 +194,7 @@
                 </div>
             </article>
 
-            <article class="tile tile-tint span-5">
+            <article class="tile span-5">
                 <div class="tile-body">
                     <h3>Stem Agent</h3>
                     <p class="kind">Applied AI, 2026</p>
@@ -215,7 +211,7 @@
                 </div>
             </article>
 
-            <article class="tile tile-feature span-12">
+            <article class="tile tile-feature span-12" style="--app: #8a6410; --app-dark: #e5bf62">
                 <div class="tile-body">
                     <h3>Nexus</h3>
                     <p class="kind">Desktop app, 2026</p>
@@ -228,9 +224,9 @@
                     <p class="stack">TypeScript, React, Electron, SQLCipher, Supabase, Turborepo</p>
                     <p class="note">Open source under Apache 2.0. The public repository opens with the first public release.</p>
                 </div>
-                <div class="stage stage-corner">
-                    <img class="shot shot-light" src="img/nexus.webp" width="1120" height="720" loading="lazy" alt="The Nexus dashboard with today's agenda, upcoming tasks and exams.">
-                    <img class="shot shot-dark" src="img/nexus-dark.webp" width="1120" height="720" loading="lazy" alt="The Nexus dashboard in its night theme.">
+                <div class="desk">
+                    <img class="win win-light" src="img/nexus.webp" width="1120" height="720" loading="lazy" alt="The Nexus dashboard with today's agenda, upcoming tasks and exams.">
+                    <img class="win win-dark" src="img/nexus-dark.webp" width="1120" height="720" loading="lazy" alt="The Nexus dashboard in its night theme.">
                 </div>
             </article>
         </div>
@@ -239,12 +235,12 @@
         <p class="subhead-note">Four native apps, each with an installer, CI and its own website.</p>
 
         <div class="work">
-            <article class="tile app span-7">
-                <div class="stage">
-                    <img class="shot" src="img/refreshify.webp" width="1164" height="792" loading="lazy" alt="Refreshify's home page with the Run all action and the state of this PC.">
+            <article class="tile app span-6" id="refreshify" style="--app: #1a5fbf; --app-dark: #64a6f4">
+                <div class="desk">
+                    <img class="win" src="img/refreshify.webp" width="1164" height="792" loading="lazy" alt="Refreshify's home page with the Run all action and the state of this PC.">
                 </div>
                 <div class="tile-body">
-                    <h3>Refreshify <span class="ver">1.1</span></h3>
+                    <h3><img class="icon" src="img/icons/refreshify.png" width="32" height="32" alt="">Refreshify <span class="ver">1.1</span></h3>
                     <p class="summary">Cleans up, repairs and updates Windows with the tools Windows already has, without a terminal window.</p>
                     <ul class="facts">
                         <li>Runs 16 built-in tools in an order that avoids known failures, after creating a restore point.</li>
@@ -260,13 +256,13 @@
                 </div>
             </article>
 
-            <article class="tile app span-5">
-                <div class="stage">
-                    <img class="shot shot-light" src="img/pwrschdlr.webp" width="926" height="733" loading="lazy" alt="Pwrschdlr counting down to a shutdown.">
-                    <img class="shot shot-dark" src="img/pwrschdlr-dark.webp" width="926" height="733" loading="lazy" alt="Pwrschdlr counting down to a shutdown, in the dark theme.">
+            <article class="tile app span-6" id="pwrschdlr" style="--app: #b5470b; --app-dark: #ff9a5c">
+                <div class="desk">
+                    <img class="win win-light" src="img/pwrschdlr.webp" width="926" height="733" loading="lazy" alt="Pwrschdlr counting down to a shutdown.">
+                    <img class="win win-dark" src="img/pwrschdlr-dark.webp" width="926" height="733" loading="lazy" alt="Pwrschdlr counting down to a shutdown, in the dark theme.">
                 </div>
                 <div class="tile-body">
-                    <h3>Pwrschdlr <span class="ver">1.0</span></h3>
+                    <h3><img class="icon" src="img/icons/pwrschdlr.png" width="32" height="32" alt="">Pwrschdlr <span class="ver">1.0</span></h3>
                     <p class="summary">A power scheduler, minus the vowels. Shuts down, restarts, sleeps, hibernates or signs out when a timer runs out.</p>
                     <ul class="facts">
                         <li>A one-time Task Scheduler task keeps the timer when the app is closed; nothing stays running.</li>
@@ -282,12 +278,12 @@
                 </div>
             </article>
 
-            <article class="tile app span-5">
-                <div class="stage">
-                    <img class="shot" src="img/permadel.webp" width="1166" height="793" loading="lazy" alt="PermaDel with four files on the shred list and three overwrite passes.">
+            <article class="tile app span-6" id="permadel" style="--app: #b3202f; --app-dark: #f2666e">
+                <div class="desk">
+                    <img class="win" src="img/permadel.webp" width="1166" height="793" loading="lazy" alt="PermaDel with four files on the shred list and three overwrite passes.">
                 </div>
                 <div class="tile-body">
-                    <h3>PermaDel <span class="ver">1.0</span></h3>
+                    <h3><img class="icon" src="img/icons/permadel.png" width="32" height="32" alt="">PermaDel <span class="ver">1.0</span></h3>
                     <p class="summary">Securely shreds files and folders on Windows so recovery tools can't bring them back.</p>
                     <ul class="facts">
                         <li>File Explorer context menu and an optional Windows Hello check before shredding.</li>
@@ -303,13 +299,13 @@
                 </div>
             </article>
 
-            <article class="tile app span-7">
-                <div class="stage">
-                    <img class="shot shot-light" src="img/perfwindow.webp" width="1386" height="738" loading="lazy" alt="PerfWindow showing load, temperatures and power for the CPU, GPUs, memory, network, battery and disks.">
-                    <img class="shot shot-dark" src="img/perfwindow-dark.webp" width="1386" height="738" loading="lazy" alt="PerfWindow's dashboard in the dark theme.">
+            <article class="tile app span-6" id="perfwindow" style="--app: #0a756c; --app-dark: #34e0d0">
+                <div class="desk">
+                    <img class="win win-light" src="img/perfwindow.webp" width="1386" height="738" loading="lazy" alt="PerfWindow showing load, temperatures and power for the CPU, GPUs, memory, network, battery and disks.">
+                    <img class="win win-dark" src="img/perfwindow-dark.webp" width="1386" height="738" loading="lazy" alt="PerfWindow's dashboard in the dark theme.">
                 </div>
                 <div class="tile-body">
-                    <h3>PerfWindow <span class="ver">0.10</span></h3>
+                    <h3><img class="icon" src="img/icons/perfwindow.png" width="32" height="32" alt="">PerfWindow <span class="ver">0.10</span></h3>
                     <p class="summary">Real-time hardware monitor for Windows: load, temperatures, power and lifetime data for every component.</p>
                     <ul class="facts">
                         <li>Rust and egui dashboard fed by a .NET sensor service built on LibreHardwareMonitor, over a named pipe.</li>
@@ -482,7 +478,6 @@
     </div>
 </footer>
 
-<script src="js/main.js" defer></script>
-<script src="js/tetris.js" defer></script>
+<script src="js/main.js?v=3" defer></script>
 </body>
 </html>
