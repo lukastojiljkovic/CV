@@ -61,7 +61,6 @@
         <div class="topline">
             <a class="mark" href="#top">Luka Stojiljković</a>
             <nav class="nav" aria-label="Sections">
-                <a href="#banka">BANKA_2</a>
                 <a href="#experience">Experience</a>
                 <a href="#work">Work</a>
                 <a href="#apps">Windows apps</a>
@@ -99,44 +98,6 @@
 </header>
 
 <main id="main">
-
-    <!-- BANKA_2 and a diagram of its services -->
-    <section class="wrap grid banka" id="banka" aria-labelledby="banka-title">
-        <div class="legend">
-            <h2 id="banka-title">BANKA_2</h2>
-            <p class="label"><span>2025–2026</span> Team lead, Software Engineering capstone at RAF</p>
-            <p class="summary">An enterprise banking platform built by a 25-person team I led across backend, web, Android and infrastructure. I wrote most of the code and designed Arbitro, its LLM assistant.</p>
-            <p class="detail" id="sys-detail" aria-live="polite">Red is the path every request takes: in through the gateway, then on to banka-core or the trading service.</p>
-            <dl class="ledger">
-                <dt>25</dt><dd>engineers on the team</dd>
-                <dt>2,165</dt><dd>backend tests, JUnit and Mockito</dd>
-                <dt>1,254</dt><dd>frontend tests in Vitest, plus a Cypress suite</dd>
-                <dt>Stack</dt><dd>Java 25, Spring Boot 4, PostgreSQL, React 19, Kotlin, Docker, Ollama</dd>
-            </dl>
-            <p class="links">
-                <a href="https://github.com/lukastojiljkovic/Software-Engineering-Backend" target="_blank" rel="noopener">Backend</a>
-                <a href="https://github.com/lukastojiljkovic/Software-Engineering-Frontend" target="_blank" rel="noopener">Frontend</a>
-                <a href="https://github.com/lukastojiljkovic/Software-Engineering-Android" target="_blank" rel="noopener">Android</a>
-                <a href="https://github.com/lukastojiljkovic/Software-Engineering-Infrastructure" target="_blank" rel="noopener">Infrastructure</a>
-            </p>
-        </div>
-
-        <figure class="sys">
-            <div class="sys-grid">
-                <button type="button" class="node n-web" data-detail="The web client in React 19, at feature parity with the Android app."><b>Web client</b><span>React 19</span></button>
-                <button type="button" class="node n-android" data-detail="The Android app in Kotlin with Jetpack Compose, at feature parity with the web client."><b>Android app</b><span>Kotlin and Jetpack Compose</span></button>
-                <button type="button" class="node n-gate" data-detail="The API gateway: nginx is the only service exposed to the outside, and it routes each path to the right service."><b>API gateway</b><span>nginx, the only way in</span></button>
-                <button type="button" class="node n-core" data-detail="banka-core, a Spring Boot service: authentication, clients and employees, accounts, cards, payments, transfers, loans and inter-bank payments with two-phase commit. Reads go to a streaming PostgreSQL replica."><b>banka-core</b><span>Accounts, cards, payments, transfers, loans and inter-bank payments (2PC)</span><span class="db">PostgreSQL, primary and replica</span></button>
-                <button type="button" class="node n-trade" data-detail="trading-service, with its own Spring Boot service and database: stock exchange orders, portfolios, OTC options between banks, margin, investment funds and tax. Price ticks live in InfluxDB."><b>trading-service</b><span>Orders, portfolios, OTC options, margin and investment funds</span><span class="db">Its own database, InfluxDB for price ticks</span></button>
-                <button type="button" class="node n-arb" data-detail="Arbitro, the banking assistant: a self-hosted LLM on Ollama with tool calling, multi-step wizards, RAG over the specifications and SSE streaming."><b>Arbitro</b><span>LLM assistant on Ollama: tool calling, wizards, RAG over the specs, streaming</span></button>
-                <button type="button" class="node n-note" data-detail="notification-service: consumes events from RabbitMQ and sends email over SMTP."><b>Notifications</b><span>Events from RabbitMQ, email over SMTP</span></button>
-                <i class="wire w-in" aria-hidden="true"></i>
-                <i class="wire w-out" aria-hidden="true"></i>
-                <i class="wire w-sup" aria-hidden="true"></i>
-            </div>
-            <figcaption>The services of BANKA_2. Point at or tap one to read what it does.</figcaption>
-        </figure>
-    </section>
 
     <!-- Experience and education -->
     <section class="wrap grid section" id="experience" aria-labelledby="exp-title">
@@ -190,6 +151,43 @@
     <section class="wrap grid section" id="work" aria-labelledby="work-title">
         <h2 class="section-title" id="work-title">Selected work</h2>
 
+        <article class="grid banka" id="banka" aria-labelledby="banka-title">
+            <div class="legend">
+                <h3 id="banka-title">BANKA_2</h3>
+                <p class="label"><span>2025–2026</span> Team lead, Software Engineering capstone at RAF</p>
+                <p class="summary">An enterprise banking platform built by a 25-person team I led across backend, web, Android and infrastructure. I wrote most of the code and designed Arbitro, its LLM assistant.</p>
+                <p class="detail" id="sys-detail" aria-live="polite">Red is the path every request takes: in through the gateway, then on to banka-core or the trading service.</p>
+                <dl class="ledger">
+                    <dt>25</dt><dd>engineers on the team</dd>
+                    <dt>2,165</dt><dd>backend tests, JUnit and Mockito</dd>
+                    <dt>1,254</dt><dd>frontend tests in Vitest, plus a Cypress suite</dd>
+                    <dt>Stack</dt><dd>Java 25, Spring Boot 4, PostgreSQL, React 19, Kotlin, Docker, Ollama</dd>
+                </dl>
+                <p class="links">
+                    <a href="https://github.com/lukastojiljkovic/Software-Engineering-Backend" target="_blank" rel="noopener">Backend</a>
+                    <a href="https://github.com/lukastojiljkovic/Software-Engineering-Frontend" target="_blank" rel="noopener">Frontend</a>
+                    <a href="https://github.com/lukastojiljkovic/Software-Engineering-Android" target="_blank" rel="noopener">Android</a>
+                    <a href="https://github.com/lukastojiljkovic/Software-Engineering-Infrastructure" target="_blank" rel="noopener">Infrastructure</a>
+                </p>
+            </div>
+
+            <figure class="sys">
+                <div class="sys-grid">
+                    <button type="button" class="node n-web" data-detail="The web client in React 19, at feature parity with the Android app."><b>Web client</b><span>React 19</span></button>
+                    <button type="button" class="node n-android" data-detail="The Android app in Kotlin with Jetpack Compose, at feature parity with the web client."><b>Android app</b><span>Kotlin and Jetpack Compose</span></button>
+                    <button type="button" class="node n-gate" data-detail="The API gateway: nginx is the only service exposed to the outside, and it routes each path to the right service."><b>API gateway</b><span>nginx, the only way in</span></button>
+                    <button type="button" class="node n-core" data-detail="banka-core, a Spring Boot service: authentication, clients and employees, accounts, cards, payments, transfers, loans and inter-bank payments with two-phase commit. Reads go to a streaming PostgreSQL replica."><b>banka-core</b><span>Accounts, cards, payments, transfers, loans and inter-bank payments (2PC)</span><span class="db">PostgreSQL, primary and replica</span></button>
+                    <button type="button" class="node n-trade" data-detail="trading-service, with its own Spring Boot service and database: stock exchange orders, portfolios, OTC options between banks, margin, investment funds and tax. Price ticks live in InfluxDB."><b>trading-service</b><span>Orders, portfolios, OTC options, margin and investment funds</span><span class="db">Its own database, InfluxDB for price ticks</span></button>
+                    <button type="button" class="node n-arb" data-detail="Arbitro, the banking assistant: a self-hosted LLM on Ollama with tool calling, multi-step wizards, RAG over the specifications and SSE streaming."><b>Arbitro</b><span>LLM assistant on Ollama: tool calling, wizards, RAG over the specs, streaming</span></button>
+                    <button type="button" class="node n-note" data-detail="notification-service: consumes events from RabbitMQ and sends email over SMTP."><b>Notifications</b><span>Events from RabbitMQ, email over SMTP</span></button>
+                    <i class="wire w-in" aria-hidden="true"></i>
+                    <i class="wire w-out" aria-hidden="true"></i>
+                    <i class="wire w-sup" aria-hidden="true"></i>
+                </div>
+                <figcaption>The services of BANKA_2. Point at or tap one to read what it does.</figcaption>
+            </figure>
+        </article>
+
         <article class="work-stem">
             <h3>Stem Agent</h3>
             <p class="label"><span>2026</span> Applied AI</p>
@@ -231,7 +229,8 @@
 
         <article class="app" id="refreshify" style="--app: #1a5fbf; --app-dark: #64a6f4">
             <div class="plate">
-                <img class="shot" src="img/refreshify.webp" width="1164" height="792" loading="lazy" alt="Refreshify's home page with the Run all action and the state of this PC.">
+                <img class="shot shot-light" src="img/refreshify.webp" width="1164" height="792" loading="lazy" alt="Refreshify's home page with the Run all action and the state of this PC.">
+                <img class="shot shot-dark" src="img/refreshify-dark.webp" width="1164" height="792" loading="lazy" alt="Refreshify's home page in the dark theme.">
             </div>
             <h3><img src="img/icons/refreshify.png" width="32" height="32" alt="">Refreshify <span class="ver">1.1</span></h3>
             <p class="summary">Cleans up, repairs and updates Windows with the tools Windows already has, without a terminal window.</p>
@@ -270,7 +269,8 @@
 
         <article class="app" id="permadel" style="--app: #b3202f; --app-dark: #f2666e">
             <div class="plate">
-                <img class="shot" src="img/permadel.webp" width="1166" height="793" loading="lazy" alt="PermaDel with four files on the shred list and three overwrite passes.">
+                <img class="shot shot-light" src="img/permadel.webp" width="1166" height="793" loading="lazy" alt="PermaDel with four files on the shred list and three overwrite passes.">
+                <img class="shot shot-dark" src="img/permadel-dark.webp" width="1166" height="793" loading="lazy" alt="PermaDel's shred list in the dark theme.">
             </div>
             <h3><img src="img/icons/permadel.png" width="32" height="32" alt="">PermaDel <span class="ver">1.0</span></h3>
             <p class="summary">Securely shreds files and folders on Windows so recovery tools can't bring them back.</p>
