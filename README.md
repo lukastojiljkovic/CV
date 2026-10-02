@@ -1,54 +1,55 @@
-# Portfolio and CV
+# Luka D. Stojiljković
 
-Luka Stojiljković's portfolio and one-page CV, served from GitHub Pages.
+Software engineer in Belgrade, Serbia. I build LLM agents, full-stack products and native Windows
+apps, and I am finishing a BSc in Computer Science at RAF, Union University.
 
-- **Portfolio:** https://lukastojiljkovic.github.io/CV/
-- **CV (PDF):** https://lukastojiljkovic.github.io/CV/CV_Luka_Stojiljkovic.pdf
+Open to applied AI, full-stack and backend roles, in Belgrade or remote.
 
-## Structure
-
-```
-CV/
-├── index.html                  Portfolio (single page)
-├── css/styles.css              Styles, light and dark themes
-├── js/main.js                  Theme toggle, the BANKA_2 diagram legend and current-section highlight
-├── img/                        Project screenshots (WebP), app icons and the social preview
-├── fonts/                      Archivo, variable (SIL OFL 1.1, see fonts/OFL.txt)
-├── favicon.png
-├── DESIGN.md                   The design system: tokens, rules and components
-├── PRODUCT.md                  Who the site is for and what it has to prove
-├── CV_Luka_Stojiljkovic.tex    CV source
-└── CV_Luka_Stojiljkovic.pdf    Compiled CV
-```
-
-## Design
-
-The site is one brochure in a series modelled on Massimo Vignelli's Unigrid system for the US
-National Park Service: a black title band over white paper on a 12-column grid, headings hung from
-heavy rules, and one colour per publication. BANKA_2 is shown as a diagram of its real services;
-point at a service to read what it does. The four app websites belong to the same series, each in
-its app's icon colour. DESIGN.md records the system. The theme follows the system setting until you
-switch it in the header, and the choice is remembered per browser.
-There is no build step and no third-party request at runtime.
-
-## Run locally
-
-Serve the folder and open it in a browser:
-
-```sh
-python -m http.server 8000
-```
-
-## Build the CV
-
-```sh
-pdflatex CV_Luka_Stojiljkovic.tex
-```
-
-Needs a LaTeX distribution with `sourcesanspro`, `titlesec`, `enumitem`, `tabularx` and `hyperref`
-(MiKTeX installs missing packages on first run). The PDF must stay one page.
-
-## Contact
-
-stojiljkovic.d.luka@gmail.com, [GitHub](https://github.com/lukastojiljkovic),
+**[Portfolio](https://lukastojiljkovic.github.io/CV/)** &nbsp;|&nbsp;
+**[CV (PDF)](https://lukastojiljkovic.github.io/CV/CV_Luka_Stojiljkovic.pdf)** &nbsp;|&nbsp;
+[stojiljkovic.d.luka@gmail.com](mailto:stojiljkovic.d.luka@gmail.com) &nbsp;|&nbsp;
 [LinkedIn](https://linkedin.com/in/luka-stojiljkovi%C4%87)
+
+## Experience
+
+**Team Lead, BANKA_2**, Software Engineering capstone at RAF, 2025 – 2026
+
+Led a 25-person team delivering an enterprise banking platform: Spring Boot services, a React 19 web
+client, a Kotlin / Jetpack Compose Android app and Docker infrastructure. Wrote the majority of the
+codebase, covered by 2,165 backend tests, 1,254 frontend tests and a Cypress end-to-end suite.
+Designed Arbitro, a self-hosted LLM banking assistant with tool calling, RAG over the specifications
+and SSE streaming on Ollama.
+
+**Software Developer, AI in AEC**, May 2025 – January 2026
+
+An AI consulting startup for architecture, engineering and construction. Built Neostack, a prototype
+for cataloguing a firm's software stack and licence usage, and AI in AEC Flow, an internal platform
+for time, task and revenue tracking.
+
+## Selected work
+
+| Project | What it is | Built with |
+| --- | --- | --- |
+| [Stem Agent](https://github.com/lukastojiljkovic/stem-agent) | An LLM agent that specializes itself by evolving pipelines of typed tools, with beam search and a MAP-Elites archive. | Python, LM Studio |
+| [Serbian speech recognition](https://github.com/lukastojiljkovic/serbian-realtime-speech-recognition) | Real-time recognition for Serbian: a hybrid voice-activity detector feeding a published Wav2Vec2 XLS-R checkpoint, with live Cyrillic output. Group project. | PyTorch, Hugging Face |
+| [Nexus](https://lukastojiljkovic.github.io/CV/#work) | An offline-first desktop workspace with an encrypted local store and optional end-to-end encrypted sync. Public release in preparation. | TypeScript, Electron, Supabase |
+| [PermaDel](https://github.com/lukastojiljkovic/PermaDel) | A secure file shredder for Windows with File Explorer integration and Windows Hello verification. | C#, WinUI 3, C++ |
+| [Refreshify](https://github.com/lukastojiljkovic/Refreshify) | Runs the built-in Windows repair tools in a safe order after creating a restore point. | C#, WinUI 3 |
+| [PerfWindow](https://github.com/lukastojiljkovic/PerfWindow) | A real-time hardware monitor: a Rust dashboard fed by an on-demand .NET sensor service. | Rust, .NET 8 |
+| [Pwrschdlr](https://github.com/lukastojiljkovic/Power-Scheduler) | A Windows 11 timer that shuts down, restarts, sleeps, hibernates or signs out. | C#, WinUI 3 |
+
+## Skills
+
+**AI and ML:** PyTorch, TensorFlow, scikit-learn, Hugging Face, Ollama, RAG, tool calling, ChromaDB  
+**Languages:** Java, Kotlin, Python, TypeScript, C#, C++, Rust, SQL  
+**Backend:** Spring Boot, Spring Security, JPA/Hibernate, REST, SSE, FastAPI  
+**Frontend and mobile:** React 19, Vite, Tailwind CSS, Jetpack Compose  
+**Data and DevOps:** PostgreSQL, SQLite, Supabase, Docker, Kubernetes, GitHub Actions  
+**Desktop:** WinUI 3, Windows App SDK, Electron, egui
+
+## Education
+
+**BSc Computer Science**, School of Computing (RAF), Union University, Belgrade, 2023 – expected 2026  
+**Computer Science studies**, Faculty of Mathematics, University of Belgrade, 2018 – 2023
+
+Serbian (native), English (full professional proficiency).
