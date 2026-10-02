@@ -4,23 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Luka Stojiljković | Software Engineer</title>
-    <meta name="description" content="Luka Stojiljković, software engineer in Belgrade. Applied AI (LLM agents, RAG, PyTorch), full-stack products (Spring Boot, React, Kotlin) and native Windows apps (WinUI 3, Rust).">
+    <meta name="description" content="Luka Stojiljković, software engineer in Belgrade. Led a 25-person team on the BANKA_2 banking platform; applied AI (LLM agents, RAG), full-stack products and native Windows apps.">
     <meta name="author" content="Luka D. Stojiljković">
-    <meta name="theme-color" content="#f5f6f8" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
+    <meta name="theme-color" content="#000000">
     <link rel="canonical" href="https://lukastojiljkovic.github.io/CV/">
 
     <meta property="og:type" content="profile">
     <meta property="og:title" content="Luka Stojiljković | Software Engineer">
-    <meta property="og:description" content="Applied AI, full-stack products and native Windows apps. Open to applied AI, full-stack and backend roles.">
+    <meta property="og:description" content="Led a 25-person team on a banking platform. Open to applied AI, full-stack and backend roles, in Belgrade or remote.">
     <meta property="og:url" content="https://lukastojiljkovic.github.io/CV/">
     <meta property="og:image" content="https://lukastojiljkovic.github.io/CV/img/og.png">
     <meta name="twitter:card" content="summary_large_image">
 
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
-    <link rel="preload" href="fonts/ls-sans.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="css/styles.css?v=3">
+    <link rel="preload" href="fonts/archivo-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="css/styles.css?v=9">
 
     <script>
         // Theme before first paint, so there is no flash: the stored choice, else the system setting.
@@ -56,280 +55,266 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<header class="bar">
-    <div class="bar-inner">
-        <a class="mark" href="#top">Luka Stojiljković</a>
-        <nav class="nav" aria-label="Sections">
-            <a href="#experience">Experience</a>
-            <a href="#work">Work</a>
-            <a href="#projects">Projects</a>
-            <a href="#stack">Stack</a>
-            <a href="#contact">Contact</a>
-        </nav>
-        <div class="bar-actions">
-            <a class="btn btn-sm" href="CV_Luka_Stojiljkovic.pdf" download>Download CV</a>
-            <button class="btn btn-sm btn-ghost" type="button" id="theme" aria-label="Switch to dark theme">
-                <span class="theme-light">Dark</span><span class="theme-dark">Light</span>
-            </button>
+<!-- The title band: who, what for, how to reach -->
+<header class="band" id="top">
+    <div class="wrap band-grid">
+        <div class="topline">
+            <a class="mark" href="#top">Luka Stojiljković</a>
+            <nav class="nav" aria-label="Sections">
+                <a href="#banka">BANKA_2</a>
+                <a href="#experience">Experience</a>
+                <a href="#work">Work</a>
+                <a href="#apps">Windows apps</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="topline-actions">
+                <a href="CV_Luka_Stojiljkovic.pdf" download>Download CV</a>
+                <button type="button" id="theme" aria-label="Switch to dark theme">
+                    <span class="theme-light">Dark</span><span class="theme-dark">Light</span>
+                </button>
+            </div>
         </div>
+
+        <div class="title">
+            <h1>Luka<br>Stojiljković</h1>
+            <p class="sub">Software engineer in Belgrade. I lead teams and build complete systems, from banking platforms to LLM agents, and ship them with tests.</p>
+        </div>
+
+        <aside class="roles" aria-labelledby="roles-title">
+            <p class="status" id="roles-title">Open to roles</p>
+            <ul>
+                <li>Applied AI</li>
+                <li>Full-stack</li>
+                <li>Backend</li>
+            </ul>
+            <p class="where">Belgrade or remote</p>
+            <p class="band-actions">
+                <a class="btn btn-light" href="mailto:stojiljkovic.d.luka@gmail.com">Email me</a>
+                <a class="btn btn-line" href="https://github.com/lukastojiljkovic" target="_blank" rel="noopener">GitHub</a>
+                <a class="btn btn-line" href="https://linkedin.com/in/luka-stojiljkovi%C4%87" target="_blank" rel="noopener">LinkedIn</a>
+            </p>
+        </aside>
     </div>
 </header>
 
 <main id="main">
 
-    <!-- Hero: the name, and what I'm looking for beside it -->
-    <section class="hero wrap" id="top">
-        <div class="hero-copy">
-            <h1><span>Luka</span> <span>Stojiljković</span></h1>
-            <p class="lede">I build LLM agents, full-stack products and native Windows apps, and ship them with tests.</p>
-            <div class="actions">
-                <a class="btn btn-primary" href="mailto:stojiljkovic.d.luka@gmail.com">Email me</a>
-                <a class="btn" href="https://github.com/lukastojiljkovic" target="_blank" rel="noopener">GitHub</a>
-                <a class="btn" href="https://linkedin.com/in/luka-stojiljkovi%C4%87" target="_blank" rel="noopener">LinkedIn</a>
-            </div>
+    <!-- BANKA_2 and a diagram of its services -->
+    <section class="wrap grid banka" id="banka" aria-labelledby="banka-title">
+        <div class="legend">
+            <h2 id="banka-title">BANKA_2</h2>
+            <p class="label"><span>2025–2026</span> Team lead, Software Engineering capstone at RAF</p>
+            <p class="summary">An enterprise banking platform built by a 25-person team I led across backend, web, Android and infrastructure. I wrote most of the code and designed Arbitro, its LLM assistant.</p>
+            <p class="detail" id="sys-detail" aria-live="polite">Red is the path every request takes: in through the gateway, then on to banka-core or the trading service.</p>
+            <dl class="ledger">
+                <dt>25</dt><dd>engineers on the team</dd>
+                <dt>2,165</dt><dd>backend tests, JUnit and Mockito</dd>
+                <dt>1,254</dt><dd>frontend tests in Vitest, plus a Cypress suite</dd>
+                <dt>Stack</dt><dd>Java 25, Spring Boot 4, PostgreSQL, React 19, Kotlin, Docker, Ollama</dd>
+            </dl>
+            <p class="links">
+                <a href="https://github.com/lukastojiljkovic/Software-Engineering-Backend" target="_blank" rel="noopener">Backend</a>
+                <a href="https://github.com/lukastojiljkovic/Software-Engineering-Frontend" target="_blank" rel="noopener">Frontend</a>
+                <a href="https://github.com/lukastojiljkovic/Software-Engineering-Android" target="_blank" rel="noopener">Android</a>
+                <a href="https://github.com/lukastojiljkovic/Software-Engineering-Infrastructure" target="_blank" rel="noopener">Infrastructure</a>
+            </p>
         </div>
 
-        <aside class="card" aria-labelledby="card-title">
-            <p class="status" id="card-title">Open to roles</p>
-            <ul class="roles">
-                <li>Applied AI</li>
-                <li>Full-stack</li>
-                <li>Backend</li>
-            </ul>
-            <dl class="card-facts">
-                <div><dt>Where</dt><dd>Belgrade or remote</dd></div>
-                <div><dt>Education</dt><dd>BSc Computer Science, RAF, final year</dd></div>
-                <div>
-                    <dt>Shipped</dt>
-                    <dd>
-                        <ul class="shipped">
-                            <li><a href="#refreshify"><img src="img/icons/refreshify.png" width="20" height="20" alt="">Refreshify 1.1</a></li>
-                            <li><a href="#pwrschdlr"><img src="img/icons/pwrschdlr.png" width="20" height="20" alt="">Pwrschdlr 1.0</a></li>
-                            <li><a href="#permadel"><img src="img/icons/permadel.png" width="20" height="20" alt="">PermaDel 1.0</a></li>
-                            <li><a href="#perfwindow"><img src="img/icons/perfwindow.png" width="20" height="20" alt="">PerfWindow 0.10</a></li>
-                        </ul>
-                    </dd>
-                </div>
-            </dl>
-        </aside>
+        <figure class="sys">
+            <div class="sys-grid">
+                <button type="button" class="node n-web" data-detail="The web client in React 19, at feature parity with the Android app."><b>Web client</b><span>React 19</span></button>
+                <button type="button" class="node n-android" data-detail="The Android app in Kotlin with Jetpack Compose, at feature parity with the web client."><b>Android app</b><span>Kotlin and Jetpack Compose</span></button>
+                <button type="button" class="node n-gate" data-detail="The API gateway: nginx is the only service exposed to the outside, and it routes each path to the right service."><b>API gateway</b><span>nginx, the only way in</span></button>
+                <button type="button" class="node n-core" data-detail="banka-core, a Spring Boot service: authentication, clients and employees, accounts, cards, payments, transfers, loans and inter-bank payments with two-phase commit. Reads go to a streaming PostgreSQL replica."><b>banka-core</b><span>Accounts, cards, payments, transfers, loans and inter-bank payments (2PC)</span><span class="db">PostgreSQL, primary and replica</span></button>
+                <button type="button" class="node n-trade" data-detail="trading-service, with its own Spring Boot service and database: stock exchange orders, portfolios, OTC options between banks, margin, investment funds and tax. Price ticks live in InfluxDB."><b>trading-service</b><span>Orders, portfolios, OTC options, margin and investment funds</span><span class="db">Its own database, InfluxDB for price ticks</span></button>
+                <button type="button" class="node n-arb" data-detail="Arbitro, the banking assistant: a self-hosted LLM on Ollama with tool calling, multi-step wizards, RAG over the specifications and SSE streaming."><b>Arbitro</b><span>LLM assistant on Ollama: tool calling, wizards, RAG over the specs, streaming</span></button>
+                <button type="button" class="node n-note" data-detail="notification-service: consumes events from RabbitMQ and sends email over SMTP."><b>Notifications</b><span>Events from RabbitMQ, email over SMTP</span></button>
+                <i class="wire w-in" aria-hidden="true"></i>
+                <i class="wire w-out" aria-hidden="true"></i>
+                <i class="wire w-sup" aria-hidden="true"></i>
+            </div>
+            <figcaption>The services of BANKA_2. Point at or tap one to read what it does.</figcaption>
+        </figure>
     </section>
 
     <!-- Experience and education -->
-    <section class="section wrap" id="experience" aria-labelledby="exp-title">
+    <section class="wrap grid section" id="experience" aria-labelledby="exp-title">
         <h2 class="section-title" id="exp-title">Experience and education</h2>
 
-        <div class="career">
-            <div class="track">
-                <h3 class="track-title">Experience</h3>
-                <ol class="timeline">
-                    <li>
-                        <p class="when">May 2025 - Jan 2026</p>
-                        <h4>Software Developer</h4>
-                        <p class="where">AI in AEC, an AI consulting startup for architecture, engineering and construction</p>
-                        <ul class="facts">
-                            <li>Built Neostack, a prototype web app that helps firms catalogue their software stack and licence usage.</li>
-                            <li>Built AI in AEC Flow, an internal platform for time, task and revenue tracking.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <p class="when">2025 - 2026</p>
-                        <h4>Team Lead, BANKA_2</h4>
-                        <p class="where">Software Engineering capstone, RAF</p>
-                        <ul class="facts">
-                            <li>Led 25 students across backend, web, Android and DevOps, wrote the majority of the code and designed the Arbitro assistant.</li>
-                        </ul>
-                    </li>
-                </ol>
-            </div>
+        <div class="col-6">
+            <h3 class="col-title">Experience</h3>
+            <ol class="units">
+                <li>
+                    <h4>AI in AEC</h4>
+                    <p class="label"><span>May 2025 – Jan 2026</span> Software Developer</p>
+                    <p>An AI consulting startup for architecture, engineering and construction.</p>
+                    <ul class="facts">
+                        <li>Built Neostack, a prototype web app that helps firms catalogue their software stack and licence usage.</li>
+                        <li>Built AI in AEC Flow, an internal platform for time, task and revenue tracking.</li>
+                    </ul>
+                </li>
+                <li>
+                    <h4><a href="#banka">BANKA_2</a></h4>
+                    <p class="label"><span>2025 – 2026</span> Team Lead</p>
+                    <p>Software Engineering capstone at RAF.</p>
+                    <ul class="facts">
+                        <li>Led 25 students across backend, web, Android and DevOps, wrote the majority of the code and designed the Arbitro assistant.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
 
-            <div class="track">
-                <h3 class="track-title">Education</h3>
-                <ol class="timeline">
-                    <li>
-                        <p class="when">2023 - 2026</p>
-                        <h4>BSc Computer Science</h4>
-                        <p class="where">School of Computing (RAF), Union University, Belgrade. Expected 2026.</p>
-                    </li>
-                    <li>
-                        <p class="when">2018 - 2023</p>
-                        <h4>Computer Science studies</h4>
-                        <p class="where">Faculty of Mathematics, University of Belgrade</p>
-                    </li>
-                </ol>
-                <dl class="languages">
-                    <dt>Languages</dt>
-                    <dd>Serbian (native), English (full professional proficiency)</dd>
-                </dl>
-            </div>
+        <div class="col-6">
+            <h3 class="col-title">Education</h3>
+            <ol class="units">
+                <li>
+                    <h4>School of Computing (RAF)</h4>
+                    <p class="label"><span>2023 – 2026</span> BSc Computer Science</p>
+                    <p>Union University, Belgrade. Expected 2026.</p>
+                </li>
+                <li>
+                    <h4>Faculty of Mathematics</h4>
+                    <p class="label"><span>2018 – 2023</span> Computer Science studies</p>
+                    <p>University of Belgrade.</p>
+                </li>
+                <li>
+                    <p class="label"><span>Languages</span></p>
+                    <p>Serbian (native), English (full professional proficiency).</p>
+                </li>
+            </ol>
         </div>
     </section>
 
     <!-- Selected work -->
-    <section class="section wrap" id="work" aria-labelledby="work-title">
+    <section class="wrap grid section" id="work" aria-labelledby="work-title">
         <h2 class="section-title" id="work-title">Selected work</h2>
 
-        <div class="work">
-            <article class="tile span-7">
-                <div class="tile-body">
-                    <h3>BANKA_2</h3>
-                    <p class="kind">Full-stack platform, 2025 - 2026</p>
-                    <p class="summary">Enterprise banking platform built by a 25-person university team I led, with a self-hosted LLM assistant on top.</p>
-                    <ul class="facts">
-                        <li>Arbitro, the banking assistant: tool calling, multi-step wizards, RAG over the specifications and SSE streaming, running on Ollama.</li>
-                        <li>Spring Boot services for accounts, cards, payments, FX, securities and options trading, OTC, loans and margin.</li>
-                        <li>React 19 web client and a Kotlin / Jetpack Compose Android app at feature parity.</li>
-                    </ul>
-                    <div class="metrics">
-                        <div><strong>25</strong><span>engineers led</span></div>
-                        <div><strong>2,165</strong><span>backend tests</span></div>
-                        <div><strong>1,254</strong><span>frontend tests</span></div>
-                    </div>
-                    <p class="stack">Java, Spring Boot, PostgreSQL, React, TypeScript, Kotlin, Docker, Ollama</p>
-                    <p class="links">
-                        <a href="https://github.com/lukastojiljkovic/Software-Engineering-Backend" target="_blank" rel="noopener">Backend</a>
-                        <a href="https://github.com/lukastojiljkovic/Software-Engineering-Frontend" target="_blank" rel="noopener">Frontend</a>
-                        <a href="https://github.com/lukastojiljkovic/Software-Engineering-Android" target="_blank" rel="noopener">Android</a>
-                        <a href="https://github.com/lukastojiljkovic/Software-Engineering-Infrastructure" target="_blank" rel="noopener">Infrastructure</a>
-                    </p>
-                </div>
-            </article>
+        <article class="work-stem">
+            <h3>Stem Agent</h3>
+            <p class="label"><span>2026</span> Applied AI</p>
+            <p class="summary">An LLM agent that specializes itself for a domain by evolving pipelines of typed tools, and keeps what works between sessions.</p>
+            <ul class="facts">
+                <li>Every tool declares input and output types; pipelines that don't type-check can't run.</li>
+                <li>Six mutation operators with beam search; a MAP-Elites archive keeps the skill library diverse.</li>
+                <li>Runs locally on LM Studio with Gemma, with an external judge only when a key is set.</li>
+            </ul>
+            <p class="stack">Python, LM Studio, Gemma, MAP-Elites</p>
+            <p class="links"><a href="https://github.com/lukastojiljkovic/stem-agent" target="_blank" rel="noopener">Source</a></p>
+        </article>
 
-            <article class="tile span-5">
-                <div class="tile-body">
-                    <h3>Stem Agent</h3>
-                    <p class="kind">Applied AI, 2026</p>
-                    <p class="summary">An LLM agent that specializes itself for a domain by evolving pipelines of typed tools, and keeps what works between sessions.</p>
-                    <ul class="facts">
-                        <li>Every tool declares input and output types; pipelines that don't type-check can't run.</li>
-                        <li>Six mutation operators with beam search; a MAP-Elites archive keeps the skill library diverse.</li>
-                        <li>Runs locally on LM Studio with Gemma, with an external judge only when a key is set.</li>
-                    </ul>
-                    <p class="stack">Python, LM Studio, Gemma, MAP-Elites</p>
-                    <p class="links">
-                        <a href="https://github.com/lukastojiljkovic/stem-agent" target="_blank" rel="noopener">Source</a>
-                    </p>
-                </div>
-            </article>
+        <article class="work-nexus" style="--app: #8a6410; --app-dark: #e5bf62">
+            <div class="plate plate-nexus">
+                <img class="shot shot-light" src="img/nexus.webp" width="1120" height="720" loading="lazy" alt="The Nexus dashboard with today's agenda, upcoming tasks and exams.">
+                <img class="shot shot-dark" src="img/nexus-dark.webp" width="1120" height="720" loading="lazy" alt="The Nexus dashboard in its night theme.">
+            </div>
+            <div class="work-text">
+                <h3>Nexus</h3>
+                <p class="label"><span>2026</span> Desktop app</p>
+                <p class="summary">Offline-first workspace for tasks, calendar, notes, studying, files, habits, fitness and finance. Your data stays on your device.</p>
+                <ul class="facts">
+                    <li>Electron and React desktop app with an encrypted SQLite store, in daily use.</li>
+                    <li>Optional end-to-end encrypted sync: the server only ever holds ciphertext.</li>
+                    <li>The local-only build can't reach the network, and CI enforces it.</li>
+                </ul>
+                <p class="stack">TypeScript, React, Electron, SQLCipher, Supabase, Turborepo</p>
+                <p class="note">Open source under Apache 2.0. The public repository opens with the first public release.</p>
+            </div>
+        </article>
 
-            <article class="tile tile-feature span-12" style="--app: #8a6410; --app-dark: #e5bf62">
-                <div class="tile-body">
-                    <h3>Nexus</h3>
-                    <p class="kind">Desktop app, 2026</p>
-                    <p class="summary">Offline-first workspace for tasks, calendar, notes, studying, files, habits, fitness and finance. Your data stays on your device.</p>
-                    <ul class="facts">
-                        <li>Electron and React desktop app with an encrypted SQLite store, in daily use.</li>
-                        <li>Optional end-to-end encrypted sync: the server only ever holds ciphertext.</li>
-                        <li>The local-only build can't reach the network, and CI enforces it.</li>
-                    </ul>
-                    <p class="stack">TypeScript, React, Electron, SQLCipher, Supabase, Turborepo</p>
-                    <p class="note">Open source under Apache 2.0. The public repository opens with the first public release.</p>
-                </div>
-                <div class="desk">
-                    <img class="win win-light" src="img/nexus.webp" width="1120" height="720" loading="lazy" alt="The Nexus dashboard with today's agenda, upcoming tasks and exams.">
-                    <img class="win win-dark" src="img/nexus-dark.webp" width="1120" height="720" loading="lazy" alt="The Nexus dashboard in its night theme.">
-                </div>
-            </article>
-        </div>
+    </section>
 
-        <h3 class="subhead">Windows apps</h3>
-        <p class="subhead-note">Four native apps, each with an installer, CI and its own website.</p>
+    <!-- Windows apps: one brochure each, in the app's own colour -->
+    <section class="wrap grid section" id="apps" aria-labelledby="apps-title">
+        <h2 class="section-title" id="apps-title">Windows apps</h2>
+        <p class="section-note">Four native apps, each released with an installer, CI and its own website.</p>
 
-        <div class="work">
-            <article class="tile app span-6" id="refreshify" style="--app: #1a5fbf; --app-dark: #64a6f4">
-                <div class="desk">
-                    <img class="win" src="img/refreshify.webp" width="1164" height="792" loading="lazy" alt="Refreshify's home page with the Run all action and the state of this PC.">
-                </div>
-                <div class="tile-body">
-                    <h3><img class="icon" src="img/icons/refreshify.png" width="32" height="32" alt="">Refreshify <span class="ver">1.1</span></h3>
-                    <p class="summary">Cleans up, repairs and updates Windows with the tools Windows already has, without a terminal window.</p>
-                    <ul class="facts">
-                        <li>Runs 16 built-in tools in an order that avoids known failures, after creating a restore point.</li>
-                        <li>Recognizes 15 common failures and fixes the ones it safely can.</li>
-                        <li>Turns a failed step into a report for an AI assistant, with personal paths hidden.</li>
-                    </ul>
-                    <p class="stack">C#, .NET, WinUI 3, Windows App SDK</p>
-                    <p class="links">
-                        <a class="btn btn-sm btn-primary" href="https://github.com/lukastojiljkovic/Refreshify/releases/latest" target="_blank" rel="noopener">Download</a>
-                        <a href="https://lukastojiljkovic.github.io/Refreshify/" target="_blank" rel="noopener">Website</a>
-                        <a href="https://github.com/lukastojiljkovic/Refreshify" target="_blank" rel="noopener">Source</a>
-                    </p>
-                </div>
-            </article>
+        <article class="app" id="refreshify" style="--app: #1a5fbf; --app-dark: #64a6f4">
+            <div class="plate">
+                <img class="shot" src="img/refreshify.webp" width="1164" height="792" loading="lazy" alt="Refreshify's home page with the Run all action and the state of this PC.">
+            </div>
+            <h3><img src="img/icons/refreshify.png" width="32" height="32" alt="">Refreshify <span class="ver">1.1</span></h3>
+            <p class="summary">Cleans up, repairs and updates Windows with the tools Windows already has, without a terminal window.</p>
+            <ul class="facts">
+                <li>Runs 16 built-in tools in an order that avoids known failures, after creating a restore point.</li>
+                <li>Recognizes 15 common failures and fixes the ones it safely can.</li>
+                <li>Turns a failed step into a report for an AI assistant, with personal paths hidden.</li>
+            </ul>
+            <p class="stack">C#, .NET, WinUI 3, Windows App SDK</p>
+            <p class="links">
+                <a class="btn btn-app" href="https://github.com/lukastojiljkovic/Refreshify/releases/latest" target="_blank" rel="noopener">Download</a>
+                <a href="https://lukastojiljkovic.github.io/Refreshify/" target="_blank" rel="noopener">Website</a>
+                <a href="https://github.com/lukastojiljkovic/Refreshify" target="_blank" rel="noopener">Source</a>
+            </p>
+        </article>
 
-            <article class="tile app span-6" id="pwrschdlr" style="--app: #b5470b; --app-dark: #ff9a5c">
-                <div class="desk">
-                    <img class="win win-light" src="img/pwrschdlr.webp" width="926" height="733" loading="lazy" alt="Pwrschdlr counting down to a shutdown.">
-                    <img class="win win-dark" src="img/pwrschdlr-dark.webp" width="926" height="733" loading="lazy" alt="Pwrschdlr counting down to a shutdown, in the dark theme.">
-                </div>
-                <div class="tile-body">
-                    <h3><img class="icon" src="img/icons/pwrschdlr.png" width="32" height="32" alt="">Pwrschdlr <span class="ver">1.0</span></h3>
-                    <p class="summary">A power scheduler, minus the vowels. Shuts down, restarts, sleeps, hibernates or signs out when a timer runs out.</p>
-                    <ul class="facts">
-                        <li>A one-time Task Scheduler task keeps the timer when the app is closed; nothing stays running.</li>
-                        <li>An always-on-top warning before the end lets you cancel or postpone.</li>
-                        <li>A timer missed while the PC was off never fires late.</li>
-                    </ul>
-                    <p class="stack">C#, .NET, WinUI 3, Task Scheduler, Inno Setup</p>
-                    <p class="links">
-                        <a class="btn btn-sm btn-primary" href="https://github.com/lukastojiljkovic/Power-Scheduler/releases/latest" target="_blank" rel="noopener">Download</a>
-                        <a href="https://lukastojiljkovic.github.io/Power-Scheduler/" target="_blank" rel="noopener">Website</a>
-                        <a href="https://github.com/lukastojiljkovic/Power-Scheduler" target="_blank" rel="noopener">Source</a>
-                    </p>
-                </div>
-            </article>
+        <article class="app" id="pwrschdlr" style="--app: #b5470b; --app-dark: #ff9a5c">
+            <div class="plate">
+                <img class="shot shot-light" src="img/pwrschdlr.webp" width="926" height="733" loading="lazy" alt="Pwrschdlr counting down to a shutdown.">
+                <img class="shot shot-dark" src="img/pwrschdlr-dark.webp" width="926" height="733" loading="lazy" alt="Pwrschdlr counting down to a shutdown, in the dark theme.">
+            </div>
+            <h3><img src="img/icons/pwrschdlr.png" width="32" height="32" alt="">Pwrschdlr <span class="ver">1.0</span></h3>
+            <p class="summary">A power scheduler, minus the vowels. Shuts down, restarts, sleeps, hibernates or signs out when a timer runs out.</p>
+            <ul class="facts">
+                <li>A one-time Task Scheduler task keeps the timer when the app is closed; nothing stays running.</li>
+                <li>An always-on-top warning before the end lets you cancel or postpone.</li>
+                <li>A timer missed while the PC was off never fires late.</li>
+            </ul>
+            <p class="stack">C#, .NET, WinUI 3, Task Scheduler, Inno Setup</p>
+            <p class="links">
+                <a class="btn btn-app" href="https://github.com/lukastojiljkovic/Power-Scheduler/releases/latest" target="_blank" rel="noopener">Download</a>
+                <a href="https://lukastojiljkovic.github.io/Power-Scheduler/" target="_blank" rel="noopener">Website</a>
+                <a href="https://github.com/lukastojiljkovic/Power-Scheduler" target="_blank" rel="noopener">Source</a>
+            </p>
+        </article>
 
-            <article class="tile app span-6" id="permadel" style="--app: #b3202f; --app-dark: #f2666e">
-                <div class="desk">
-                    <img class="win" src="img/permadel.webp" width="1166" height="793" loading="lazy" alt="PermaDel with four files on the shred list and three overwrite passes.">
-                </div>
-                <div class="tile-body">
-                    <h3><img class="icon" src="img/icons/permadel.png" width="32" height="32" alt="">PermaDel <span class="ver">1.0</span></h3>
-                    <p class="summary">Securely shreds files and folders on Windows so recovery tools can't bring them back.</p>
-                    <ul class="facts">
-                        <li>File Explorer context menu and an optional Windows Hello check before shredding.</li>
-                        <li>Overwrites alternate data streams, flushes every pass to disk and refuses unsafe targets.</li>
-                        <li>Forensic tests scan a raw disk image to prove the data is gone.</li>
-                    </ul>
-                    <p class="stack">C#, .NET, WinUI 3, C++, Inno Setup</p>
-                    <p class="links">
-                        <a class="btn btn-sm btn-primary" href="https://github.com/lukastojiljkovic/PermaDel/releases/latest" target="_blank" rel="noopener">Download</a>
-                        <a href="https://lukastojiljkovic.github.io/PermaDel/" target="_blank" rel="noopener">Website</a>
-                        <a href="https://github.com/lukastojiljkovic/PermaDel" target="_blank" rel="noopener">Source</a>
-                    </p>
-                </div>
-            </article>
+        <article class="app" id="permadel" style="--app: #b3202f; --app-dark: #f2666e">
+            <div class="plate">
+                <img class="shot" src="img/permadel.webp" width="1166" height="793" loading="lazy" alt="PermaDel with four files on the shred list and three overwrite passes.">
+            </div>
+            <h3><img src="img/icons/permadel.png" width="32" height="32" alt="">PermaDel <span class="ver">1.0</span></h3>
+            <p class="summary">Securely shreds files and folders on Windows so recovery tools can't bring them back.</p>
+            <ul class="facts">
+                <li>File Explorer context menu and an optional Windows Hello check before shredding.</li>
+                <li>Overwrites alternate data streams, flushes every pass to disk and refuses unsafe targets.</li>
+                <li>Forensic tests scan a raw disk image to prove the data is gone.</li>
+            </ul>
+            <p class="stack">C#, .NET, WinUI 3, C++, Inno Setup</p>
+            <p class="links">
+                <a class="btn btn-app" href="https://github.com/lukastojiljkovic/PermaDel/releases/latest" target="_blank" rel="noopener">Download</a>
+                <a href="https://lukastojiljkovic.github.io/PermaDel/" target="_blank" rel="noopener">Website</a>
+                <a href="https://github.com/lukastojiljkovic/PermaDel" target="_blank" rel="noopener">Source</a>
+            </p>
+        </article>
 
-            <article class="tile app span-6" id="perfwindow" style="--app: #0a756c; --app-dark: #34e0d0">
-                <div class="desk">
-                    <img class="win win-light" src="img/perfwindow.webp" width="1386" height="738" loading="lazy" alt="PerfWindow showing load, temperatures and power for the CPU, GPUs, memory, network, battery and disks.">
-                    <img class="win win-dark" src="img/perfwindow-dark.webp" width="1386" height="738" loading="lazy" alt="PerfWindow's dashboard in the dark theme.">
-                </div>
-                <div class="tile-body">
-                    <h3><img class="icon" src="img/icons/perfwindow.png" width="32" height="32" alt="">PerfWindow <span class="ver">0.10</span></h3>
-                    <p class="summary">Real-time hardware monitor for Windows: load, temperatures, power and lifetime data for every component.</p>
-                    <ul class="facts">
-                        <li>Rust and egui dashboard fed by a .NET sensor service built on LibreHardwareMonitor, over a named pipe.</li>
-                        <li>The service starts on demand and exits with the window: nothing stays resident, no tray icon.</li>
-                        <li>The installer handles the signed PawnIO driver, elevation and clean removal.</li>
-                    </ul>
-                    <p class="stack">Rust, egui, C#, .NET 8, Inno Setup</p>
-                    <p class="links">
-                        <a class="btn btn-sm btn-primary" href="https://github.com/lukastojiljkovic/PerfWindow/releases/latest" target="_blank" rel="noopener">Download</a>
-                        <a href="https://lukastojiljkovic.github.io/PerfWindow/" target="_blank" rel="noopener">Website</a>
-                        <a href="https://github.com/lukastojiljkovic/PerfWindow" target="_blank" rel="noopener">Source</a>
-                    </p>
-                </div>
-            </article>
-        </div>
+        <article class="app" id="perfwindow" style="--app: #0a756c; --app-dark: #34e0d0">
+            <div class="plate">
+                <img class="shot shot-light" src="img/perfwindow.webp" width="1386" height="738" loading="lazy" alt="PerfWindow showing load, temperatures and power for the CPU, GPUs, memory, network, battery and disks.">
+                <img class="shot shot-dark" src="img/perfwindow-dark.webp" width="1386" height="738" loading="lazy" alt="PerfWindow's dashboard in the dark theme.">
+            </div>
+            <h3><img src="img/icons/perfwindow.png" width="32" height="32" alt="">PerfWindow <span class="ver">0.10</span></h3>
+            <p class="summary">Real-time hardware monitor for Windows: load, temperatures, power and lifetime data for every component.</p>
+            <ul class="facts">
+                <li>Rust and egui dashboard fed by a .NET sensor service built on LibreHardwareMonitor, over a named pipe.</li>
+                <li>The service starts on demand and exits with the window: nothing stays resident, no tray icon.</li>
+                <li>The installer handles the signed PawnIO driver, elevation and clean removal.</li>
+            </ul>
+            <p class="stack">Rust, egui, C#, .NET 8, Inno Setup</p>
+            <p class="links">
+                <a class="btn btn-app" href="https://github.com/lukastojiljkovic/PerfWindow/releases/latest" target="_blank" rel="noopener">Download</a>
+                <a href="https://lukastojiljkovic.github.io/PerfWindow/" target="_blank" rel="noopener">Website</a>
+                <a href="https://github.com/lukastojiljkovic/PerfWindow" target="_blank" rel="noopener">Source</a>
+            </p>
+        </article>
     </section>
 
     <!-- More projects -->
-    <section class="section wrap" id="projects" aria-labelledby="proj-title">
+    <section class="wrap grid section" id="projects" aria-labelledby="proj-title">
         <h2 class="section-title" id="proj-title">More projects</h2>
 
-        <div class="group">
-            <h3>Machine learning and AI</h3>
-            <ul class="index index-3">
+        <div class="group group-ml">
+            <h3 class="col-title">Machine learning and AI</h3>
+            <ul class="index">
                 <li>
                     <a href="https://github.com/lukastojiljkovic/serbian-realtime-speech-recognition" target="_blank" rel="noopener">Serbian real-time speech recognition</a>
                     <p>Fine-tuned Wav2Vec2 XLS-R with a hybrid voice-activity detector and live Cyrillic output. About 0.29 WER on conversational speech. Group project.</p>
@@ -378,71 +363,69 @@
             </ul>
         </div>
 
-        <div class="groups">
-            <div class="group">
-                <h3>Systems and algorithms</h3>
-                <ul class="index">
-                    <li>
-                        <a href="https://github.com/lukastojiljkovic/Intepreter" target="_blank" rel="noopener">BareC compiler and VM</a>
-                        <p>Preprocessor, lexer, recursive-descent parser, type checker, code generator and stack VM for a small C-like language.</p>
-                        <span>C++17</span>
-                    </li>
-                    <li>
-                        <a href="https://github.com/lukastojiljkovic/Algorithms-and-Data-Structures" target="_blank" rel="noopener">Algorithms and data structures</a>
-                        <p>Course implementations, with a second set for <a href="https://github.com/lukastojiljkovic/Design-and-Analysis-of-Alghoritms" target="_blank" rel="noopener">algorithm design and analysis</a>.</p>
-                        <span>C++</span>
-                    </li>
-                </ul>
-            </div>
+        <div class="group">
+            <h3 class="col-title">Systems and algorithms</h3>
+            <ul class="index">
+                <li>
+                    <a href="https://github.com/lukastojiljkovic/Intepreter" target="_blank" rel="noopener">BareC compiler and VM</a>
+                    <p>Preprocessor, lexer, recursive-descent parser, type checker, code generator and stack VM for a small C-like language.</p>
+                    <span>C++17</span>
+                </li>
+                <li>
+                    <a href="https://github.com/lukastojiljkovic/Algorithms-and-Data-Structures" target="_blank" rel="noopener">Algorithms and data structures</a>
+                    <p>Course implementations, with a second set for <a href="https://github.com/lukastojiljkovic/Design-and-Analysis-of-Alghoritms" target="_blank" rel="noopener">algorithm design and analysis</a>.</p>
+                    <span>C++</span>
+                </li>
+            </ul>
+        </div>
 
-            <div class="group">
-                <h3>Image processing</h3>
-                <ul class="index">
-                    <li>
-                        <a href="https://github.com/lukastojiljkovic/laplacian-pyramid-image-blending" target="_blank" rel="noopener">Laplacian pyramid blending</a>
-                        <p>Burt-Adelson multiresolution blending with Gaussian and Laplacian pyramids.</p>
-                        <span>Octave</span>
-                    </li>
-                    <li>
-                        <a href="https://github.com/lukastojiljkovic/haar-wavelet-edge-detection" target="_blank" rel="noopener">Haar wavelet edge detection</a>
-                        <p>Edges from a one-level 2D Haar transform, with exact reconstruction.</p>
-                        <span>MATLAB</span>
-                    </li>
-                    <li>
-                        <a href="https://github.com/lukastojiljkovic/hybrid-images-oliva-torralba" target="_blank" rel="noopener">Hybrid images</a>
-                        <p>The Oliva-Torralba illusion from low-pass and high-pass filtered images.</p>
-                        <span>Octave</span>
-                    </li>
-                    <li>
-                        <a href="https://github.com/lukastojiljkovic/gaussian-and-max-image-filters" target="_blank" rel="noopener">Gaussian and MAX filters</a>
-                        <p>Linear and non-linear spatial filters without built-in convolution helpers.</p>
-                        <span>Octave</span>
-                    </li>
-                </ul>
-            </div>
+        <div class="group">
+            <h3 class="col-title">Image processing</h3>
+            <ul class="index">
+                <li>
+                    <a href="https://github.com/lukastojiljkovic/laplacian-pyramid-image-blending" target="_blank" rel="noopener">Laplacian pyramid blending</a>
+                    <p>Burt-Adelson multiresolution blending with Gaussian and Laplacian pyramids.</p>
+                    <span>Octave</span>
+                </li>
+                <li>
+                    <a href="https://github.com/lukastojiljkovic/haar-wavelet-edge-detection" target="_blank" rel="noopener">Haar wavelet edge detection</a>
+                    <p>Edges from a one-level 2D Haar transform, with exact reconstruction.</p>
+                    <span>MATLAB</span>
+                </li>
+                <li>
+                    <a href="https://github.com/lukastojiljkovic/hybrid-images-oliva-torralba" target="_blank" rel="noopener">Hybrid images</a>
+                    <p>The Oliva-Torralba illusion from low-pass and high-pass filtered images.</p>
+                    <span>Octave</span>
+                </li>
+                <li>
+                    <a href="https://github.com/lukastojiljkovic/gaussian-and-max-image-filters" target="_blank" rel="noopener">Gaussian and MAX filters</a>
+                    <p>Linear and non-linear spatial filters without built-in convolution helpers.</p>
+                    <span>Octave</span>
+                </li>
+            </ul>
+        </div>
 
-            <div class="group">
-                <h3>Android</h3>
-                <ul class="index">
-                    <li>
-                        <a href="https://github.com/lukastojiljkovic/NFCard" target="_blank" rel="noopener">NFCard</a>
-                        <p>Turns a phone into a tappable business card with NFC host-card emulation, with Nearby Connections for larger payloads.</p>
-                        <span>Kotlin, Jetpack Compose, Hilt, Room</span>
-                    </li>
-                    <li>
-                        <a href="https://github.com/lukastojiljkovic/Pomodoro" target="_blank" rel="noopener">Pomodoro</a>,
-                        <a href="https://github.com/lukastojiljkovic/Calculator-app" target="_blank" rel="noopener">Calculator</a>,
-                        <a href="https://github.com/lukastojiljkovic/Age-in-Minutes" target="_blank" rel="noopener">Age in Minutes</a>
-                        <p>First Android apps, in Java and Kotlin.</p>
-                        <span>Android SDK</span>
-                    </li>
-                </ul>
-            </div>
+        <div class="group">
+            <h3 class="col-title">Android</h3>
+            <ul class="index">
+                <li>
+                    <a href="https://github.com/lukastojiljkovic/NFCard" target="_blank" rel="noopener">NFCard</a>
+                    <p>Turns a phone into a tappable business card with NFC host-card emulation, with Nearby Connections for larger payloads.</p>
+                    <span>Kotlin, Jetpack Compose, Hilt, Room</span>
+                </li>
+                <li>
+                    <a href="https://github.com/lukastojiljkovic/Pomodoro" target="_blank" rel="noopener">Pomodoro</a>,
+                    <a href="https://github.com/lukastojiljkovic/Calculator-app" target="_blank" rel="noopener">Calculator</a>,
+                    <a href="https://github.com/lukastojiljkovic/Age-in-Minutes" target="_blank" rel="noopener">Age in Minutes</a>
+                    <p>First Android apps, in Java and Kotlin.</p>
+                    <span>Android SDK</span>
+                </li>
+            </ul>
         </div>
     </section>
 
     <!-- Stack -->
-    <section class="section wrap" id="stack" aria-labelledby="stack-title">
+    <section class="wrap grid section" id="stack" aria-labelledby="stack-title">
         <h2 class="section-title" id="stack-title">Stack</h2>
         <dl class="matrix">
             <div><dt>AI and ML</dt><dd>PyTorch, TensorFlow, scikit-learn, Hugging Face, Ollama, LM Studio, RAG, tool calling</dd></div>
@@ -455,29 +438,28 @@
             <div><dt>DevOps</dt><dd>Docker, Docker Compose, Kubernetes manifests, GitHub Actions, nginx</dd></div>
         </dl>
     </section>
+</main>
 
-    <!-- Contact -->
-    <section class="contact wrap" id="contact" aria-labelledby="contact-title">
-        <h2 id="contact-title">Open to applied AI, full&#8209;stack and backend roles, in Belgrade or remote.</h2>
-        <div class="contact-reach">
+<!-- The closing band mirrors the title band -->
+<footer class="band band-close" id="contact">
+    <div class="wrap band-grid">
+        <h2 class="close-title">Open to applied AI, full&#8209;stack and backend roles, in Belgrade or remote.</h2>
+        <div class="close-reach">
             <a class="email" href="mailto:stojiljkovic.d.luka@gmail.com">stojiljkovic.d.luka@gmail.com</a>
-            <p class="contact-links">
+            <p class="close-links">
                 <a href="tel:+381649040342">+381 64 904 0342</a>
                 <a href="https://github.com/lukastojiljkovic" target="_blank" rel="noopener">GitHub</a>
                 <a href="https://linkedin.com/in/luka-stojiljkovi%C4%87" target="_blank" rel="noopener">LinkedIn</a>
                 <a href="CV_Luka_Stojiljkovic.pdf" download>Download CV</a>
             </p>
         </div>
-    </section>
-</main>
-
-<footer class="wrap">
-    <div class="foot">
-        <span>Luka D. Stojiljković, Belgrade</span>
-        <a href="https://github.com/lukastojiljkovic/CV" target="_blank" rel="noopener">Source of this site</a>
+        <p class="foot">
+            <span>Luka D. Stojiljković, Belgrade</span>
+            <a href="https://github.com/lukastojiljkovic/CV" target="_blank" rel="noopener">Source of this site</a>
+        </p>
     </div>
 </footer>
 
-<script src="js/main.js?v=3" defer></script>
+<script src="js/main.js?v=5" defer></script>
 </body>
 </html>

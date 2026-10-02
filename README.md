@@ -11,20 +11,24 @@ Luka Stojiljković's portfolio and one-page CV, served from GitHub Pages.
 CV/
 ├── index.html                  Portfolio (single page)
 ├── css/styles.css              Styles, light and dark themes
-├── js/main.js                  Theme toggle and current-section highlight
+├── js/main.js                  Theme toggle, the BANKA_2 diagram legend and current-section highlight
 ├── img/                        Project screenshots (WebP), app icons and the social preview
-├── fonts/                      LS Sans, a Mona Sans subset (SIL OFL 1.1, see fonts/OFL.txt)
+├── fonts/                      Archivo, variable (SIL OFL 1.1, see fonts/OFL.txt)
 ├── favicon.png
+├── DESIGN.md                   The design system: tokens, rules and components
+├── PRODUCT.md                  Who the site is for and what it has to prove
 ├── CV_Luka_Stojiljkovic.tex    CV source
 └── CV_Luka_Stojiljkovic.pdf    Compiled CV
 ```
 
 ## Design
 
-Neutral surfaces and one sans family; colour belongs to the work. Each Windows app is shown as a
-window on its own desktop, tinted with the app's icon colour, the same way its website shows it. The
-theme follows the system setting until you switch it in the header, and the choice is remembered per
-browser.
+The site is one brochure in a series modelled on Massimo Vignelli's Unigrid system for the US
+National Park Service: a black title band over white paper on a 12-column grid, headings hung from
+heavy rules, and one colour per publication. BANKA_2 is shown as a diagram of its real services;
+point at a service to read what it does. The four app websites belong to the same series, each in
+its app's icon colour. DESIGN.md records the system. The theme follows the system setting until you
+switch it in the header, and the choice is remembered per browser.
 There is no build step and no third-party request at runtime.
 
 ## Run locally

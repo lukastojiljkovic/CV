@@ -1,0 +1,462 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-02T09:14:01+00:00",
+  "title": "Design System: Luka Stojiljković, portfolio",
+  "extensions": {
+    "colorMeta": {
+      "band-black": {
+        "role": "neutral",
+        "displayName": "Band Black",
+        "canonical": "#000000",
+        "darkValue": "#000000",
+        "tonalRamp": [
+          "oklch(15.0% 0.000 0.0)",
+          "oklch(26.0% 0.000 0.0)",
+          "oklch(37.0% 0.000 0.0)",
+          "oklch(48.0% 0.000 0.0)",
+          "oklch(59.0% 0.000 0.0)",
+          "oklch(70.0% 0.000 0.0)",
+          "oklch(82.0% 0.000 0.0)",
+          "oklch(95.0% 0.000 0.0)"
+        ]
+      },
+      "paper-white": {
+        "role": "neutral",
+        "displayName": "Paper White",
+        "canonical": "#ffffff",
+        "darkValue": "#141613",
+        "tonalRamp": [
+          "oklch(15.0% 0.000 89.9)",
+          "oklch(26.0% 0.000 89.9)",
+          "oklch(37.0% 0.000 89.9)",
+          "oklch(48.0% 0.000 89.9)",
+          "oklch(59.0% 0.000 89.9)",
+          "oklch(70.0% 0.000 89.9)",
+          "oklch(82.0% 0.000 89.9)",
+          "oklch(95.0% 0.000 89.9)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "#0d0e0c",
+        "darkValue": "#eef0ea",
+        "tonalRamp": [
+          "oklch(15.0% 0.004 128.8)",
+          "oklch(26.0% 0.004 128.8)",
+          "oklch(37.0% 0.004 128.8)",
+          "oklch(48.0% 0.004 128.8)",
+          "oklch(59.0% 0.004 128.8)",
+          "oklch(70.0% 0.004 128.8)",
+          "oklch(82.0% 0.004 128.8)",
+          "oklch(95.0% 0.004 128.8)"
+        ]
+      },
+      "ink-secondary": {
+        "role": "neutral",
+        "displayName": "Ink Secondary",
+        "canonical": "#4a4f47",
+        "darkValue": "#a9aea4",
+        "tonalRamp": [
+          "oklch(15.0% 0.015 133.5)",
+          "oklch(26.0% 0.015 133.5)",
+          "oklch(37.0% 0.015 133.5)",
+          "oklch(48.0% 0.015 133.5)",
+          "oklch(59.0% 0.015 133.5)",
+          "oklch(70.0% 0.015 133.5)",
+          "oklch(82.0% 0.015 133.5)",
+          "oklch(95.0% 0.015 133.5)"
+        ]
+      },
+      "hairline": {
+        "role": "neutral",
+        "displayName": "Hairline",
+        "canonical": "#d5d9d1",
+        "darkValue": "#30352e",
+        "tonalRamp": [
+          "oklch(15.0% 0.012 128.6)",
+          "oklch(26.0% 0.012 128.6)",
+          "oklch(37.0% 0.012 128.6)",
+          "oklch(48.0% 0.012 128.6)",
+          "oklch(59.0% 0.012 128.6)",
+          "oklch(70.0% 0.012 128.6)",
+          "oklch(82.0% 0.012 128.6)",
+          "oklch(95.0% 0.012 128.6)"
+        ]
+      },
+      "band-secondary": {
+        "role": "neutral",
+        "displayName": "Band Secondary",
+        "canonical": "#c4c8c0",
+        "darkValue": "#a9aea4",
+        "tonalRamp": [
+          "oklch(15.0% 0.012 128.6)",
+          "oklch(26.0% 0.012 128.6)",
+          "oklch(37.0% 0.012 128.6)",
+          "oklch(48.0% 0.012 128.6)",
+          "oklch(59.0% 0.012 128.6)",
+          "oklch(70.0% 0.012 128.6)",
+          "oklch(82.0% 0.012 128.6)",
+          "oklch(95.0% 0.012 128.6)"
+        ]
+      },
+      "open-green": {
+        "role": "neutral",
+        "displayName": "Open Green",
+        "canonical": "#3ddc84",
+        "darkValue": "#3ddc84",
+        "tonalRamp": [
+          "oklch(15.0% 0.180 154.0)",
+          "oklch(26.0% 0.180 154.0)",
+          "oklch(37.0% 0.180 154.0)",
+          "oklch(48.0% 0.180 154.0)",
+          "oklch(59.0% 0.180 154.0)",
+          "oklch(70.0% 0.180 154.0)",
+          "oklch(82.0% 0.180 154.0)",
+          "oklch(95.0% 0.180 154.0)"
+        ]
+      },
+      "tile": {
+        "role": "neutral",
+        "displayName": "Tile",
+        "canonical": "#eef1ea",
+        "darkValue": "#1f231d",
+        "tonalRamp": [
+          "oklch(15.0% 0.010 125.7)",
+          "oklch(26.0% 0.010 125.7)",
+          "oklch(37.0% 0.010 125.7)",
+          "oklch(48.0% 0.010 125.7)",
+          "oklch(59.0% 0.010 125.7)",
+          "oklch(70.0% 0.010 125.7)",
+          "oklch(82.0% 0.010 125.7)",
+          "oklch(95.0% 0.010 125.7)"
+        ]
+      },
+      "tile-lifted": {
+        "role": "neutral",
+        "displayName": "Tile Lifted",
+        "canonical": "#e0e5d8",
+        "darkValue": "#2b3028",
+        "tonalRamp": [
+          "oklch(15.0% 0.018 124.0)",
+          "oklch(26.0% 0.018 124.0)",
+          "oklch(37.0% 0.018 124.0)",
+          "oklch(48.0% 0.018 124.0)",
+          "oklch(59.0% 0.018 124.0)",
+          "oklch(70.0% 0.018 124.0)",
+          "oklch(82.0% 0.018 124.0)",
+          "oklch(95.0% 0.018 124.0)"
+        ]
+      },
+      "route-red": {
+        "role": "primary",
+        "displayName": "Route Red",
+        "canonical": "#c8102e",
+        "darkValue": "#ff4d5e",
+        "tonalRamp": [
+          "oklch(15.0% 0.207 22.3)",
+          "oklch(26.0% 0.207 22.3)",
+          "oklch(37.0% 0.207 22.3)",
+          "oklch(48.0% 0.207 22.3)",
+          "oklch(59.0% 0.207 22.3)",
+          "oklch(70.0% 0.207 22.3)",
+          "oklch(82.0% 0.207 22.3)",
+          "oklch(95.0% 0.207 22.3)"
+        ]
+      },
+      "nexus-ochre": {
+        "role": "secondary",
+        "displayName": "Nexus Ochre",
+        "canonical": "#8a6410",
+        "darkValue": "#e5bf62",
+        "tonalRamp": [
+          "oklch(15.0% 0.104 80.9)",
+          "oklch(26.0% 0.104 80.9)",
+          "oklch(37.0% 0.104 80.9)",
+          "oklch(48.0% 0.104 80.9)",
+          "oklch(59.0% 0.104 80.9)",
+          "oklch(70.0% 0.104 80.9)",
+          "oklch(82.0% 0.104 80.9)",
+          "oklch(95.0% 0.104 80.9)"
+        ]
+      },
+      "refreshify-blue": {
+        "role": "secondary",
+        "displayName": "Refreshify Blue",
+        "canonical": "#1a5fbf",
+        "darkValue": "#64a6f4",
+        "tonalRamp": [
+          "oklch(15.0% 0.165 258.2)",
+          "oklch(26.0% 0.165 258.2)",
+          "oklch(37.0% 0.165 258.2)",
+          "oklch(48.0% 0.165 258.2)",
+          "oklch(59.0% 0.165 258.2)",
+          "oklch(70.0% 0.165 258.2)",
+          "oklch(82.0% 0.165 258.2)",
+          "oklch(95.0% 0.165 258.2)"
+        ]
+      },
+      "pwrschdlr-orange": {
+        "role": "secondary",
+        "displayName": "Pwrschdlr Orange",
+        "canonical": "#b5470b",
+        "darkValue": "#ff9a5c",
+        "tonalRamp": [
+          "oklch(15.0% 0.156 42.7)",
+          "oklch(26.0% 0.156 42.7)",
+          "oklch(37.0% 0.156 42.7)",
+          "oklch(48.0% 0.156 42.7)",
+          "oklch(59.0% 0.156 42.7)",
+          "oklch(70.0% 0.156 42.7)",
+          "oklch(82.0% 0.156 42.7)",
+          "oklch(95.0% 0.156 42.7)"
+        ]
+      },
+      "permadel-red": {
+        "role": "secondary",
+        "displayName": "PermaDel Red",
+        "canonical": "#b3202f",
+        "darkValue": "#f2666e",
+        "tonalRamp": [
+          "oklch(15.0% 0.181 22.3)",
+          "oklch(26.0% 0.181 22.3)",
+          "oklch(37.0% 0.181 22.3)",
+          "oklch(48.0% 0.181 22.3)",
+          "oklch(59.0% 0.181 22.3)",
+          "oklch(70.0% 0.181 22.3)",
+          "oklch(82.0% 0.181 22.3)",
+          "oklch(95.0% 0.181 22.3)"
+        ]
+      },
+      "perfwindow-teal": {
+        "role": "secondary",
+        "displayName": "PerfWindow Teal",
+        "canonical": "#0a756c",
+        "darkValue": "#34e0d0",
+        "tonalRamp": [
+          "oklch(15.0% 0.087 185.4)",
+          "oklch(26.0% 0.087 185.4)",
+          "oklch(37.0% 0.087 185.4)",
+          "oklch(48.0% 0.087 185.4)",
+          "oklch(59.0% 0.087 185.4)",
+          "oklch(70.0% 0.087 185.4)",
+          "oklch(82.0% 0.087 185.4)",
+          "oklch(95.0% 0.087 185.4)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The name in the title band."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section titles under a 6px rule; the closing sentence."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Module headings: BANKA_2, Stem Agent, Nexus, each app."
+      },
+      "title-small": {
+        "displayName": "Title Small",
+        "purpose": "Units inside a column."
+      },
+      "roles": {
+        "displayName": "Roles",
+        "purpose": "The three roles in the Open to roles block."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Summaries and facts at 62–64ch."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "The dated label under every unit heading."
+      },
+      "headline-close": {
+        "displayName": "Headline Close",
+        "purpose": "The sentence in the closing band."
+      },
+      "title-module": {
+        "displayName": "Title Module",
+        "purpose": "The BANKA_2 heading."
+      },
+      "title-app": {
+        "displayName": "Title App",
+        "purpose": "Each app heading, with its icon and version."
+      },
+      "title-column": {
+        "displayName": "Title Column",
+        "purpose": "Column heads over a 1px ink rule."
+      },
+      "email": {
+        "displayName": "Email",
+        "purpose": "The email address in the closing band."
+      },
+      "sub": {
+        "displayName": "Sub",
+        "purpose": "The one-sentence line under the name."
+      },
+      "ui": {
+        "displayName": "UI",
+        "purpose": "Nav, buttons, link rows, the ledger and the detail line."
+      },
+      "small": {
+        "displayName": "Small",
+        "purpose": "Diagram descriptions and project stack lines."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "wire-draw",
+        "value": "clip-path inset(0 100% 0 0) to none, 0.6s cubic-bezier(0.16, 1, 0.3, 1), 0.3s and 0.7s delays",
+        "purpose": "The one authored motion: the two red request wires draw in once, client side first. Off under reduced motion."
+      },
+      {
+        "name": "state",
+        "value": "0.15s buttons, 0.2s diagram block fill",
+        "purpose": "Colour transitions answering hover and focus."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact-band",
+        "value": "1100px"
+      },
+      {
+        "name": "stack",
+        "value": "900px"
+      },
+      {
+        "name": "diagram-column",
+        "value": "760px"
+      },
+      {
+        "name": "narrow",
+        "value": "640px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Email me (light button)",
+      "kind": "button",
+      "refersTo": "button-light",
+      "description": "The one primary action, on the black band.",
+      "html": "<div class=\"ds-band\"><a class=\"ds-btn ds-btn-light\" href=\"#\">Email me</a></div>",
+      "css": ".ds-band{background:#000;padding:24px}.ds-btn{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1px solid transparent;border-radius:2px;font:650 0.9375rem/1 Archivo,system-ui,sans-serif;text-decoration:none;white-space:nowrap;transition:background-color .15s,border-color .15s}.ds-btn:active{transform:translateY(1px)}.ds-btn:focus-visible{outline:2px solid #fff;outline-offset:3px}.ds-btn-light{background:#fff;color:#000}.ds-btn-light:hover{background:#c4c8c0}"
+    },
+    {
+      "name": "GitHub (line button)",
+      "kind": "button",
+      "refersTo": "button-line",
+      "description": "Secondary actions on the black band.",
+      "html": "<div class=\"ds-band\"><a class=\"ds-btn ds-btn-line\" href=\"#\">GitHub</a></div>",
+      "css": ".ds-band{background:#000;padding:24px}.ds-btn{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1px solid transparent;border-radius:2px;font:650 0.9375rem/1 Archivo,system-ui,sans-serif;text-decoration:none;white-space:nowrap;transition:background-color .15s,border-color .15s}.ds-btn:active{transform:translateY(1px)}.ds-btn:focus-visible{outline:2px solid #fff;outline-offset:3px}.ds-btn-line{color:#fff;border-color:rgb(255 255 255/.45)}.ds-btn-line:hover{border-color:#fff}"
+    },
+    {
+      "name": "Download (app button)",
+      "kind": "button",
+      "refersTo": "button-app",
+      "description": "Download in the publication's own colour; Refreshify shown.",
+      "html": "<a class=\"ds-btn ds-btn-app\" href=\"#\" style=\"--accent:#1a5fbf\">Download</a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:1px solid transparent;border-radius:2px;font:650 0.9375rem/1 Archivo,system-ui,sans-serif;text-decoration:none;white-space:nowrap;transition:background-color .15s,border-color .15s}.ds-btn:active{transform:translateY(1px)}.ds-btn:focus-visible{outline:2px solid #0d0e0c;outline-offset:3px}.ds-btn-app{background:var(--accent);color:#fff}.ds-btn-app:hover{background:color-mix(in oklab,var(--accent) 86%,#0d0e0c)}"
+    },
+    {
+      "name": "Topline navigation",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Section links on the band; the current one is white and underlined.",
+      "html": "<nav class=\"ds-nav\"><a href=\"#\" aria-current=\"true\">BANKA_2</a><a href=\"#\">Experience</a><a href=\"#\">Work</a><a href=\"#\">Contact</a></nav>",
+      "css": ".ds-nav{display:flex;gap:24px;background:#000;padding:20px 24px;font:500 0.9375rem Archivo,system-ui,sans-serif}.ds-nav a{color:#c4c8c0;text-decoration:none;text-underline-offset:4px}.ds-nav a:hover,.ds-nav a[aria-current]{color:#fff;text-decoration:underline}.ds-nav a:focus-visible{outline:2px solid #fff;outline-offset:3px}"
+    },
+    {
+      "name": "Section title",
+      "kind": "custom",
+      "refersTo": "headline",
+      "description": "Every section heading hangs from a 6px ink rule.",
+      "html": "<h2 class=\"ds-section-title\">Selected work</h2>",
+      "css": ".ds-section-title{margin:0;border-top:6px solid #0d0e0c;padding-top:14px;font:720 2.75rem/1 Archivo,system-ui,sans-serif;font-stretch:104%;letter-spacing:-0.03em;color:#0d0e0c}"
+    },
+    {
+      "name": "Dated unit",
+      "kind": "custom",
+      "refersTo": "label",
+      "description": "A heading, then its dated label, then the summary.",
+      "html": "<article class=\"ds-unit\"><h4>AI in AEC</h4><p class=\"ds-label\"><span>May 2025 – Jan 2026</span>Software Developer</p><p>An AI consulting startup for architecture, engineering and construction.</p></article>",
+      "css": ".ds-unit{padding:20px 0 24px;border-bottom:1px solid #d5d9d1;font:400 1.0625rem/1.55 Archivo,system-ui,sans-serif;color:#4a4f47}.ds-unit h4{margin:0;font-size:1.375rem;font-weight:700;letter-spacing:-0.015em;color:#0d0e0c}.ds-label{margin:6px 0 8px;font-size:.875rem}.ds-label span{margin-right:.5em;font-weight:700;color:#0d0e0c;font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "Diagram service",
+      "kind": "custom",
+      "refersTo": "diagram",
+      "description": "A service block in the BANKA_2 diagram, with its data store at the foot; a red wire leads in.",
+      "html": "<div class=\"ds-row\"><i class=\"ds-wire\"></i><button type=\"button\" class=\"ds-node\"><b>banka-core</b><span>Accounts, cards, payments, transfers, loans and inter-bank payments (2PC)</span><span class=\"ds-db\">PostgreSQL, primary and replica</span></button></div>",
+      "css": ".ds-row{display:flex;align-items:center;width:340px}.ds-wire{width:32px;border-top:2px solid #c8102e}.ds-node{display:flex;flex-direction:column;flex:1;padding:12px 14px 4px;border:0;border-top:3px solid #0d0e0c;border-radius:0;background:#eef1ea;color:#0d0e0c;font:400 1rem Archivo,system-ui,sans-serif;text-align:left;cursor:pointer;transition:background-color .2s}.ds-node:hover,.ds-node:focus-visible{background:#e0e5d8}.ds-node:focus-visible{outline:2px solid #0d0e0c;outline-offset:3px}.ds-node b{font-size:1.0625rem;font-weight:700;letter-spacing:-0.01em}.ds-node span{margin:4px 0 10px;font-size:.8125rem;line-height:1.4;color:#4a4f47}.ds-node .ds-db{margin:0;padding:8px 0 10px;border-top:1px solid #d5d9d1}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Unigrid Brochure",
+    "overview": "Every surface is one publication in an identity program modelled on Massimo Vignelli's 1977 Unigrid system for the US National Park Service. A true black title band sits over white paper on a strict 12-column grid. Headings hang from heavy rules, and rows are separated by hairlines. Each publication owns exactly one colour. The portfolio's colour is the red of the BANKA_2 request path. Each app website takes its app icon's colour. The page reads like a printed brochure: dense where there are facts, empty where a module has nothing to say, and never boxed.\n\nThe memorable element is the system itself. BANKA_2 appears as a plain architecture diagram of its real services: flat square blocks with a heavy top rule, the gateway as the one black block, and red wires for the path every request takes. The red wires draw once on load, and after that nothing moves on its own. Interaction answers the visitor: pointing at a service lifts its block and writes what it does into the legend.\n\nThe direction replaced two rejected ones: a Tetris and wide-type gimmick, and a standard SaaS landing template with a headline, buttons and a card grid. A first version drew BANKA_2 as a park map with land, lakes and contours; the user found it unprofessional, and the diagram replaced it.",
+    "keyCharacteristics": [
+      "A black title band at the top and a closing black band at the bottom; white paper between.",
+      "A 12-column grid with modules that change only in whole units at every breakpoint.",
+      "6px rules over headings, 1px rules between rows; no cards, no shadows.",
+      "One typeface, Archivo, set heavy and tight for display and plain for reading.",
+      "Three values per publication: black, paper and one colour.",
+      "One authored motion: the route draws once."
+    ],
+    "rules": [
+      {
+        "name": "The Three Values Rule",
+        "body": "A publication uses black, paper and its one colour. A second accent on the same publication breaks the series.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Red Line Rule",
+        "body": "Route red is the request path and text selection. It is never a fill, a heading colour or a second accent.",
+        "section": "colors"
+      },
+      {
+        "name": "The Label Follows Rule",
+        "body": "Every unit carries a dated label, and it sits under the heading, never above it. Nothing is set as a kicker or eyebrow over a heading.",
+        "section": "typography"
+      },
+      {
+        "name": "The Sentence Case Rule",
+        "body": "Labels, nav and buttons are sentence case. Nothing is tracked-out all caps.",
+        "section": "typography"
+      },
+      {
+        "name": "The Whole Units Rule",
+        "body": "At every breakpoint modules change by whole grid units. No fractional cell and no module squeezed into a gap.",
+        "section": "layout"
+      },
+      {
+        "name": "The Flat Brochure Rule",
+        "body": "Grouping comes from grid position, the band and rules, never from boxes. A module is not a card.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do open every publication with the true black band (#000000) and close it with the same band.",
+      "Do hang every section heading from a 6px rule, and separate rows with 1px Hairline rules.",
+      "Do give each publication exactly one colour, taken from its icon, and use it for its rules, its plates and its primary button.",
+      "Do put a dated label under every unit heading, with the date in 700 tabular numerals.",
+      "Do theme the browser surfaces from the palette: text selection in Route Red, scrollbar in Ink Secondary on paper, focus outlines in ink.",
+      "Do keep the single authored motion. Interaction may answer the visitor; nothing else moves on its own.",
+      "Do draw systems as diagrams of their real parts: square blocks, right-angled wires, the request path in red."
+    ],
+    "donts": [
+      "Don't use cards, drop shadows, glass or gradient fills to group content.",
+      "Don't set labels, kickers or eyebrows above headings, or set any text in tracked-out capitals.",
+      "Don't use a tinted near-black for the band or a cream for the paper.",
+      "Don't introduce a second typeface or monospace for labels.",
+      "Don't join meta strings with middle dots or append arrows to links and buttons.",
+      "Don't fall back to the headline, buttons and card grid template, or to the Tetris and wide-type treatment the user rejected.",
+      "Don't illustrate software as landscapes, maps or other metaphors; the user rejected the park map as unprofessional."
+    ]
+  }
+}

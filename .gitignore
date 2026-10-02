@@ -5,3 +5,8 @@
 *.synctex.gz
 *.fls
 *.fdb_latexmk
+
+# Impeccable working files: review captures, mocks and logs stay local
+.impeccable/*
+!.impeccable/surfaces/
+!.impeccable/design.json

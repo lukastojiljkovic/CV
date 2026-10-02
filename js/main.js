@@ -1,4 +1,4 @@
-// Theme toggle and current-section highlighting. No dependencies.
+// Theme toggle, the BANKA_2 diagram's legend and current-section highlighting. No dependencies.
 (() => {
     const root = document.documentElement;
     const button = document.getElementById('theme');
@@ -20,6 +20,13 @@
         try { if (localStorage.getItem('theme')) return; } catch (_) {}
         root.dataset.theme = e.matches ? 'dark' : 'light';
         sync();
+    });
+
+    // The BANKA_2 diagram: pointing at, focusing or tapping a service shows what it does in the legend.
+    const detail = document.getElementById('sys-detail');
+    document.querySelectorAll('.node').forEach((node) => {
+        const show = () => { detail.textContent = node.dataset.detail; };
+        ['pointerenter', 'focus', 'click'].forEach((type) => node.addEventListener(type, show));
     });
 
     const links = new Map(
