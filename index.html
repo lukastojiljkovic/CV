@@ -55,28 +55,31 @@
 <body>
 <a class="skip" href="#main">Skip to content</a>
 
-<!-- The title band: who, what for, how to reach -->
-<header class="band" id="top">
-    <div class="wrap band-grid">
-        <div class="topline">
-            <a class="mark" href="#top">Luka Stojiljković</a>
-            <nav class="nav" aria-label="Sections">
-                <a href="#experience">Experience</a>
-                <a href="#work">Work</a>
-                <a href="#apps">Windows apps</a>
-                <a href="#projects">Projects</a>
-                <a href="#contact">Contact</a>
-            </nav>
-            <div class="topline-actions">
-                <a href="CV_Luka_Stojiljkovic.pdf" download>Download CV</a>
-                <button type="button" id="theme" aria-label="Switch to dark theme">
-                    <span class="theme-light">Dark</span><span class="theme-dark">Light</span>
-                </button>
-            </div>
+<!-- The bar: name, sections, the CV and the theme, in reach the whole way down -->
+<header class="band bar">
+    <div class="wrap topline">
+        <a class="mark" href="#top">Luka Stojiljković</a>
+        <nav class="nav" aria-label="Sections">
+            <a href="#experience">Experience</a>
+            <a href="#work">Work</a>
+            <a href="#apps">Windows apps</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <div class="topline-actions">
+            <a href="CV_Luka_Stojiljkovic.pdf" download>Download CV</a>
+            <button type="button" id="theme" aria-label="Switch to dark theme">
+                <span class="theme-light">Dark</span><span class="theme-dark">Light</span>
+            </button>
         </div>
+    </div>
+</header>
 
+<!-- The title band: who, what for, how to reach -->
+<section class="band" id="top" aria-labelledby="name">
+    <div class="wrap band-grid">
         <div class="title">
-            <h1>Luka<br>Stojiljković</h1>
+            <h1 id="name">Luka<br>Stojiljković</h1>
             <p class="sub">Software engineer in Belgrade. I lead teams and build complete systems, from banking platforms to LLM agents, and ship them with tests.</p>
         </div>
 
@@ -95,7 +98,7 @@
             </p>
         </aside>
     </div>
-</header>
+</section>
 
 <main id="main">
 
@@ -159,7 +162,7 @@
                 <p class="detail" id="sys-detail" aria-live="polite">Red is the path every request takes: in through the gateway, then on to banka-core or the trading service.</p>
                 <dl class="ledger">
                     <dt>25</dt><dd>engineers on the team</dd>
-                    <dt>2,165</dt><dd>backend tests, JUnit and Mockito</dd>
+                    <dt>4,413</dt><dd>backend tests, JUnit and Mockito</dd>
                     <dt>1,254</dt><dd>frontend tests in Vitest, plus a Cypress suite</dd>
                     <dt>Stack</dt><dd>Java 25, Spring Boot 4, PostgreSQL, React 19, Kotlin, Docker, Ollama</dd>
                 </dl>
@@ -207,7 +210,7 @@
                 <img class="shot shot-dark" src="img/nexus-dark.webp" width="1120" height="720" loading="lazy" alt="The Nexus dashboard in its night theme.">
             </div>
             <div class="work-text">
-                <h3>Nexus</h3>
+                <h3>Nexus <span class="ver">1.4</span></h3>
                 <p class="label"><span>2026</span> Desktop app</p>
                 <p class="summary">Offline-first workspace for tasks, calendar, notes, studying, files, habits, fitness and finance. Your data stays on your device.</p>
                 <ul class="facts">
@@ -216,7 +219,12 @@
                     <li>The local-only build can't reach the network, and CI enforces it.</li>
                 </ul>
                 <p class="stack">TypeScript, React, Electron, SQLCipher, Supabase, Turborepo</p>
-                <p class="note">Open source under Apache 2.0. The public repository opens with the first public release.</p>
+                <p class="note">Open source under Apache 2.0.</p>
+                <p class="links">
+                    <a class="btn btn-app" href="https://github.com/lukastojiljkovic/Nexus/releases/latest" target="_blank" rel="noopener">Download</a>
+                    <a href="https://lukastojiljkovic.github.io/Nexus/" target="_blank" rel="noopener">Website</a>
+                    <a href="https://github.com/lukastojiljkovic/Nexus" target="_blank" rel="noopener">Source</a>
+                </p>
             </div>
         </article>
 

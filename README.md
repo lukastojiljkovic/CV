@@ -16,7 +16,7 @@ Open to applied AI, full-stack and backend roles, in Belgrade or remote.
 
 Led a 25-person team delivering an enterprise banking platform: Spring Boot services, a React 19 web
 client, a Kotlin / Jetpack Compose Android app and Docker infrastructure. Wrote the majority of the
-codebase, covered by 2,165 backend tests, 1,254 frontend tests and a Cypress end-to-end suite.
+codebase, covered by 4,413 backend tests, 1,254 frontend tests and a Cypress end-to-end suite.
 Designed Arbitro, a self-hosted LLM banking assistant with tool calling, RAG over the specifications
 and SSE streaming on Ollama.
 
@@ -32,8 +32,8 @@ for time, task and revenue tracking.
 | --- | --- | --- |
 | [Stem Agent](https://github.com/lukastojiljkovic/stem-agent) | An LLM agent that specializes itself by evolving pipelines of typed tools, with beam search and a MAP-Elites archive. | Python, LM Studio |
 | [Serbian speech recognition](https://github.com/lukastojiljkovic/serbian-realtime-speech-recognition) | Real-time recognition for Serbian: a hybrid voice-activity detector feeding a published Wav2Vec2 XLS-R checkpoint, with live Cyrillic output. Group project. | PyTorch, Hugging Face |
-| [Nexus](https://lukastojiljkovic.github.io/CV/#work) | An offline-first desktop workspace with an encrypted local store and optional end-to-end encrypted sync. Public release in preparation. | TypeScript, Electron, Supabase |
-| [PermaDel](https://github.com/lukastojiljkovic/PermaDel) | A secure file shredder for Windows with File Explorer integration and Windows Hello verification. | C#, WinUI 3, C++ |
+| [Nexus](https://github.com/lukastojiljkovic/Nexus) | An offline-first desktop workspace with an encrypted local store and optional end-to-end encrypted sync. | TypeScript, Electron, Supabase |
+| [PermaDel](https://github.com/lukastojiljkovic/PermaDel) | A secure file shredder for Windows with File Explorer integration and an optional Windows Hello check. | C#, WinUI 3, C++ |
 | [Refreshify](https://github.com/lukastojiljkovic/Refreshify) | Runs the built-in Windows repair tools in a safe order after creating a restore point. | C#, WinUI 3 |
 | [PerfWindow](https://github.com/lukastojiljkovic/PerfWindow) | A real-time hardware monitor: a Rust dashboard fed by an on-demand .NET sensor service. | Rust, .NET 8 |
 | [Pwrschdlr](https://github.com/lukastojiljkovic/Power-Scheduler) | A Windows 11 timer that shuts down, restarts, sleeps, hibernates or signs out. | C#, WinUI 3 |
@@ -44,7 +44,7 @@ for time, task and revenue tracking.
 **Languages:** Java, Kotlin, Python, TypeScript, C#, C++, Rust, SQL  
 **Backend:** Spring Boot, Spring Security, JPA/Hibernate, REST, SSE, FastAPI  
 **Frontend and mobile:** React 19, Vite, Tailwind CSS, Jetpack Compose  
-**Data and DevOps:** PostgreSQL, SQLite, Supabase, Docker, Kubernetes, GitHub Actions  
+**Data and DevOps:** PostgreSQL, SQLite, Supabase, Docker, Kubernetes manifests, GitHub Actions  
 **Desktop:** WinUI 3, Windows App SDK, Electron, egui
 
 ## Education
