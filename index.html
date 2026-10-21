@@ -210,15 +210,17 @@
                 <img class="shot shot-dark" src="img/nexus-dark.webp" width="1120" height="720" loading="lazy" alt="The Nexus dashboard in its night theme.">
             </div>
             <div class="work-text">
-                <h3>Nexus <span class="ver">2.0</span></h3>
+                <h3>Nexus <span class="ver">2.1</span></h3>
                 <p class="label"><span>2026</span> Desktop app</p>
-                <p class="summary">An offline workspace of forty modules, from tasks, notes, study and finance to an offline Wikipedia reader and signed content packs. Your data never leaves your computer.</p>
+                <p class="summary">An offline workspace of forty modules, from tasks, notes, study and finance to an offline Wikipedia reader and signed content packs, with an AI agent that runs locally and works in all of them. Your data never leaves your computer.</p>
                 <ul class="facts">
+                    <li>An on-device LLM agent (llama.cpp, open models from Hugging Face) that acts in every module through 207 typed tools. Each turn offers the tools that fit the open page and the model's context window, every change asks first, and answers cite your notes, packs and offline Wikipedia.</li>
+                    <li>Built for small models: tool calls decode under a grammar built from each tool's schema, reads run in parallel and writes one at a time, and an answer that claims a change that never happened is asked again. An eval suite scores each model in English and Serbian.</li>
                     <li>Electron and React app for Windows, Linux and macOS with an encrypted SQLite store, in daily use.</li>
                     <li>No account and no server. It stays offline unless you allow update checks or downloads, each limited to a fixed list of hosts, and CI enforces that boundary.</li>
                     <li>Updates and content packs install only after their signatures and checksums verify.</li>
                 </ul>
-                <p class="stack">TypeScript, React, Electron, SQLCipher, Turborepo</p>
+                <p class="stack">TypeScript, React, Electron, llama.cpp, SQLCipher, Turborepo</p>
                 <p class="note">Open source under Apache 2.0.</p>
                 <p class="links">
                     <a class="btn btn-app" href="https://github.com/lukastojiljkovic/Nexus/releases/latest" target="_blank" rel="noopener">Download</a>
