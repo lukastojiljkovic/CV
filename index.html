@@ -305,15 +305,15 @@
                 <img class="shot shot-light" src="img/perfwindow.webp" width="1386" height="738" loading="lazy" alt="PerfWindow showing load, temperatures and power for the CPU, GPUs, memory, network, battery and disks.">
                 <img class="shot shot-dark" src="img/perfwindow-dark.webp" width="1386" height="738" loading="lazy" alt="PerfWindow's dashboard in the dark theme.">
             </div>
-            <h3><img src="img/icons/perfwindow.png" width="32" height="32" alt="">PerfWindow <span class="ver">2.0</span></h3>
-            <p class="summary">Real-time hardware monitor for Windows: load, temperatures, power and lifetime data for every component.</p>
+            <h3><img src="img/icons/perfwindow.png" width="32" height="32" alt="">PerfWindow <span class="ver">2.1</span></h3>
+            <p class="summary">Real-time hardware monitor for Windows: load, temperatures, power and lifetime data for every component, in a window or a terminal.</p>
             <ul class="facts">
                 <li>Rust and egui dashboard fed by a .NET sensor service built on LibreHardwareMonitor, over a named pipe.</li>
-                <li>The service starts on demand and exits with the window: nothing stays resident, no tray icon.</li>
-                <li>The installer handles the signed PawnIO driver, elevation and clean removal.</li>
+                <li>New in 2.1: perfwindow-cli, a live dashboard in the terminal that gives scripts and AI agents the readings as text or JSON.</li>
+                <li>The service starts on demand and exits with the window, and the installer handles the signed PawnIO driver and elevation.</li>
                 <li>Scales to fit any window, turns see-through, or shrinks to a one-line strip over the top of the screen.</li>
             </ul>
-            <p class="stack">Rust, egui, C#, .NET 8, Inno Setup</p>
+            <p class="stack">Rust, egui, ratatui, C#, .NET 8, Inno Setup</p>
             <p class="links">
                 <a class="btn btn-app" href="https://github.com/lukastojiljkovic/PerfWindow/releases/latest" target="_blank" rel="noopener">Download</a>
                 <a href="https://lukastojiljkovic.github.io/PerfWindow/" target="_blank" rel="noopener">Website</a>

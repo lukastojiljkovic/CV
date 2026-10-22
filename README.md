@@ -35,7 +35,7 @@ for time, task and revenue tracking.
 | [Nexus](https://github.com/lukastojiljkovic/Nexus) | An offline workspace for Windows, Linux and macOS: forty modules, an encrypted local store, offline Wikipedia and signed content packs, with an on-device LLM agent that acts in every module through 207 tools and asks before each change. No account, no server. | TypeScript, Electron, llama.cpp, SQLCipher |
 | [PermaDel](https://github.com/lukastojiljkovic/PermaDel) | A secure file shredder for Windows with File Explorer integration and an optional Windows Hello check. | C#, WinUI 3, C++ |
 | [Refreshify](https://github.com/lukastojiljkovic/Refreshify) | Runs the built-in Windows repair tools in a safe order after creating a restore point. | C#, WinUI 3 |
-| [PerfWindow](https://github.com/lukastojiljkovic/PerfWindow) | A real-time hardware monitor: a Rust dashboard fed by an on-demand .NET sensor service. | Rust, .NET 8 |
+| [PerfWindow](https://github.com/lukastojiljkovic/PerfWindow) | A real-time hardware monitor: a Rust dashboard and a terminal CLI for scripts and AI agents, fed by an on-demand .NET sensor service. | Rust, .NET 8 |
 | [Pwrschdlr](https://github.com/lukastojiljkovic/Power-Scheduler) | A Windows 11 timer that shuts down, restarts, sleeps, hibernates or signs out. | C#, WinUI 3 |
 
 ## Skills
